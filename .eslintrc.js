@@ -1,11 +1,13 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    es6: true,
+    browser: true,
   },
   extends: [
-    'plugin:vue/essential',
-    '@vue/standard'
+    "airbnb-base",
+    "plugin:vue/recommended"
   ],
   parserOptions: {
     parser: 'babel-eslint'
