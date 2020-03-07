@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h4>Education List</h4>
+  <div class="education-list">
     <EducationItem
       v-for="(item, index) in list"
       :key="index"
+      :item="item"
     />
   </div>
 </template>
@@ -27,5 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.education-list {
+  padding: 1em;
+}
 </style>

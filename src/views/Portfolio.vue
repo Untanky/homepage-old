@@ -109,6 +109,7 @@ export default {
     background-color: $primary;
     border-radius: $border-radius $border-radius 0 0;
     padding: 0.5em 1em;
+    margin-block-end: 0;
   }
 }
 </style>
