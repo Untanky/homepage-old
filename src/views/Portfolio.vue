@@ -13,6 +13,7 @@
       <h3 class="category-title">
         Experience
       </h3>
+      <ExperienceList :list="experience" />
     </div>
     <div class="category-wrapper">
       <h3 class="category-title">
@@ -29,11 +30,13 @@
 
 <script>
 import EducationList from '../components/EducationList.vue';
+import ExperienceList from '../components/ExperienceList.vue';
 
 export default {
   name: 'Portfolio',
   components: {
     EducationList,
+    ExperienceList,
   },
   data: () => ({
     education: [
@@ -85,6 +88,54 @@ export default {
           year: 2020,
           month: 9,
           day: 30,
+        },
+      },
+    ],
+    experience: [
+      {
+        jobTitle: 'Studentische Hilfskraft',
+        company: 'Hochschule für Technik und Wirtschaft Berlin',
+        address: {
+          street: 'Wilhelminenhofstraße 75',
+          zip: '12439',
+          city: 'Berlin',
+          country: 'Germany',
+        },
+        description: 'Hausaufgabenkontrolle und Tutorium im Fach "Theoretische Grundlagen der Informatik"',
+        link: 'https://htw-berlin.de',
+        finished: false,
+        startDate: {
+          year: 2018,
+          month: 10,
+          day: 1,
+        },
+        endDate: {
+          year: 2020,
+          month: 7,
+          day: 15,
+        },
+      },
+      {
+        jobTitle: 'Software Engineering Intern',
+        company: 'WBS Coding School',
+        address: {
+          street: 'Lorenzweg 5',
+          zip: '12099',
+          city: 'Berlin',
+          country: 'Germany',
+        },
+        description: 'Entwicklung einer Lernplattform mit React im Frontend und NodeJS im Backend',
+        link: 'https://wbscodingschool.com',
+        finished: false,
+        startDate: {
+          year: 2020,
+          month: 2,
+          day: 16,
+        },
+        endDate: {
+          year: 2020,
+          month: 5,
+          day: 15,
         },
       },
     ],
