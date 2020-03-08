@@ -73,8 +73,8 @@ export default {
   .time-wrapper {
     .time {
       position: absolute;
-      left: -130px;
-      width: 80px;
+      left: -140px;
+      width: 90px;
       text-align: right;
       font-size: 10px;
       font-weight: bold;
