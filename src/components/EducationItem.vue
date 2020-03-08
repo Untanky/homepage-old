@@ -5,7 +5,7 @@
   >
     <div class="education-info">
       <div class="school">
-        {{ item.school }}
+        <a :href="item.link"><b>{{ item.school }}</b></a>
       </div>
       <div class="degreeText">
         {{ degree }}
@@ -18,31 +18,6 @@
       </div>
     </div>
   </TimelineItem>
-  <!-- <div class="education-item">
-    <span class="time-line"/>
-    <div class="education-info">
-      <div class="school">
-        {{ item.school }}
-      </div>
-      <div class="degreeText">
-        {{ degree }}
-      </div>
-      <div
-        v-if="item.description"
-        class="description"
-      >
-        {{ item.description }}
-      </div>
-    </div>
-    <div class="duration-wrapper">
-      <div class="time">
-        {{ startDate }}
-      </div>
-      <div class="time">
-        {{ endDate }}
-      </div>
-    </div>
-  </div> -->
 </template>
 
 <script>
@@ -99,5 +74,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.education-list {
+  *:not(:first-child) {
+    padding-top: 0.25em;
+  }
+}
 </style>
