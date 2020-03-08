@@ -38,6 +38,30 @@ export default {
   data: () => ({
     education: [
       {
+        school: 'Heinrich-Hertz-Oberschule Berlin',
+        address: {
+          street: 'Rigaer Straße 81-82',
+          zip: '10247',
+          city: 'Berlin',
+          country: 'Germany',
+        },
+        degree: 'Abitur',
+        course: null,
+        grade: '1.8',
+        type: 'HIGH_SCHOOL',
+        link: 'https://htw-berlin.de',
+        description: 'Leistungskurse: Informatik/Mathematik',
+        finished: true,
+        startDate: {
+          year: 2011,
+          month: 9,
+        },
+        endDate: {
+          year: 2017,
+          month: 7,
+        },
+      },
+      {
         school: 'Hochschule für Technik und Wirtschaft Berlin',
         address: {
           street: 'Wilhelminenhofstraße 75',
@@ -63,30 +87,6 @@ export default {
           day: 30,
         },
       },
-      {
-        school: 'Heinrich-Hertz-Oberschule Berlin',
-        address: {
-          street: 'Rigaer Straße 81-82',
-          zip: '10247',
-          city: 'Berlin',
-          country: 'Germany',
-        },
-        degree: 'Abitur',
-        course: null,
-        grade: '1.8',
-        type: 'HIGH_SCHOOL',
-        link: 'https://htw-berlin.de',
-        description: 'Leistungskurse: Informatik/Mathematik',
-        finished: true,
-        startDate: {
-          year: 2011,
-          month: 9,
-        },
-        endDate: {
-          year: 2017,
-          month: 7,
-        },
-      },
     ],
   }),
 };
@@ -96,7 +96,7 @@ export default {
 @import "../_variables.scss";
 
 .category-wrapper {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(245, 245, 245);
   text-align: left;
   border-radius: $border-radius;
 

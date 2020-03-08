@@ -1,25 +1,35 @@
 <template>
   <div class="education-item">
-    <div>
-      {{ duration }}
+    <span />
+    <div class="education-info">
+      <div class="school">
+        {{ item.school }}
+      </div>
+      <div class="degreeText">
+        {{ degree }}
+      </div>
+      <div
+        v-if="item.description"
+        class="description"
+      >
+        {{ item.description }}
+      </div>
     </div>
-    <div class="school">
-      {{ item.school }}
-    </div>
-    <div class="degreeText">
-      {{ degree }}
-    </div>
-    <div
-      v-if="item.description"
-      class="description"
-    >
-      {{ item.description }}
+    <div class="duration-wrapper">
+      <div class="time">
+        {{ startDate }}
+      </div>
+      <div class="time">
+        {{ endDate }}
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { DateTime } from 'luxon';
+
+const dateFormat = { year: 'numeric', month: 'long' };
 
 export default {
   name: 'EducationItem',
@@ -47,35 +57,89 @@ export default {
 
       return result;
     },
-    duration() {
-      const {
-        startDate, endDate, finished,
-      } = this.item;
-      let result = '';
-
-      const start = DateTime.fromObject(startDate).toLocaleString({ year: 'numeric', month: 'long' });
-      const end = DateTime.fromObject(endDate).toLocaleString({ year: 'numeric', month: 'long' });
-
-      result += `${start}`;
+    startDate() {
+      return DateTime
+        .fromObject(this.item.startDate)
+        .toLocaleString(dateFormat);
+    },
+    endDate() {
+      const { endDate, finished } = this.item;
 
       if (finished && endDate) {
-        result += ` - ${end}`;
-      } else {
-        result += ' - now';
+        return DateTime
+          .fromObject(this.item.endDate)
+          .toLocaleString(dateFormat);
       }
 
-      return result;
+      return 'now';
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+@import '../_variables';
+
 .education-item {
+  position: relative;
+  padding-top: 8px;
+  margin-left: 135px;
   margin-bottom: 1em;
 
-  &:last-child {
-    margin-bottom: 0;
+  &:not(:first-child) {
+    margin-top: 60px;
   }
+
+  > span { /* line */
+    width: 2px;
+    height: 100%;
+    background: #000;
+    left: -30px;
+    top: 0;
+    position: absolute;
+    &:before,
+    &:after {/* circles */
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid #000;
+      position: absolute;
+      background: $primary;
+      left: -5px;
+      top: 0;
+    }
+
+    &:after {
+      top: 100%;
+    }
+  }
+
+  .duration-wrapper {
+    .time {
+      position: absolute;
+      left: -130px;
+      width: 80px;
+      text-align: right;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 0 0.5em;
+      border-radius: 16px;
+      &:first-child {
+        top: 0;
+      }
+      &:last-child {
+        top: 100%;
+      }
+    }
+  }
+}
+
+.education-info {
+  background-color: white;
+  padding: 1em;
+  border-radius: 12px;
+  margin-top: 3px;
+  margin-right: 1em;
 }
 </style>
