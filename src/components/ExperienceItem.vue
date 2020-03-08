@@ -21,7 +21,7 @@
 import { DateTime } from 'luxon';
 import TimelineItem from './TimelineItem.vue';
 
-const dateFormat = { year: 'numeric', month: 'long' };
+const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' };
 
 export default {
   name: 'ExperienceItem',
