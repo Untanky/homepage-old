@@ -147,9 +147,10 @@ export default {
 @import "../_variables.scss";
 
 .category-wrapper {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(255, 255, 255);
   text-align: left;
   border-radius: $border-radius;
+  box-shadow: $shadow;
 
   @media screen and (min-width: 819px) {
     width: 820px;
@@ -157,9 +158,10 @@ export default {
   }
 
   .category-title {
-    background-color: $primary;
-    border-radius: $border-radius $border-radius 0 0;
-    padding: 0.5em 1em;
+    // background-color: $primary;
+    // border-radius: $border-radius $border-radius 0 0;
+    border-bottom: 2px solid $primary;
+    padding: 1em;
     margin-block-end: 0;
   }
 }
