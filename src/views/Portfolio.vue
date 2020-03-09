@@ -32,6 +32,8 @@
 import EducationList from '../components/EducationList.vue';
 import ExperienceList from '../components/ExperienceList.vue';
 
+// const MAX_SKILL_RATING = 5;
+
 export default {
   name: 'Portfolio',
   components: {
@@ -137,6 +139,43 @@ export default {
           month: 5,
           day: 15,
         },
+      },
+    ],
+    skills: [
+      {
+        name: 'HTML',
+        categories: ['Web', 'Languages', 'Frontend'],
+        rating: 5,
+      },
+      {
+        name: 'CSS',
+        categories: ['Web', 'UI', 'Frontend'],
+        rating: 5,
+      },
+      {
+        name: 'JavaScript',
+        categories: ['Web', 'Languages', 'Frontend'],
+        rating: 5,
+      },
+      {
+        name: 'React.js',
+        categories: ['Web', 'Frameworks', 'Frontend'],
+        rating: 5,
+      },
+      {
+        name: 'Vue.js',
+        categories: ['Web', 'Frameworks', 'Frontend'],
+        rating: 4,
+      },
+      {
+        name: 'Node.js',
+        categories: ['API', 'Backend', 'Languages'],
+        rating: 5,
+      },
+      {
+        name: 'Express',
+        categories: ['API', 'Backend', 'Frameworks'],
+        rating: 4,
       },
     ],
   }),
