@@ -49,7 +49,7 @@ export default {
   > .timeline { /* line */
     width: 2px;
     height: 100%;
-    background: #000;
+    background: rgb(100, 100, 100);
     left: -30px;
     top: 0;
     position: absolute;
@@ -58,7 +58,7 @@ export default {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      border: 2px solid #000;
+      border: 2px solid white;
       position: absolute;
       background: $primary;
       left: -5px;
@@ -91,10 +91,11 @@ export default {
 }
 
 .timeline-info {
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   padding: 1em;
   border-radius: 12px;
   margin-top: 3px;
   margin-right: 1em;
+  box-shadow: $shadow;
 }
 </style>
