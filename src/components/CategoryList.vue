@@ -1,15 +1,23 @@
 <template>
-  <div class="skills-list">
-    <h1>Skill</h1>
-    <p>{{ skillsByCategory }}</p>
+  <div class="category-list">
+    <SkillCategory
+      v-for="(skills, category, index) of skillsByCategory"
+      :key="index"
+      :category="category"
+      :skills="skills"
+    />
   </div>
 </template>
 
 <script>
 import _ from 'lodash';
+import SkillCategory from './SkillCategory.vue';
 
 export default {
   name: 'SkillsList',
+  components: {
+    SkillCategory,
+  },
   props: {
     list: {
       type: Array,
@@ -21,7 +29,6 @@ export default {
     skillsByCategory() {
       const categories = _.chain(this.list)
         .reduce((prev, curr) => {
-          console.log(prev);
           const next = { ...prev };
           _.forEach(curr.categories, (category) => {
             if (!prev[category]) {
@@ -33,7 +40,6 @@ export default {
         }, {})
         .value();
 
-      console.log(categories);
       return categories;
     },
   },
@@ -41,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.skills-list {
+.category-list {
   padding: 1em;
 }
 </style>

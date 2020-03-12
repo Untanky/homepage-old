@@ -19,7 +19,7 @@
       <h3 class="category-title">
         Skills
       </h3>
-      <SkillsList :list="skills" />
+      <CategoryList :list="skills" />
     </div>
     <div class="category-wrapper">
       <h3 class="category-title">
@@ -32,7 +32,7 @@
 <script>
 import EducationList from '../components/EducationList.vue';
 import ExperienceList from '../components/ExperienceList.vue';
-import SkillsList from '../components/SkillsList.vue';
+import CategoryList from '../components/CategoryList.vue';
 
 // const MAX_SKILL_RATING = 5;
 
@@ -41,7 +41,7 @@ export default {
   components: {
     EducationList,
     ExperienceList,
-    SkillsList,
+    CategoryList,
   },
   data: () => ({
     education: [
