@@ -31,7 +31,7 @@ body {
   color: #2c3e50;
 
   .main-view {
-    margin-top: 48px;
+    margin-top: 96px;
   }
 }
 </style>
