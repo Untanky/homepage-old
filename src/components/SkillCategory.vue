@@ -47,7 +47,6 @@ export default {
   display: grid;
   grid-template-columns: 64px 1fr;
   gap: 1em 1em;
-  margin-bottom: 1em;
 
   .skill-badge{
     display: inline-block;

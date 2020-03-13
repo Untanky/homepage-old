@@ -57,8 +57,11 @@ export default {
 <style lang="scss" scoped>
 .category-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
   padding: 1em;
+
+  @media screen and (min-width: 819px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
 }
 </style>
