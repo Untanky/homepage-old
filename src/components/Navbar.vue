@@ -48,18 +48,22 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: $primary;
+  background-color: white;
   text-align: left;
+  border-bottom: 4px solid $primary;
+  box-shadow: $shadow;
+  z-index: 1;
 
   .link {
     display: inline-block;
     color: $text-on-primary;
     text-decoration: none;
-    padding: 0.5em 1em;
+    text-align: left;
+    padding: 1em 2em;
     transition: background-color 0.5s ease;
 
     &:hover {
-      background-color: $primary-variation1;
+      background-color: $background-color;
       transition: background-color 0.5s ease;
     }
   }

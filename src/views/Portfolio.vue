@@ -19,6 +19,10 @@
       <h3 class="category-title">
         Skills
       </h3>
+      <CategoryList
+        :list="skills"
+        :categories="categories"
+      />
     </div>
     <div class="category-wrapper">
       <h3 class="category-title">
@@ -31,12 +35,16 @@
 <script>
 import EducationList from '../components/EducationList.vue';
 import ExperienceList from '../components/ExperienceList.vue';
+import CategoryList from '../components/CategoryList.vue';
+
+// const MAX_SKILL_RATING = 5;
 
 export default {
   name: 'Portfolio',
   components: {
     EducationList,
     ExperienceList,
+    CategoryList,
   },
   data: () => ({
     education: [
@@ -139,6 +147,80 @@ export default {
         },
       },
     ],
+    skills: [
+      {
+        name: 'HTML',
+        categories: ['Web', 'Languages', 'Frontend'],
+        rating: 5,
+      },
+      {
+        name: 'CSS',
+        categories: ['Web', 'UI', 'Frontend'],
+        rating: 5,
+      },
+      {
+        name: 'JavaScript',
+        categories: ['Web', 'Languages', 'Frontend'],
+        rating: 5,
+      },
+      {
+        name: 'React.js',
+        categories: ['Web', 'Frameworks', 'Frontend'],
+        rating: 5,
+      },
+      {
+        name: 'Vue.js',
+        categories: ['Web', 'Frameworks', 'Frontend'],
+        rating: 4,
+      },
+      {
+        name: 'Node.js',
+        categories: ['API', 'Backend', 'Languages'],
+        rating: 5,
+      },
+      {
+        name: 'Express',
+        categories: ['API', 'Backend', 'Frameworks'],
+        rating: 4,
+      },
+    ],
+    categories: [
+      {
+        name: 'Web',
+        description: 'Short description about web development and stuff',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'Languages',
+        description: 'The programming lanaguages that I know',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'Frontend',
+        description: 'Frontend technologies I know',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'UI',
+        description: 'User Interface Design and stuff',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'Frameworks',
+        description: 'Frameworks that I know how to use',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'API',
+        description: 'API technologies I know',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'Backend',
+        description: 'Backend stuff',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+    ],
   }),
 };
 </script>
@@ -162,6 +244,7 @@ export default {
     // border-radius: $border-radius $border-radius 0 0;
     border-bottom: 2px solid $primary;
     padding: 1em;
+    border-radius: $border-radius $border-radius 0 0;
     margin-block-end: 0;
   }
 }
