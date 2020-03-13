@@ -204,6 +204,7 @@ export default {
     // border-radius: $border-radius $border-radius 0 0;
     border-bottom: 2px solid $primary;
     padding: 1em;
+    border-radius: $border-radius $border-radius 0 0;
     margin-block-end: 0;
   }
 }
