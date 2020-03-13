@@ -1,10 +1,9 @@
 <template>
   <div class="category-list">
-    <!-- {{ skillsByCategory }} -->
     <SkillCategory
-      v-for="(skills, category, index) of skillsByCategory"
+      v-for="(category, categoryName, index) of skillsByCategory"
       :key="index"
-      :skills="skills"
+      :category="category"
     />
   </div>
 </template>

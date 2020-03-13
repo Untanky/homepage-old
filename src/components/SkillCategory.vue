@@ -3,20 +3,20 @@
     <div class="skill-badge">
       <img
         class="badge-image"
-        :src="skills.badgeImageURI"
-        :alt="skills.name"
+        :src="category.badgeImageURI"
+        :alt="category.name"
       >
     </div>
     <div class="skill-list-wrapper">
       <div class="badge-title">
-        <b>{{ skills.name }}</b>
+        <b>{{ category.name }}</b>
       </div>
       <div class="badge-description">
-        {{ skills.description }}
+        {{ category.description }}
       </div>
       <div class="skill-list">
         <span
-          v-for="(skill, index) in skills.skills"
+          v-for="(skill, index) in category.skills"
           :key="index"
           class="skill"
         >
@@ -31,12 +31,7 @@
 export default {
   name: 'SkillCategory',
   props: {
-    // category: {
-    //   type: String,
-    //   required: true,
-    //   default: () => '',
-    // },
-    skills: {
+    category: {
       type: Object,
       required: true,
       default: () => {},
