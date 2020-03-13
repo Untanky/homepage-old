@@ -19,7 +19,10 @@
       <h3 class="category-title">
         Skills
       </h3>
-      <CategoryList :list="skills" />
+      <CategoryList
+        :list="skills"
+        :categories="categories"
+      />
     </div>
     <div class="category-wrapper">
       <h3 class="category-title">
@@ -179,6 +182,43 @@ export default {
         name: 'Express',
         categories: ['API', 'Backend', 'Frameworks'],
         rating: 4,
+      },
+    ],
+    categories: [
+      {
+        name: 'Web',
+        description: 'Short description about web development and stuff',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'Languages',
+        description: 'The programming lanaguages that I know',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'Frontend',
+        description: 'Frontend technologies I know',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'UI',
+        description: 'User Interface Design and stuff',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'Frameworks',
+        description: 'Frameworks that I know how to use',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'API',
+        description: 'API technologies I know',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
+      },
+      {
+        name: 'Backend',
+        description: 'Backend stuff',
+        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
       },
     ],
   }),

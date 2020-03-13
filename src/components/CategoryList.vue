@@ -1,9 +1,9 @@
 <template>
   <div class="category-list">
+    <!-- {{ skillsByCategory }} -->
     <SkillCategory
       v-for="(skills, category, index) of skillsByCategory"
       :key="index"
-      :category="category"
       :skills="skills"
     />
   </div>
@@ -24,6 +24,11 @@ export default {
       default: () => [],
       required: false,
     },
+    categories: {
+      type: Array,
+      default: () => [],
+      required: false,
+    },
   },
   computed: {
     skillsByCategory() {
@@ -32,12 +37,16 @@ export default {
           const next = { ...prev };
           _.forEach(curr.categories, (category) => {
             if (!prev[category]) {
-              next[category] = [];
+              next[category] = { name: category, skills: [] };
             }
-            next[category].push({ name: curr.name, rating: curr.rating });
+            next[category].skills.push({ name: curr.name, rating: curr.rating });
           });
           return next;
         }, {})
+        .map((curr) => ({
+          ...curr,
+          ..._.find(this.categories, (cat) => cat.name === curr.name),
+        }))
         .value();
 
       return categories;

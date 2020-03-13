@@ -3,20 +3,20 @@
     <div class="skill-badge">
       <img
         class="badge-image"
-        src="https://i.ya-webdesign.com/images/badge-vector-png-4.png"
-        :alt="category"
+        :src="skills.badgeImageURI"
+        :alt="skills.name"
       >
     </div>
     <div class="skill-list-wrapper">
       <div class="badge-title">
-        <b>{{ category }}</b>
+        <b>{{ skills.name }}</b>
       </div>
       <div class="badge-description">
-        Short skill description that might span multiple lines of text as it might not be too short after all
+        {{ skills.description }}
       </div>
       <div class="skill-list">
         <span
-          v-for="(skill, index) in skills"
+          v-for="(skill, index) in skills.skills"
           :key="index"
           class="skill"
         >
@@ -31,15 +31,15 @@
 export default {
   name: 'SkillCategory',
   props: {
-    category: {
-      type: String,
-      required: true,
-      default: () => '',
-    },
+    // category: {
+    //   type: String,
+    //   required: true,
+    //   default: () => '',
+    // },
     skills: {
-      type: Array,
-      required: false,
-      default: () => [],
+      type: Object,
+      required: true,
+      default: () => {},
     },
   },
 };
