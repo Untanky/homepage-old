@@ -28,6 +28,7 @@
       <h3 class="category-title">
         Strenghts
       </h3>
+      <p>Strengths</p>
     </div>
     <div class="category-wrapper">
       <h3 class="category-title">
