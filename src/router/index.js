@@ -30,7 +30,7 @@ const routes = [
     component: Socials,
   },
   {
-    path: '/Contact',
+    path: '/contact',
     name: 'Contact',
     component: Contact,
   },
