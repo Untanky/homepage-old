@@ -55,7 +55,7 @@ export default {
   width: 100%;
   background-color: white;
   text-align: left;
-  border-bottom: 4px solid $primary;
+  border-bottom: $thick-border-primary;
   box-shadow: $shadow;
   z-index: 1;
 

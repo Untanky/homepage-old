@@ -265,7 +265,7 @@ export default {
   .category-title {
     // background-color: $primary;
     // border-radius: $border-radius $border-radius 0 0;
-    border-bottom: 2px solid $primary;
+    border-bottom: $border-primary;
     padding: 1em;
     border-radius: $border-radius $border-radius 0 0;
     margin-block-end: 0;
