@@ -1,30 +1,35 @@
 <template>
   <nav class="navbar">
     <router-link
+      active-class="active"
       class="link"
       to="/"
     >
       Home
     </router-link>
     <router-link
+      active-class="active"
       class="link"
       to="/portfolio"
     >
       Portfolio
     </router-link>
     <router-link
+      active-class="active"
       class="link"
       to="/projects"
     >
       Projects
     </router-link>
     <router-link
+      active-class="active"
       class="link"
       to="/socials"
     >
       Socials
     </router-link>
     <router-link
+      active-class="active"
       class="link"
       to="/contact"
     >
@@ -65,6 +70,10 @@ export default {
     &:hover {
       background-color: $background-color;
       transition: background-color 0.5s ease;
+    }
+
+    &.active-exact {
+      background-color: $primary-variation2;
     }
   }
 }
