@@ -29,6 +29,14 @@
         Strenghts
       </h3>
     </div>
+    <div class="category-wrapper">
+      <h3 class="category-title">
+        Contact
+      </h3>
+      <ContactInfo
+        :contact="contact"
+      />
+    </div>
   </div>
 </template>
 
@@ -36,6 +44,7 @@
 import EducationList from '../components/EducationList.vue';
 import ExperienceList from '../components/ExperienceList.vue';
 import CategoryList from '../components/CategoryList.vue';
+import ContactInfo from '../components/ContactInfo.vue';
 
 // const MAX_SKILL_RATING = 5;
 
@@ -45,6 +54,7 @@ export default {
     EducationList,
     ExperienceList,
     CategoryList,
+    ContactInfo,
   },
   data: () => ({
     education: [
@@ -221,6 +231,18 @@ export default {
         badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
       },
     ],
+    contact: {
+      name: 'Lukas Grimm',
+      address: {
+        street: 'Ahornallee 16',
+        zip: '12555',
+        city: 'Berlin',
+        country: 'Germany',
+      },
+      phone: '+4915129102880',
+      email: 'lukaskingsmail@gmail.com',
+      link: 'lukasgrimm.me/contact',
+    },
   }),
 };
 </script>
