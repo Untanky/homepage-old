@@ -28,7 +28,9 @@
       <h3 class="category-title">
         Strenghts
       </h3>
-      <p>Strengths</p>
+      <StrengthList
+        :strengths="strengths"
+      />
     </div>
     <div class="category-wrapper">
       <h3 class="category-title">
@@ -45,6 +47,7 @@
 import EducationList from '../components/EducationList.vue';
 import ExperienceList from '../components/ExperienceList.vue';
 import CategoryList from '../components/CategoryList.vue';
+import StrengthList from '../components/StrengthList.vue';
 import ContactInfo from '../components/ContactInfo.vue';
 
 // const MAX_SKILL_RATING = 5;
@@ -55,6 +58,7 @@ export default {
     EducationList,
     ExperienceList,
     CategoryList,
+    StrengthList,
     ContactInfo,
   },
   data: () => ({
@@ -232,6 +236,38 @@ export default {
         badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
       },
     ],
+    strengths: {
+      methods: {
+        title: 'Methodische Kompetenz',
+        list: [
+          {
+            name: 'Test',
+            description: 'Test test test test test test',
+          },
+        ],
+      },
+      personal: {
+        title: 'Persönliche Kompetenz',
+        list: [
+          {
+            name: 'Test next',
+            description: 'Test test test test test test',
+          },
+        ],
+      },
+      social: {
+        title: 'Soziale Kompetenz',
+        list: [
+          {
+            name: 'Testtest',
+            description: 'Test test test test test test',
+          },
+          {
+            name: 'Test',
+          },
+        ],
+      },
+    },
     contact: {
       name: 'Lukas Grimm',
       address: {
