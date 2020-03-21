@@ -1,5 +1,13 @@
 # homepage
 
+## Configure
+
+Setup environment variables
+
+```environment
+VUE_APP_API_HOST="<url_to_api_host>"
+```
+
 ## Project setup
 ```
 yarn install
