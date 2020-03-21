@@ -3,47 +3,64 @@
     <h1 class="title">
       Portfolio
     </h1>
-    <div class="category-wrapper">
-      <h3 class="category-title">
-        Education
-      </h3>
-      <EducationList :list="education" />
+    <div
+      v-if="loading"
+    >
+      <Loader />
     </div>
-    <div class="category-wrapper">
-      <h3 class="category-title">
-        Experience
-      </h3>
-      <ExperienceList :list="experience" />
+    <div
+      v-else-if="error"
+    >
+      There was an unexpected error
     </div>
-    <div class="category-wrapper">
-      <h3 class="category-title">
-        Skills
-      </h3>
-      <CategoryList
-        :list="skills"
-        :categories="categories"
-      />
-    </div>
-    <div class="category-wrapper">
-      <h3 class="category-title">
-        Strenghts
-      </h3>
-      <StrengthList
-        :strengths="strengths"
-      />
-    </div>
-    <div class="category-wrapper">
-      <h3 class="category-title">
-        Contact
-      </h3>
-      <ContactInfo
-        :contact="contact"
-      />
+    <div
+      v-else
+    >
+      <div class="category-wrapper">
+        <h3 class="category-title">
+          Education
+        </h3>
+        <EducationList :list="education" />
+      </div>
+      <div class="category-wrapper">
+        <h3 class="category-title">
+          Experience
+        </h3>
+        <ExperienceList :list="experience" />
+      </div>
+      <div class="category-wrapper">
+        <h3 class="category-title">
+          Skills
+        </h3>
+        <CategoryList
+          :list="skills"
+          :categories="categories"
+        />
+      </div>
+      <div class="category-wrapper">
+        <h3 class="category-title">
+          Strenghts
+        </h3>
+        <StrengthList
+          :strengths="strengths"
+        />
+      </div>
+      <div class="category-wrapper">
+        <h3 class="category-title">
+          Contact
+        </h3>
+        <ContactInfo
+          :contact="contact"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
+import Loader from '../components/Loader.vue';
 import EducationList from '../components/EducationList.vue';
 import ExperienceList from '../components/ExperienceList.vue';
 import CategoryList from '../components/CategoryList.vue';
@@ -60,214 +77,16 @@ export default {
     CategoryList,
     StrengthList,
     ContactInfo,
+    Loader,
   },
   data: () => ({
-    education: [
-      {
-        school: 'Heinrich-Hertz-Oberschule Berlin',
-        address: {
-          street: 'Rigaer Straße 81-82',
-          zip: '10247',
-          city: 'Berlin',
-          country: 'Germany',
-        },
-        degree: 'Abitur',
-        course: null,
-        grade: '1.8',
-        type: 'HIGH_SCHOOL',
-        link: 'https://htw-berlin.de',
-        description: 'Leistungskurse: Informatik/Mathematik',
-        finished: true,
-        startDate: {
-          year: 2011,
-          month: 9,
-        },
-        endDate: {
-          year: 2017,
-          month: 7,
-        },
-      },
-      {
-        school: 'Hochschule für Technik und Wirtschaft Berlin',
-        address: {
-          street: 'Wilhelminenhofstraße 75',
-          zip: '12439',
-          city: 'Berlin',
-          country: 'Germany',
-        },
-        degree: 'Bachelor of Science',
-        course: 'Angewandte Informatik',
-        grade: null,
-        type: 'UNIVERSITY',
-        link: 'https://htw-berlin.de',
-        description: '',
-        finished: false,
-        startDate: {
-          year: 2017,
-          month: 10,
-          day: 1,
-        },
-        endDate: {
-          year: 2020,
-          month: 9,
-          day: 30,
-        },
-      },
-    ],
-    experience: [
-      {
-        jobTitle: 'Studentische Hilfskraft',
-        company: 'Hochschule für Technik und Wirtschaft Berlin',
-        address: {
-          street: 'Wilhelminenhofstraße 75',
-          zip: '12439',
-          city: 'Berlin',
-          country: 'Germany',
-        },
-        description: 'Hausaufgabenkontrolle und Tutorium im Fach "Theoretische Grundlagen der Informatik"',
-        link: 'https://htw-berlin.de',
-        finished: false,
-        startDate: {
-          year: 2018,
-          month: 10,
-          day: 1,
-        },
-        endDate: {
-          year: 2020,
-          month: 7,
-          day: 15,
-        },
-      },
-      {
-        jobTitle: 'Software Engineering Intern',
-        company: 'WBS Coding School',
-        address: {
-          street: 'Lorenzweg 5',
-          zip: '12099',
-          city: 'Berlin',
-          country: 'Germany',
-        },
-        description: 'Entwicklung einer Lernplattform mit React im Frontend und NodeJS im Backend',
-        link: 'https://wbscodingschool.com',
-        finished: false,
-        startDate: {
-          year: 2020,
-          month: 2,
-          day: 16,
-        },
-        endDate: {
-          year: 2020,
-          month: 5,
-          day: 15,
-        },
-      },
-    ],
-    skills: [
-      {
-        name: 'HTML',
-        categories: ['Web', 'Languages', 'Frontend'],
-        rating: 5,
-      },
-      {
-        name: 'CSS',
-        categories: ['Web', 'UI', 'Frontend'],
-        rating: 5,
-      },
-      {
-        name: 'JavaScript',
-        categories: ['Web', 'Languages', 'Frontend'],
-        rating: 5,
-      },
-      {
-        name: 'React.js',
-        categories: ['Web', 'Frameworks', 'Frontend'],
-        rating: 5,
-      },
-      {
-        name: 'Vue.js',
-        categories: ['Web', 'Frameworks', 'Frontend'],
-        rating: 4,
-      },
-      {
-        name: 'Node.js',
-        categories: ['API', 'Backend', 'Languages'],
-        rating: 5,
-      },
-      {
-        name: 'Express',
-        categories: ['API', 'Backend', 'Frameworks'],
-        rating: 4,
-      },
-    ],
-    categories: [
-      {
-        name: 'Web',
-        description: 'Short description about web development and stuff',
-        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
-      },
-      {
-        name: 'Languages',
-        description: 'The programming lanaguages that I know',
-        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
-      },
-      {
-        name: 'Frontend',
-        description: 'Frontend technologies I know',
-        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
-      },
-      {
-        name: 'UI',
-        description: 'User Interface Design and stuff',
-        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
-      },
-      {
-        name: 'Frameworks',
-        description: 'Frameworks that I know how to use',
-        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
-      },
-      {
-        name: 'API',
-        description: 'API technologies I know',
-        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
-      },
-      {
-        name: 'Backend',
-        description: 'Backend stuff',
-        badgeImageURI: 'https://i.ya-webdesign.com/images/badge-vector-png-4.png',
-      },
-    ],
-    strengths: {
-      methods: {
-        title: 'Methodische Kompetenz',
-        list: [
-          {
-            name: 'Test',
-            description: 'Test test test test test test',
-          },
-        ],
-      },
-      personal: {
-        title: 'Persönliche Kompetenz',
-        list: [
-          {
-            name: 'Test next',
-            description: 'Test test test test test test',
-          },
-        ],
-      },
-      social: {
-        title: 'Soziale Kompetenz',
-        list: [
-          {
-            name: 'Testtest',
-            description: 'Test test test test test test',
-          },
-          {
-            name: 'Test',
-          },
-        ],
-      },
-    },
+    loading: true,
+    error: false,
+    education: [],
+    experience: [],
+    skills: [],
+    categories: [],
+    strengths: {},
     contact: {
       name: 'Lukas Grimm',
       address: {
@@ -281,6 +100,32 @@ export default {
       link: 'lukasgrimm.me/contact',
     },
   }),
+  mounted() {
+    const educationPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/education`);
+    const experiencePromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/experience`);
+    const skillsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/skills`);
+    const categoriesPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/categories`);
+    const strengthsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/strengths`);
+
+
+    Promise.all([
+      educationPromise,
+      experiencePromise,
+      skillsPromise,
+      categoriesPromise,
+      strengthsPromise,
+    ]).then((res) => {
+      console.log(res);
+      this.education = res[0].data;
+      this.experience = res[1].data;
+      this.skills = res[2].data;
+      this.categories = res[3].data;
+      this.strengths = res[4].data;
+      console.log(typeof this.education);
+    })
+      .catch(() => { this.error = true; })
+      .finally(() => { this.loading = false; });
+  },
 };
 </script>
 
