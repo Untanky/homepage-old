@@ -18,15 +18,22 @@
     </header>
     <article>
       <PostSection type="single">
-        <p class="section single">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <PostContent
+          type="TEXT"
+          :content="{text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Nullam convallis arcu ipsum, nec ullamcorper tortor tristique porttitor.
           Cras a fermentum purus. Ut faucibus posuere maximus.
           Cras malesuada felis ut urna cursus consectetur. Nullam eget accumsan erat,
           sagittis hendrerit lorem. In hac habitasse platea dictumst. In placerat quam
           ut lacus pellentesque accumsan. Nunc venenatis velit id erat ultrices, vitae
-          scelerisque ante luctus.
-        </p>
+          scelerisque ante luctus.`}"
+        />
+      </PostSection>
+      <PostSection type="single">
+        <PostContent
+          type="SECTION"
+          :content="{title: 'Title'}"
+        />
       </PostSection>
       <PostSection type="single">
         <p class="section single">
@@ -43,7 +50,7 @@
           sit amet aliquet elit tortor ut purus. Suspendisse vitae cursus dui.
         </p>
       </PostSection>
-      <PostSection>
+      <PostSection type="single">
         <p class="section single">
           Nullam pharetra ac eros in dictum. Pellentesque magna nisi, tempor eu sodales sed,
           laoreet at tortor. Morbi eget pharetra augue, eget mollis nisl. Morbi eu tempus ante.
@@ -74,6 +81,7 @@
 import { DateTime } from 'luxon';
 
 import PostSection from './PostSection.vue';
+import PostContent from './PostContent.vue';
 
 // eslint-disable-next-line no-unused-vars
 const MediaTypes = {
@@ -89,6 +97,7 @@ export default {
   name: 'ProjectPost',
   components: {
     PostSection,
+    PostContent,
   },
   data: () => ({
     article: {
@@ -158,33 +167,6 @@ $double-width: 900px;
 
   article {
     text-align: justify;
-
-    .single {
-      max-width: $single-width;
-    }
-
-    .double {
-      display: flex;
-      max-width: $double-width;
-
-      :nth-child(1), :nth-child(2) {
-        box-sizing: border-box;
-        align-self: center;
-        display: inline-block;
-        width: 50%;
-      }
-
-      :nth-child(1) {
-        padding-right: 1em;
-      }
-
-      :nth-child(2) {
-        padding-left: 1em;
-      }
-    }
-
-    > .section {
-    }
   }
 }
 </style>
