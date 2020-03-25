@@ -17,35 +17,41 @@
       </div>
     </header>
     <article>
-      <p class="section single">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nullam convallis arcu ipsum, nec ullamcorper tortor tristique porttitor.
-        Cras a fermentum purus. Ut faucibus posuere maximus.
-        Cras malesuada felis ut urna cursus consectetur. Nullam eget accumsan erat,
-        sagittis hendrerit lorem. In hac habitasse platea dictumst. In placerat quam
-        ut lacus pellentesque accumsan. Nunc venenatis velit id erat ultrices, vitae
-        scelerisque ante luctus.
-      </p>
-      <p class="section single">
-        Vestibulum vitae gravida diam, sed imperdiet justo. Maecenas posuere libero
-        ac molestie pulvinar. Donec venenatis tincidunt mauris quis ultricies. Donec
-        feugiat, elit ac interdum consequat, justo felis condimentum dui, iaculis
-        tincidunt lorem lacus et eros. Maecenas scelerisque ante a magna suscipit, in
-        sodales augue malesuada. Integer viverra magna massa. Sed congue ligula leo,
-        at laoreet eros lobortis in. Morbi consequat erat non risus suscipit pellentesque.
-        Maecenas dictum molestie eros nec volutpat. Maecenas feugiat rutrum velit, eget
-        pharetra purus interdum sed. Nunc lobortis pretium dolor vitae aliquet. Aliquam
-        volutpat vel massa ut ultrices. Morbi sit amet urna eu enim rutrum dapibus dictum
-        in magna. Donec egestas, ante faucibus porttitor fermentum, justo erat faucibus nisi,
-        sit amet aliquet elit tortor ut purus. Suspendisse vitae cursus dui.
-      </p>
-      <p class="section single">
-        Nullam pharetra ac eros in dictum. Pellentesque magna nisi, tempor eu sodales sed,
-        laoreet at tortor. Morbi eget pharetra augue, eget mollis nisl. Morbi eu tempus ante.
-        Nullam laoreet ex a turpis mattis, sed rutrum diam luctus. Nulla eu nisl eu nunc
-        rhoncus tristique. Ut ultrices sapien eu tincidunt iaculis.
-      </p>
-      <section class="section double">
+      <PostSection type="single">
+        <p class="section single">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nullam convallis arcu ipsum, nec ullamcorper tortor tristique porttitor.
+          Cras a fermentum purus. Ut faucibus posuere maximus.
+          Cras malesuada felis ut urna cursus consectetur. Nullam eget accumsan erat,
+          sagittis hendrerit lorem. In hac habitasse platea dictumst. In placerat quam
+          ut lacus pellentesque accumsan. Nunc venenatis velit id erat ultrices, vitae
+          scelerisque ante luctus.
+        </p>
+      </PostSection>
+      <PostSection type="single">
+        <p class="section single">
+          Vestibulum vitae gravida diam, sed imperdiet justo. Maecenas posuere libero
+          ac molestie pulvinar. Donec venenatis tincidunt mauris quis ultricies. Donec
+          feugiat, elit ac interdum consequat, justo felis condimentum dui, iaculis
+          tincidunt lorem lacus et eros. Maecenas scelerisque ante a magna suscipit, in
+          sodales augue malesuada. Integer viverra magna massa. Sed congue ligula leo,
+          at laoreet eros lobortis in. Morbi consequat erat non risus suscipit pellentesque.
+          Maecenas dictum molestie eros nec volutpat. Maecenas feugiat rutrum velit, eget
+          pharetra purus interdum sed. Nunc lobortis pretium dolor vitae aliquet. Aliquam
+          volutpat vel massa ut ultrices. Morbi sit amet urna eu enim rutrum dapibus dictum
+          in magna. Donec egestas, ante faucibus porttitor fermentum, justo erat faucibus nisi,
+          sit amet aliquet elit tortor ut purus. Suspendisse vitae cursus dui.
+        </p>
+      </PostSection>
+      <PostSection>
+        <p class="section single">
+          Nullam pharetra ac eros in dictum. Pellentesque magna nisi, tempor eu sodales sed,
+          laoreet at tortor. Morbi eget pharetra augue, eget mollis nisl. Morbi eu tempus ante.
+          Nullam laoreet ex a turpis mattis, sed rutrum diam luctus. Nulla eu nisl eu nunc
+          rhoncus tristique. Ut ultrices sapien eu tincidunt iaculis.
+        </p>
+      </PostSection>
+      <PostSection type="double">
         <img
           src="https://www.pride.com/sites/www.pride.com/files/styles/vertical_gallery_desktop_1x/public/2018/06/13/01-pride_flags.jpg?itok=W2cQgupQ&timestamp=1528927091"
         >
@@ -59,13 +65,15 @@
           interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla
           at turpis malesuada porta. Phasellus et egestas leo.
         </p>
-      </section>
+      </PostSection>
     </article>
   </div>
 </template>
 
 <script>
 import { DateTime } from 'luxon';
+
+import PostSection from './PostSection.vue';
 
 // eslint-disable-next-line no-unused-vars
 const MediaTypes = {
@@ -79,6 +87,9 @@ const MediaTypes = {
 
 export default {
   name: 'ProjectPost',
+  components: {
+    PostSection,
+  },
   data: () => ({
     article: {
       title: 'Test article with a very, very, very long title',
@@ -173,7 +184,6 @@ $double-width: 900px;
     }
 
     > .section {
-      margin: 0.5em auto;
     }
   }
 }
