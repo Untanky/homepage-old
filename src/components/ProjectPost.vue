@@ -97,7 +97,8 @@ timestamp=1528927091`, alt: 'Pride flag', desc: `Pride flag; the
       <PostSection type="single">
         <PostContent
           type="LINK"
-          :content="{link: `www.google.com`}"
+          :content="{link: `https://www.google
+.com`, imageUrl: `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png`, imageAltText: `Google Logo`, title: `Google`, text: `https://google.com`}"
         />
       </PostSection>
     </article>

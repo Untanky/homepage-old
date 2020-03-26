@@ -1,20 +1,22 @@
 <template>
-  <div class="post-link-content">
-    <linxios :url="content.link">
-      <div slot-scope="{ state, actions }">
-        <div>{{ state }} /// {{ actions }}</div>
-      </div>
-    </linxios>
-  </div>
+  <LinkPreview
+    class="post-link-content"
+    :href="content.link"
+    :image-url="content.imageUrl"
+    :image-alt-text="content.imageAltText"
+  >
+    <div class="link-title"><b>{{ content.title }}</b></div>
+    <div class="link-text">{{ content.text }}</div>
+  </LinkPreview>
 </template>
 
 <script>
-import { Linxios } from '@webdataorg/linxios-vue';
+import LinkPreview from './LinkPreview.vue';
 
 export default {
   name: 'PostContentLink',
   components: {
-    Linxios,
+    LinkPreview,
   },
   props: {
     content: {
@@ -27,5 +29,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.post-link-content {
+  .link-title {
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+  }
 
+  .link-text {
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+  }
+}
 </style>

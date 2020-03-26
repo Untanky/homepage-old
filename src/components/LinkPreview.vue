@@ -51,7 +51,6 @@ export default {
 $logo-size: 96px;
 
 .link-preview {
-  max-width: 360px;
   height: $logo-size;
   display: grid;
   grid-template-columns: $logo-size 1fr;
@@ -64,6 +63,7 @@ $logo-size: 96px;
 
   .link-image {
     box-sizing: border-box;
+    height: $logo-size;
     border-top: $border-primary;
     border-bottom: $border-primary;
     border-radius: $border-radius 0 0 $border-radius;
@@ -71,6 +71,8 @@ $logo-size: 96px;
 
   .wrapper {
     text-align: left;
+    align-self: center;
+    text-decoration: none;
   }
 }
 </style>

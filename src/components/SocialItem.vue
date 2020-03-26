@@ -6,11 +6,11 @@
     image-alt-text="network"
     image-class="logo"
   >
-    <h3 class="network-name">
-      {{ social.network }}
-    </h3>
+    <div class="network-name">
+      <b>{{ social.network }}</b>
+    </div>
     <div class="handle">
-      <a :href="social.link">{{ social.handle }}</a>
+      {{ social.handle }}
     </div>
   </LinkPreview>
 </template>
@@ -38,9 +38,19 @@ export default {
 $logo-size: 96px;
 
 .social-item {
+  max-width: 360px;
+
   .logo {
     height: $logo-size;
     padding: 1em;
+  }
+
+  .network-name {
+    margin-bottom: 0.25em;
+  }
+
+  .handle {
+    margin-top: 0.25em;
   }
 }
 </style>
