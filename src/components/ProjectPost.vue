@@ -29,15 +29,17 @@
           scelerisque ante luctus.`}"
         />
       </PostSection>
-      <PostSection type="single">
+      <PostSection type="full">
         <PostContent
           type="SECTION"
-          :content="{title: 'Title'}"
+          :content="{title: 'Long title that breaks text bounds and may overlap'}"
         />
       </PostSection>
       <PostSection type="single">
-        <p class="section single">
-          Vestibulum vitae gravida diam, sed imperdiet justo. Maecenas posuere libero
+        <PostContent
+          type="TEXT"
+          :content="{text: `Vestibulum vitae gravida diam, sed imperdiet justo. Maecenas
+          posuere libero
           ac molestie pulvinar. Donec venenatis tincidunt mauris quis ultricies. Donec
           feugiat, elit ac interdum consequat, justo felis condimentum dui, iaculis
           tincidunt lorem lacus et eros. Maecenas scelerisque ante a magna suscipit, in
@@ -47,31 +49,56 @@
           pharetra purus interdum sed. Nunc lobortis pretium dolor vitae aliquet. Aliquam
           volutpat vel massa ut ultrices. Morbi sit amet urna eu enim rutrum dapibus dictum
           in magna. Donec egestas, ante faucibus porttitor fermentum, justo erat faucibus nisi,
-          sit amet aliquet elit tortor ut purus. Suspendisse vitae cursus dui.
-        </p>
+          sit amet aliquet elit tortor ut purus. Suspendisse vitae cursus dui.`}"
+        />
       </PostSection>
       <PostSection type="single">
-        <p class="section single">
-          Nullam pharetra ac eros in dictum. Pellentesque magna nisi, tempor eu sodales sed,
+        <PostContent
+          type="TEXT"
+          :content="{text: `Nullam pharetra ac eros in dictum. Pellentesque magna nisi,
+          tempor eu sodales sed,
           laoreet at tortor. Morbi eget pharetra augue, eget mollis nisl. Morbi eu tempus ante.
           Nullam laoreet ex a turpis mattis, sed rutrum diam luctus. Nulla eu nisl eu nunc
-          rhoncus tristique. Ut ultrices sapien eu tincidunt iaculis.
-        </p>
+          rhoncus tristique. Ut ultrices sapien eu tincidunt iaculis.`}"
+        />
       </PostSection>
       <PostSection type="double">
-        <img
-          src="https://www.pride.com/sites/www.pride.com/files/styles/vertical_gallery_desktop_1x/public/2018/06/13/01-pride_flags.jpg?itok=W2cQgupQ&timestamp=1528927091"
-        >
-        <p>
-          Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio.
+        <PostContent
+          type="IMAGE"
+          :content="{src: `https://www.pride.com/
+sites/www.pride.com/files/styles/vertical_gallery_desktop_1x/
+public/2018/06/13/01-pride_flags.jpg?itok=W2cQgupQ&
+timestamp=1528927091`, alt: 'Pride flag', desc: `Pride flag; the
+          representational flag of the queer community`}"
+        />
+        <PostContent
+          type="TEXT"
+          :content="{text: `Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo,
+          at varius odio.
           Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae,
           blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula.
           Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur
           at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus
           tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus
           interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla
-          at turpis malesuada porta. Phasellus et egestas leo.
-        </p>
+          at turpis malesuada porta. Phasellus et egestas leo.`}"
+        />
+      </PostSection>
+      <PostSection type="single">
+        <PostContent
+          type="IMAGE"
+          :content="{src: `https://www.pride.com/
+sites/www.pride.com/files/styles/vertical_gallery_desktop_1x/
+public/2018/06/13/01-pride_flags.jpg?itok=W2cQgupQ&
+timestamp=1528927091`, alt: 'Pride flag', desc: `Pride flag; the
+          representational flag of the queer community`}"
+        />
+      </PostSection>
+      <PostSection type="single">
+        <PostContent
+          type="LINK"
+          :content="{link: `www.google.com`}"
+        />
       </PostSection>
     </article>
   </div>

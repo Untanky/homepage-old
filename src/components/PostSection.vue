@@ -16,7 +16,7 @@ export default {
       required: true,
       default: () => 'single',
       validator(value) {
-        return (value === 'single' || value === 'double');
+        return (value === 'single' || value === 'double' || value === 'full');
       },
     },
   },
@@ -34,22 +34,26 @@ $double-width: 900px;
     max-width: $single-width;
   }
 
+  &.full {
+    max-width: $double-width;
+  }
+
   &.double {
     display: flex;
     max-width: $double-width;
 
-    :nth-child(1), :nth-child(2) {
+    > :nth-child(1), > :nth-child(2) {
       box-sizing: border-box;
       align-self: center;
       display: inline-block;
       width: 50%;
     }
 
-    :nth-child(1) {
+    > :nth-child(1) {
       padding-right: 1em;
     }
 
-    :nth-child(2) {
+    > :nth-child(2) {
       padding-left: 1em;
     }
   }
