@@ -90,7 +90,7 @@ timestamp=1528927091`, alt: 'Pride flag', desc: `Pride flag; the
           :content="{src: `https://www.pride.com/
 sites/www.pride.com/files/styles/vertical_gallery_desktop_1x/
 public/2018/06/13/01-pride_flags.jpg?itok=W2cQgupQ&
-timestamp=1528927091`, alt: 'Pride flag', desc: `Pride flag; the
+timestamp=1528927091`, alt: 'Pride flag', caption: `Pride flag; the
           representational flag of the queer community`}"
         />
       </PostSection>
@@ -99,6 +99,12 @@ timestamp=1528927091`, alt: 'Pride flag', desc: `Pride flag; the
           type="LINK"
           :content="{link: `https://www.google
 .com`, imageUrl: `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png`, imageAltText: `Google Logo`, title: `Google`, text: `https://google.com`}"
+        />
+      </PostSection>
+      <PostSection>
+        <PostContent
+          type="YOUTUBE_VIDEO"
+          :content="{videoId: 'oHg5SJYRHA0'}"
         />
       </PostSection>
     </article>

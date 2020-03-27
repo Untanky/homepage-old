@@ -1,10 +1,16 @@
 <template>
   <div class="post-image-content">
     <img
-      class
+      class="image"
       :src="content.src"
       :alt="content.alt"
     >
+    <div
+      v-if="content.caption"
+      class="caption"
+    >
+      {{ content.caption }}
+    </div>
   </div>
 </template>
 
@@ -28,10 +34,21 @@ export default {
 @import "../_variables";
 
 .post-image-content {
-  img {
+  .image {
     width: 100%;
     border: $thin-border-primary;
     border-radius: $border-radius;
+    box-shadow: $shadow;
+  }
+
+  .caption {
+    color: rgb(100, 100, 100);
+    font-size: 14px;
+    margin: 0 1em;
+
+    &::before {
+      content: 'Fig.:'
+    }
   }
 }
 </style>
