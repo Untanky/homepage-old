@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import Linxios from '@webdataorg/linxios-vue';
 import App from './App.vue';
 import router from './router';
 
@@ -14,8 +13,6 @@ Vue.component('post-image-content', PostImageContent);
 Vue.component('post-link-content', PostLinkContent);
 Vue.component('post-video-content', PostVideoContent);
 Vue.component('post-section-title', PostSectionTitle);
-
-Vue.use(Linxios);
 
 Vue.config.productionTip = false;
 

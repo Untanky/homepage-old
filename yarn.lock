@@ -1528,11 +1528,6 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@webdataorg/linxios-vue@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@webdataorg/linxios-vue/-/linxios-vue-1.2.0.tgz#44dce89337bc1ba9adac5b4bca03d2cf29e1a8df"
-  integrity sha512-8FtlSb+vQGqM81bfClawyUqCRCdr0XA/m2wN4EYB9nOuynCOVf+ye13jQKDHCNqKu3E98xx99ebjGN0UKRuBbA==
-
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
