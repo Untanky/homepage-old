@@ -28,9 +28,9 @@ export default {
       default: () => {},
     },
   },
-  computed: {
-    component() {
-      switch (this.type) {
+  methods: {
+    component(type) {
+      switch (type) {
         case MediaTypes.SECTION:
           return 'post-section-title';
         case MediaTypes.TEXT:

@@ -1,23 +1,60 @@
 <template>
   <div
     class="post-section"
-    :class="{ [type]: true }"
+    :class="{ [layout]: true }"
   >
-    <slot />
+    <component
+      :is="component(data.type)"
+      v-for="(data, index) in content"
+      :key="index"
+      :content="data"
+    />
   </div>
 </template>
 
 <script>
+import { MediaTypes } from './ProjectPost.vue';
+
 export default {
   name: 'PostSection',
   props: {
-    type: {
+    layout: {
       type: String,
       required: true,
       default: () => 'single',
       validator(value) {
         return (value === 'single' || value === 'double' || value === 'full');
       },
+    },
+    type: {
+      type: String,
+      required: true,
+      default: () => 'TEXT',
+    },
+    content: {
+      type: Array,
+      required: true,
+      default: () => [],
+    },
+  },
+  methods: {
+    component(type) {
+      switch (type) {
+        case MediaTypes.SECTION:
+          return 'post-section-title';
+        case MediaTypes.TEXT:
+          return 'post-text-content';
+        case MediaTypes.VIDEO:
+          return 'post-video-content';
+        case MediaTypes.IMAGE:
+          return 'post-image-content';
+        case MediaTypes.CODE:
+          return 'post-code-content';
+        case MediaTypes.LINK:
+          return 'post-link-content';
+        default:
+          return '';
+      }
     },
   },
 };

@@ -20,12 +20,10 @@
       <post-section
         v-for="(section, index) in article.content"
         :key="index"
-        :type="section.layout"
+        :layout="section.layout"
+        :type="section.type"
+        :content="section.content"
       >
-        <post-content
-          :type="section.type"
-          :content="section.content"
-        />
       </post-section>
     </article>
   </div>
@@ -35,12 +33,11 @@
 import { DateTime } from 'luxon';
 
 import PostSection from './PostSection.vue';
-import PostContent from './PostContent.vue';
 
 import article from '../article.test.json';
 
 // eslint-disable-next-line no-unused-vars
-const MediaTypes = {
+export const MediaTypes = {
   SECTION: 'TITLE',
   TEXT: 'TEXT',
   VIDEO: 'YOUTUBE_VIDEO',
@@ -53,7 +50,6 @@ export default {
   name: 'ProjectPost',
   components: {
     PostSection,
-    PostContent,
   },
   data: () => ({
     article,
