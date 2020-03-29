@@ -17,102 +17,14 @@
       </div>
     </header>
     <article>
-      <PostSection type="single">
-        <PostContent
-          type="TEXT"
-          :content="{text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Nullam convallis arcu ipsum, nec ullamcorper tortor tristique porttitor.
-          Cras a fermentum purus. Ut faucibus posuere maximus.
-          Cras malesuada felis ut urna cursus consectetur. Nullam eget accumsan erat,
-          sagittis hendrerit lorem. In hac habitasse platea dictumst. In placerat quam
-          ut lacus pellentesque accumsan. Nunc venenatis velit id erat ultrices, vitae
-          scelerisque ante luctus.`}"
-        />
-      </PostSection>
-      <PostSection type="full">
-        <PostContent
-          type="SECTION"
-          :content="{title: 'Long title that breaks text bounds and may overlap'}"
-        />
-      </PostSection>
-      <PostSection type="single">
-        <PostContent
-          type="TEXT"
-          :content="{text: `Vestibulum vitae gravida diam, sed imperdiet justo. Maecenas
-          posuere libero
-          ac molestie pulvinar. Donec venenatis tincidunt mauris quis ultricies. Donec
-          feugiat, elit ac interdum consequat, justo felis condimentum dui, iaculis
-          tincidunt lorem lacus et eros. Maecenas scelerisque ante a magna suscipit, in
-          sodales augue malesuada. Integer viverra magna massa. Sed congue ligula leo,
-          at laoreet eros lobortis in. Morbi consequat erat non risus suscipit pellentesque.
-          Maecenas dictum molestie eros nec volutpat. Maecenas feugiat rutrum velit, eget
-          pharetra purus interdum sed. Nunc lobortis pretium dolor vitae aliquet. Aliquam
-          volutpat vel massa ut ultrices. Morbi sit amet urna eu enim rutrum dapibus dictum
-          in magna. Donec egestas, ante faucibus porttitor fermentum, justo erat faucibus nisi,
-          sit amet aliquet elit tortor ut purus. Suspendisse vitae cursus dui.`}"
-        />
-      </PostSection>
-      <PostSection type="single">
-        <PostContent
-          type="TEXT"
-          :content="{text: `Nullam pharetra ac eros in dictum. Pellentesque magna nisi,
-          tempor eu sodales sed,
-          laoreet at tortor. Morbi eget pharetra augue, eget mollis nisl. Morbi eu tempus ante.
-          Nullam laoreet ex a turpis mattis, sed rutrum diam luctus. Nulla eu nisl eu nunc
-          rhoncus tristique. Ut ultrices sapien eu tincidunt iaculis.`}"
-        />
-      </PostSection>
-      <PostSection type="double">
-        <PostContent
-          type="IMAGE"
-          :content="{src: `https://www.pride.com/
-sites/www.pride.com/files/styles/vertical_gallery_desktop_1x/
-public/2018/06/13/01-pride_flags.jpg?itok=W2cQgupQ&
-timestamp=1528927091`, alt: 'Pride flag', desc: `Pride flag; the
-          representational flag of the queer community`}"
-        />
-        <PostContent
-          type="TEXT"
-          :content="{text: `Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo,
-          at varius odio.
-          Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae,
-          blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula.
-          Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur
-          at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus
-          tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus
-          interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla
-          at turpis malesuada porta. Phasellus et egestas leo.`}"
-        />
-      </PostSection>
-      <PostSection type="single">
-        <PostContent
-          type="IMAGE"
-          :content="{src: `https://www.pride.com/
-sites/www.pride.com/files/styles/vertical_gallery_desktop_1x/
-public/2018/06/13/01-pride_flags.jpg?itok=W2cQgupQ&
-timestamp=1528927091`, alt: 'Pride flag', caption: `Pride flag; the
-          representational flag of the queer community`}"
-        />
-      </PostSection>
-      <PostSection type="single">
-        <PostContent
-          type="LINK"
-          :content="{link: `https://www.google
-.com`, imageUrl: `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png`, imageAltText: `Google Logo`, title: `Google`, text: `https://google.com`}"
-        />
-      </PostSection>
-      <PostSection>
-        <PostContent
-          type="YOUTUBE_VIDEO"
-          :content="{videoId: 'oHg5SJYRHA0'}"
-        />
-      </PostSection>
-      <post-section>
+      <post-section
+        v-for="(section, index) in article.content"
+        :key="index"
+        :type="section.layout"
+      >
         <post-content
-          type="CODE"
-          :content="{ language: 'javascript', code: `
-let var = 1;
-var += 2;` }"
+          :type="section.type"
+          :content="section.content"
         />
       </post-section>
     </article>
@@ -125,9 +37,11 @@ import { DateTime } from 'luxon';
 import PostSection from './PostSection.vue';
 import PostContent from './PostContent.vue';
 
+import article from '../article.test.json';
+
 // eslint-disable-next-line no-unused-vars
 const MediaTypes = {
-  SECTION: 'SECTION',
+  SECTION: 'TITLE',
   TEXT: 'TEXT',
   VIDEO: 'YOUTUBE_VIDEO',
   IMAGE: 'IMAGE',
@@ -142,22 +56,7 @@ export default {
     PostContent,
   },
   data: () => ({
-    article: {
-      title: 'Test article with a very, very, very long title',
-      author: 'Lukas Grimm',
-      created: '2020-03-22T16:31:16+00:00',
-      updated: '2020-03-22T17:13:56+00:00',
-      content: [
-        {
-          type: 'TEXT_ONLY',
-          text: 'Blah blah',
-        },
-        {
-          type: 'MEDIA_ONLY',
-          description: 'media',
-        },
-      ],
-    },
+    article,
   }),
   computed: {
     createdDate() {

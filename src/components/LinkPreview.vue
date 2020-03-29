@@ -38,7 +38,7 @@ export default {
     },
     imageClass: {
       type: String,
-      required: true,
+      required: false,
       default: () => '',
     },
   },

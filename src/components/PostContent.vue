@@ -1,6 +1,6 @@
 <template>
   <component
-    v-bind:is="component"
+    :is="component"
     :content="content"
   />
 </template>
@@ -8,7 +8,7 @@
 <script>
 // eslint-disable-next-line no-unused-vars
 const MediaTypes = {
-  SECTION: 'SECTION',
+  SECTION: 'TITLE',
   TEXT: 'TEXT',
   VIDEO: 'YOUTUBE_VIDEO',
   IMAGE: 'IMAGE',
