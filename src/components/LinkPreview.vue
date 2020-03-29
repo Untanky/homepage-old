@@ -10,7 +10,9 @@
       :class="imageClass"
     >
     <div class="wrapper">
-      <slot />
+      <slot
+        class="content"
+      />
     </div>
   </a>
 </template>
@@ -60,10 +62,12 @@ $logo-size: 96px;
   border-radius: $border-radius;
   margin: 0 auto;
   box-shadow: $shadow;
+  text-decoration: none;
 
   .link-image {
     box-sizing: border-box;
     height: $logo-size;
+    padding: 0.5em;
     border-top: $border-primary;
     border-bottom: $border-primary;
     border-radius: $border-radius 0 0 $border-radius;
@@ -72,7 +76,10 @@ $logo-size: 96px;
   .wrapper {
     text-align: left;
     align-self: center;
-    text-decoration: none;
+
+    * {
+      color: initial;
+    }
   }
 }
 </style>
