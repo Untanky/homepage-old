@@ -36,7 +36,6 @@ export default {
 .post-video-content {
   width: 100%;
   height: (9 / 16) * 600px;
-  border: $thin-border-primary;
   border-radius: $border-radius;
   box-shadow: $shadow;
 

@@ -38,6 +38,43 @@
       "content": {
         "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
       }
+    },
+    {
+      "layout": "single",
+      "type": "CODE",
+      "content": {
+        "language": "javascript",
+        "code": "function hello() {\n  console.log('Looooooooooooooooooooonnnnnnnnnnnnnnnnnnnng string!!!!!!!!!!!!!!!!11111111111111111111eleven');\n  return 'Hello World!';\n}",
+        "caption": "'Hello World' code example"
+      }
+    },
+    {
+      "layout": "single",
+      "type": "IMAGE",
+      "content": {
+        "src": "https://i.pinimg.com/originals/ae/c4/53/aec453161b2f33ffc6219d8a758307a9.jpg",
+        "alt": "Cute Puppy",
+        "caption": "Some cute puppy"
+      }
+    },
+    {
+      "layout": "single",
+      "type": "LINK",
+      "content": {
+        "link": "https://vuejs.org/",
+        "imageUrl": "https://vuejs.org/images/logo.png",
+        "imageAltText": "Vue logo",
+        "title": "Some link",
+        "text": "to some website"
+      }
+    },
+    {
+      "layout": "single",
+      "type": "YOUTUBE_VIDEO",
+      "content": {
+        "videoId": "9HDEHj2yzew",
+        "caption": "Dua Lipa's Physical Music Video"
+      }
     }
   ]
 }

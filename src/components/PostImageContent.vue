@@ -36,7 +36,6 @@ export default {
 .post-image-content {
   .image {
     width: 100%;
-    border: $thin-border-primary;
     border-radius: $border-radius;
     box-shadow: $shadow;
   }
