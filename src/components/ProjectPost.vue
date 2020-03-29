@@ -107,6 +107,14 @@ timestamp=1528927091`, alt: 'Pride flag', caption: `Pride flag; the
           :content="{videoId: 'oHg5SJYRHA0'}"
         />
       </PostSection>
+      <post-section>
+        <post-content
+          type="CODE"
+          :content="{ language: 'javascript', code: `
+let var = 1;
+var += 2;` }"
+        />
+      </post-section>
     </article>
   </div>
 </template>
