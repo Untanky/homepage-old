@@ -5,18 +5,21 @@
       :src="content.src"
       :alt="content.alt"
     >
-    <div
-      v-if="content.caption"
-      class="caption"
-    >
-      {{ content.caption }}
-    </div>
+    <Caption
+      type="Image"
+      :caption="content.caption"
+    />
   </div>
 </template>
 
 <script>
+import Caption from './Caption.vue';
+
 export default {
   name: 'PostImageContent',
+  components: {
+    Caption,
+  },
   props: {
     content: {
       type: Object,
@@ -38,16 +41,6 @@ export default {
     width: 100%;
     border-radius: $border-radius;
     box-shadow: $shadow;
-  }
-
-  .caption {
-    color: rgb(100, 100, 100);
-    font-size: 14px;
-    margin: 0 1em;
-
-    &::before {
-      content: 'Fig.:'
-    }
   }
 }
 </style>

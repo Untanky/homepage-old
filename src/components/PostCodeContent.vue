@@ -6,12 +6,21 @@
     >
       {{ content.code }}
     </highlight-code>
+    <Caption
+      type="Code"
+      :caption="content.caption"
+    />
   </div>
 </template>
 
 <script>
+import Caption from './Caption.vue';
+
 export default {
   name: 'PostCodeContent',
+  components: {
+    Caption,
+  },
   props: {
     content: {
       type: Object,

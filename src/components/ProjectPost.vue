@@ -23,8 +23,7 @@
         :layout="section.layout"
         :type="section.type"
         :content="section.content"
-      >
-      </post-section>
+      />
     </article>
   </div>
 </template>

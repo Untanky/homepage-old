@@ -9,12 +9,21 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     />
+    <Caption
+      type="Video"
+      :caption="content.caption"
+    />
   </div>
 </template>
 
 <script>
+import Caption from './Caption.vue';
+
 export default {
   name: 'PostVideoContent',
+  components: {
+    Caption,
+  },
   props: {
     content: {
       type: Object,
@@ -35,14 +44,13 @@ export default {
 
 .post-video-content {
   width: 100%;
-  height: (9 / 16) * 600px;
   border-radius: $border-radius;
-  box-shadow: $shadow;
 
   .video {
     width: 100%;
     height: (9 / 16) * 600px;
     border-radius: $border-radius;
+    box-shadow: $shadow;
   }
 }
 </style>
