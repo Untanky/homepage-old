@@ -66,9 +66,18 @@ $double-width: 900px;
 
 .post-section {
   margin: 0.5em auto;
+    padding: 0 0.5em;
+
+  @media screen and (min-width: 719px) {
+    padding: 0;
+  }
 
   &.single {
+    max-width: $double-width;
+
+    @media screen and (min-width: 719px) {
     max-width: $single-width;
+    }
   }
 
   &.full {
@@ -77,21 +86,29 @@ $double-width: 900px;
 
   &.double {
     display: flex;
+    flex-wrap: wrap;
     max-width: $double-width;
 
-    > :nth-child(1), > :nth-child(2) {
+    > * {
       box-sizing: border-box;
       align-self: center;
-      display: inline-block;
-      width: 50%;
+      display: block;
+      width: 100%;
     }
 
-    > :nth-child(1) {
-      padding-right: 1em;
-    }
+    @media screen and (min-width: 719px) {
+      > * {
+        display: inline-block;
+        width: 50%;
+      }
 
-    > :nth-child(2) {
-      padding-left: 1em;
+      > :nth-child(2n+1) {
+        padding-right: 1em;
+      }
+
+      > :nth-child(2n) {
+        padding-left: 1em;
+      }
     }
   }
 }
