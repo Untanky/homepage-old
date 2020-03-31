@@ -1,3 +1,16 @@
 <template>
-  <h1>Projects</h1>
+  <div>
+    <blog-post />
+  </div>
 </template>
+
+<script>
+import BlogPost from '../components/BlogPost.vue';
+
+export default {
+  name: 'Projects',
+  components: {
+    BlogPost,
+  },
+};
+</script>

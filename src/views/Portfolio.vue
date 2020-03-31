@@ -115,13 +115,11 @@ export default {
       categoriesPromise,
       strengthsPromise,
     ]).then((res) => {
-      console.log(res);
       this.education = res[0].data;
       this.experience = res[1].data;
       this.skills = res[2].data;
       this.categories = res[3].data;
       this.strengths = res[4].data;
-      console.log(typeof this.education);
     })
       .catch(() => { this.error = true; })
       .finally(() => { this.loading = false; });
