@@ -8,6 +8,7 @@
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
+      :height="iframeHeight"
     />
     <Caption
       type="Video"
@@ -31,9 +32,26 @@ export default {
       default: () => {},
     },
   },
+  data: () => ({
+    iframeHeight: '400',
+  }),
   computed: {
     youtubeUrl() {
       return `https://www.youtube.com/embed/${this.content.videoId}`;
+    },
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.fixVideoDimensions();
+    });
+
+    this.fixVideoDimensions();
+  },
+  methods: {
+    fixVideoDimensions() {
+      const video = document.querySelector('.video');
+      const height = (9 / 16) * video.offsetWidth;
+      this.iframeHeight = `${height}`;
     },
   },
 };
@@ -48,7 +66,6 @@ export default {
 
   .video {
     width: 100%;
-    height: (9 / 16) * 600px;
     border-radius: $border-radius;
     box-shadow: $shadow;
   }
