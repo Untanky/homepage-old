@@ -46,7 +46,7 @@ export const MediaTypes = {
 };
 
 export default {
-  name: 'ProjectPost',
+  name: 'BlogPost',
   components: {
     PostSection,
   },

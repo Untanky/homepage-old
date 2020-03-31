@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { MediaTypes } from './ProjectPost.vue';
+import { MediaTypes } from './BlogPost.vue';
 
 export default {
   name: 'PostSection',

@@ -1,16 +1,16 @@
 <template>
   <div>
-    <ProjectPost />
+    <blog-post />
   </div>
 </template>
 
 <script>
-import ProjectPost from '../components/ProjectPost.vue';
+import BlogPost from '../components/BlogPost.vue';
 
 export default {
   name: 'Projects',
   components: {
-    ProjectPost,
+    BlogPost,
   },
 };
 </script>
