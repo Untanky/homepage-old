@@ -42,9 +42,6 @@ export default {
       default: () => '',
     },
   },
-  mounted() {
-    console.log('HELLO WORLD!');
-  },
 };
 </script>
 

@@ -7,6 +7,7 @@
       {{ content.code }}
     </highlight-code>
     <Caption
+      class="caption"
       type="Code"
       :caption="content.caption"
     />
@@ -39,7 +40,12 @@ export default {
     .hljs {
       padding: 1.5em;
       border-radius: $border-radius;
+      box-shadow: $shadow;
     }
+  }
+
+  .caption {
+    margin-top: -0.75em;
   }
 }
 </style>

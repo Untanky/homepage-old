@@ -66,33 +66,31 @@ export default {
 
 <style lang="scss" scoped>
 @import "../_variables.scss";
+@import "../_responsive.scss";
 
 $single-width: 600px;
 $double-width: 900px;
 
 .project-post {
   background-color: white;
-    // box-sizing: border-box;
-  max-width: $double-width;
   border-radius: $border-radius;
-  padding: 2em 0;
-  @media screen and (min-width: 719px) {
-    padding: 2em 2em;
-  }
-  margin: 0 auto;
+  padding: 2em 1em 0.25em;
+  box-shadow: $shadow;
 
   header {
     .title {
-      font-size: 48px;
+      font-size: 44px;
       text-align: center;
-      padding: 1em 0 1em;
     }
 
     .meta-data {
-      max-width: $single-width;
-      padding: 0.5em;
+      padding: 0.5em 0;
       border-bottom: $border-primary;
       margin: 0 auto;
+
+      @include tablet-up {
+        max-width: $single-width;
+      }
 
       .author {
         font-size: 20px;
@@ -110,4 +108,45 @@ $double-width: 900px;
     text-align: justify;
   }
 }
+
+// .project-post {
+//   background-color: white;
+//     // box-sizing: border-box;
+//   max-width: $double-width;
+//   border-radius: $border-radius;
+//   padding: 2em 0;
+//   @media screen and (min-width: 719px) {
+//     padding: 2em 2em;
+//   }
+//   margin: 0 auto;
+
+//   header {
+//     .title {
+//       font-size: 48px;
+//       text-align: center;
+//       padding: 1em 0 1em;
+//     }
+
+//     .meta-data {
+//       max-width: $single-width;
+//       padding: 0.5em;
+//       border-bottom: $border-primary;
+//       margin: 0 auto;
+
+//       .author {
+//         font-size: 20px;
+//         text-align: left;
+//       }
+
+//       .date {
+//         font-size: 12px;
+//         text-align: left;
+//       }
+//     }
+//   }
+
+//   article {
+//     text-align: justify;
+//   }
+// }
 </style>
