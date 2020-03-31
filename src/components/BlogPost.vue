@@ -83,6 +83,14 @@ $double-width: 900px;
     .title {
       font-size: 44px;
       text-align: center;
+
+      @include tablet-up {
+        margin: 1em 0;
+      }
+
+      @include laptop-up {
+        margin: 2em 0;
+      }
     }
 
     .meta-data {
