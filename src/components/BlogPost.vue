@@ -73,8 +73,10 @@ $double-width: 900px;
 
 .project-post {
   background-color: white;
+  max-width: 1000px;
   border-radius: $border-radius;
   padding: 2em 1em 0.25em;
+  margin: 0 auto;
   box-shadow: $shadow;
 
   header {
@@ -108,45 +110,4 @@ $double-width: 900px;
     text-align: justify;
   }
 }
-
-// .project-post {
-//   background-color: white;
-//     // box-sizing: border-box;
-//   max-width: $double-width;
-//   border-radius: $border-radius;
-//   padding: 2em 0;
-//   @media screen and (min-width: 719px) {
-//     padding: 2em 2em;
-//   }
-//   margin: 0 auto;
-
-//   header {
-//     .title {
-//       font-size: 48px;
-//       text-align: center;
-//       padding: 1em 0 1em;
-//     }
-
-//     .meta-data {
-//       max-width: $single-width;
-//       padding: 0.5em;
-//       border-bottom: $border-primary;
-//       margin: 0 auto;
-
-//       .author {
-//         font-size: 20px;
-//         text-align: left;
-//       }
-
-//       .date {
-//         font-size: 12px;
-//         text-align: left;
-//       }
-//     }
-//   }
-
-//   article {
-//     text-align: justify;
-//   }
-// }
 </style>

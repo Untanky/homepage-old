@@ -40,7 +40,6 @@ export default {
     .hljs {
       padding: 1.5em;
       border-radius: $border-radius;
-      box-shadow: $shadow;
     }
   }
 
