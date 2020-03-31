@@ -71,16 +71,21 @@ $single-width: 600px;
 $double-width: 900px;
 
 .project-post {
-  box-sizing: border-box;
+  background-color: white;
+    // box-sizing: border-box;
   max-width: $double-width;
   border-radius: $border-radius;
+  padding: 2em 0;
+  @media screen and (min-width: 719px) {
+    padding: 2em 2em;
+  }
   margin: 0 auto;
 
   header {
     .title {
       font-size: 48px;
       text-align: center;
-      margin: 4em 0 2em;
+      padding: 1em 0 1em;
     }
 
     .meta-data {

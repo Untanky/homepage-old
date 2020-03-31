@@ -76,7 +76,7 @@ $double-width: 900px;
     max-width: $double-width;
 
     @media screen and (min-width: 719px) {
-    max-width: $single-width;
+      max-width: $single-width;
     }
   }
 
