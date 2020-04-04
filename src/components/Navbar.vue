@@ -79,6 +79,12 @@ export default {
     color: $text-on-primary;
     text-decoration: none;
     padding: 0.5em 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
     transition: background-color 0.5s ease;
 
     @include tablet-up {
