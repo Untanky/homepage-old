@@ -18,7 +18,8 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import "./_variables";
+@import "./variables";
+@import "./responsive";
 
 body {
   background-color: rgb(245, 245, 245);
@@ -32,7 +33,11 @@ body {
   color: #2c3e50;
 
   .main-view {
-    margin-top: 96px;
+    margin-bottom: 64px;
+
+    @include tablet-up {
+      margin-top: 64px;
+    }
   }
 }
 </style>
