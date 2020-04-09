@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="root">
     <navbar />
     <nuxt class="wrapper" />
   </div>
@@ -15,7 +15,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "../assets/scss/variables";
+@import "../assets/scss/responsive";
+
 html {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
@@ -24,10 +27,21 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  text-align: center;
+
+  body {
+    background-color: $background-color;
+  }
 }
 
-.wrapper {
-  margin-top: 64px;
-}
+.root {
+  > .wrapper {
+    margin-bottom: 64px;
 
+    @include tablet-up {
+      margin-top: 64px;
+      margin-bottom: 0;
+    }
+  }
+}
 </style>

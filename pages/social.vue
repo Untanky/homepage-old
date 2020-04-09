@@ -1,16 +1,19 @@
 <template>
-  <h1>
-    Social
-  </h1>
+  <div class="socials">
+    <h1>Socials</h1>
+    <SocialList />
+  </div>
 </template>
 
 <script>
+import SocialList from '../components/SocialList.vue'
 
 export default {
-
+  name: 'Socials',
+  components: { SocialList }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

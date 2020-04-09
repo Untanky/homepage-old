@@ -54,7 +54,6 @@ export default {
       return result
     },
     startDate () {
-      console.log(this)
       return DateTime
         .fromObject(this.item.startDate)
         .toLocaleString(dateFormat)
