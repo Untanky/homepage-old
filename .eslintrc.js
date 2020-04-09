@@ -1,31 +1,18 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
-    es6: true,
     browser: true,
+    node: true
+  },
+  parserOptions: {
+    parser: 'babel-eslint'
   },
   extends: [
-    'airbnb-base',
-    'plugin:vue/recommended',
+    '@nuxtjs',
+    'plugin:nuxt/recommended'
   ],
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
+  // add your custom rules here
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'linebreak-style': ['error', process.env.NODE_ENV === 'prod' ? 'unix' : 'windows'],
-  },
-  overrides: [
-    {
-      files: [
-        '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)',
-      ],
-      env: {
-        jest: true,
-      },
-    },
-  ],
-};
+    'nuxt/no-cjs-in-config': 'off'
+  }
+}
