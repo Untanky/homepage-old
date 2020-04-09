@@ -1,6 +1,6 @@
 <template>
   <h1>
-    Home
+    Blog
   </h1>
 </template>
 

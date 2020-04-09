@@ -1,6 +1,6 @@
 <template>
   <h1>
-    Home
+    Social
   </h1>
 </template>
 
