@@ -1,45 +1,45 @@
 <template>
   <nav class="navbar">
-    <router-link
+    <nuxt-link
       active-class="active"
       class="link"
       to="/"
     >
       <span class="material-icons-outlined">home</span>
       <span class="text">Home</span>
-    </router-link>
-    <router-link
+    </nuxt-link>
+    <nuxt-link
       active-class="active"
       class="link"
       to="/portfolio"
     >
       <span class="material-icons-outlined">list_alt</span>
       <span class="text">Portfolio</span>
-    </router-link>
-    <router-link
+    </nuxt-link>
+    <nuxt-link
       active-class="active"
       class="link"
       to="/blog"
     >
       <span class="material-icons-outlined">keyboard</span>
       <span class="text">Blog</span>
-    </router-link>
-    <router-link
+    </nuxt-link>
+    <nuxt-link
       active-class="active"
       class="link"
       to="/social"
     >
       <span class="material-icons-outlined">people</span>
       <span class="text">Social</span>
-    </router-link>
-    <router-link
+    </nuxt-link>
+    <nuxt-link
       active-class="active"
       class="link"
       to="/contact"
     >
       <span class="material-icons-outlined">more</span>
       <span class="text">Contact</span>
-    </router-link>
+    </nuxt-link>
   </nav>
 </template>
 

@@ -95,6 +95,7 @@ export default {
       .catch(() => ({ error: true }))
   },
   data: () => ({
+    error: false,
     contact: {
       name: 'Lukas Grimm',
       address: {
