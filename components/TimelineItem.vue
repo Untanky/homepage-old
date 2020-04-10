@@ -22,15 +22,15 @@ export default {
     startDate: {
       type: String,
       required: true,
-      default: ''
+      default: '',
     },
     endDate: {
       type: String,
       required: true,
-      default: ''
-    }
-  }
-}
+      default: '',
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

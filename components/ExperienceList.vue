@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import ExperienceItem from './ExperienceItem.vue'
+import ExperienceItem from './ExperienceItem.vue';
 
 export default {
   name: 'ExperienceList',
@@ -18,10 +18,10 @@ export default {
     list: {
       type: Array,
       required: true,
-      default: () => []
-    }
-  }
-}
+      default: () => [],
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

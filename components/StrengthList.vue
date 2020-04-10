@@ -38,10 +38,10 @@ export default {
     strengths: {
       type: Object,
       required: true,
-      default: () => {}
-    }
-  }
-}
+      default: () => {},
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

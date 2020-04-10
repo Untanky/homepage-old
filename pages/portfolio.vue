@@ -53,13 +53,14 @@
 </template>
 
 <script>
-import axios from 'axios'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import axios from 'axios';
 
-import EducationList from '../components/EducationList.vue'
-import ExperienceList from '../components/ExperienceList.vue'
-import CategoryList from '../components/CategoryList.vue'
-import StrengthList from '../components/StrengthList.vue'
-import ContactInfo from '../components/ContactInfo.vue'
+import EducationList from '../components/EducationList.vue';
+import ExperienceList from '../components/ExperienceList.vue';
+import CategoryList from '../components/CategoryList.vue';
+import StrengthList from '../components/StrengthList.vue';
+import ContactInfo from '../components/ContactInfo.vue';
 
 // const MAX_SKILL_RATING = 5;
 
@@ -70,29 +71,29 @@ export default {
     ExperienceList,
     CategoryList,
     StrengthList,
-    ContactInfo
+    ContactInfo,
   },
-  asyncData () {
-    const educationPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/education`)
-    const experiencePromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/experience`)
-    const skillsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/skills`)
-    const categoriesPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/categories`)
-    const strengthsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/strengths`)
+  asyncData() {
+    const educationPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/education`);
+    const experiencePromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/experience`);
+    const skillsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/skills`);
+    const categoriesPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/categories`);
+    const strengthsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/strengths`);
 
     return Promise.all([
       educationPromise,
       experiencePromise,
       skillsPromise,
       categoriesPromise,
-      strengthsPromise
-    ]).then(res => ({
+      strengthsPromise,
+    ]).then((res) => ({
       education: res[0].data,
       experience: res[1].data,
       skills: res[2].data,
       categories: res[3].data,
-      strengths: res[4].data
+      strengths: res[4].data,
     }))
-      .catch(() => ({ error: true }))
+      .catch(() => ({ error: true }));
   },
   data: () => ({
     error: false,
@@ -102,16 +103,16 @@ export default {
         street: 'Ahornallee 16',
         zip: '12555',
         city: 'Berlin',
-        country: 'Germany'
+        country: 'Germany',
       },
       phone: '+4915129102880',
       email: 'lukaskingsmail@gmail.com',
-      link: 'lukasgrimm.me/contact'
-    }
+      link: 'lukasgrimm.me/contact',
+    },
   }),
-  mounted () {
-  }
-}
+  mounted() {
+  },
+};
 </script>
 
 <style lang="scss" scoped>

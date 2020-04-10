@@ -61,10 +61,10 @@ export default {
     contact: {
       type: Object,
       required: true,
-      default: () => {}
-    }
-  }
-}
+      default: () => {},
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

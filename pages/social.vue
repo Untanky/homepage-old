@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import SocialList from '../components/SocialList.vue'
+import SocialList from '../components/SocialList.vue';
 
 export default {
   name: 'Socials',
-  components: { SocialList }
-}
+  components: { SocialList },
+};
 </script>
 
 <style lang="scss" scoped>

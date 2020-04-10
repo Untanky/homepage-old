@@ -9,49 +9,51 @@
 </template>
 
 <script>
-import _ from 'lodash'
-import SkillCategory from './SkillCategory.vue'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import _ from 'lodash';
+
+import SkillCategory from './SkillCategory.vue';
 
 export default {
   name: 'SkillsList',
   components: {
-    SkillCategory
+    SkillCategory,
   },
   props: {
     list: {
       type: Array,
       default: () => [],
-      required: false
+      required: false,
     },
     categories: {
       type: Array,
       default: () => [],
-      required: false
-    }
+      required: false,
+    },
   },
   computed: {
-    skillsByCategory () {
+    skillsByCategory() {
       const categories = _.chain(this.list)
         .reduce((prev, curr) => {
-          const next = { ...prev }
+          const next = { ...prev };
           _.forEach(curr.categories, (category) => {
             if (!prev[category]) {
-              next[category] = { name: category, skills: [] }
+              next[category] = { name: category, skills: [] };
             }
-            next[category].skills.push({ name: curr.name, rating: curr.rating })
-          })
-          return next
+            next[category].skills.push({ name: curr.name, rating: curr.rating });
+          });
+          return next;
         }, {})
-        .map(curr => ({
+        .map((curr) => ({
           ...curr,
-          ..._.find(this.categories, cat => cat.name === curr.name)
+          ..._.find(this.categories, (cat) => cat.name === curr.name),
         }))
-        .value()
+        .value();
 
-      return categories
-    }
-  }
-}
+      return categories;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

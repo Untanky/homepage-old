@@ -21,10 +21,10 @@
 </template>
 
 <script>
-import { DateTime } from 'luxon'
-import TimelineItem from './TimelineItem.vue'
+import { DateTime } from 'luxon';
+import TimelineItem from './TimelineItem.vue';
 
-const dateFormat = { year: 'numeric', month: 'long' }
+const dateFormat = { year: 'numeric', month: 'long' };
 
 export default {
   name: 'EducationItem',
@@ -33,44 +33,44 @@ export default {
     item: {
       type: Object,
       required: false,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   computed: {
-    degree () {
+    degree() {
       const {
-        degree, course, finished, grade
-      } = this.item
-      let result = degree
+        degree, course, finished, grade,
+      } = this.item;
+      let result = degree;
 
       if (course) {
-        result += `: ${course}`
+        result += `: ${course}`;
       }
 
       if (finished && grade) {
-        result += ` (grade: ${grade})`
+        result += ` (grade: ${grade})`;
       }
 
-      return result
+      return result;
     },
-    startDate () {
+    startDate() {
       return DateTime
         .fromObject(this.item.startDate)
-        .toLocaleString(dateFormat)
+        .toLocaleString(dateFormat);
     },
-    endDate () {
-      const { endDate, finished } = this.item
+    endDate() {
+      const { endDate, finished } = this.item;
 
       if (finished && endDate) {
         return DateTime
           .fromObject(this.item.endDate)
-          .toLocaleString(dateFormat)
+          .toLocaleString(dateFormat);
       }
 
-      return 'now'
-    }
-  }
-}
+      return 'now';
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

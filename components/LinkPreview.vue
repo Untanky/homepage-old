@@ -24,25 +24,25 @@ export default {
     href: {
       type: String,
       required: true,
-      default: () => ''
+      default: () => '',
     },
     imageUrl: {
       type: String,
       required: true,
-      default: () => ''
+      default: () => '',
     },
     imageAltText: {
       type: String,
       required: true,
-      default: () => ''
+      default: () => '',
     },
     imageClass: {
       type: String,
       required: false,
-      default: () => ''
-    }
-  }
-}
+      default: () => '',
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

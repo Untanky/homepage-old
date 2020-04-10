@@ -16,21 +16,21 @@
 </template>
 
 <script>
-import LinkPreview from './LinkPreview.vue'
+import LinkPreview from './LinkPreview.vue';
 
 export default {
   name: 'SocialItem',
   components: {
-    LinkPreview
+    LinkPreview,
   },
   props: {
     social: {
       type: Object,
       default: () => {},
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss">

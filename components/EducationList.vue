@@ -9,21 +9,21 @@
 </template>
 
 <script>
-import EducationItem from './EducationItem.vue'
+import EducationItem from './EducationItem.vue';
 
 export default {
   name: 'EducationList',
   components: {
-    EducationItem
+    EducationItem,
   },
   props: {
     list: {
       type: Array,
       required: true,
-      default: () => []
-    }
-  }
-}
+      default: () => [],
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

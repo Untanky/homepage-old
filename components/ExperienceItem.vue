@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import { DateTime } from 'luxon'
-import TimelineItem from './TimelineItem.vue'
+import { DateTime } from 'luxon';
+import TimelineItem from './TimelineItem.vue';
 
-const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' }
+const dateFormat = { year: 'numeric', month: 'long', day: '2-digit' };
 
 export default {
   name: 'ExperienceItem',
@@ -30,28 +30,28 @@ export default {
     item: {
       type: Object,
       required: false,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   computed: {
-    startDate () {
+    startDate() {
       return DateTime
         .fromObject(this.item.startDate)
-        .toLocaleString(dateFormat)
+        .toLocaleString(dateFormat);
     },
-    endDate () {
-      const { endDate, finished } = this.item
+    endDate() {
+      const { endDate, finished } = this.item;
 
       if (finished && endDate) {
         return DateTime
           .fromObject(this.item.endDate)
-          .toLocaleString(dateFormat)
+          .toLocaleString(dateFormat);
       }
 
-      return 'now'
-    }
-  }
-}
+      return 'now';
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

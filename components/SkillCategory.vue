@@ -34,10 +34,10 @@ export default {
     category: {
       type: Object,
       required: true,
-      default: () => {}
-    }
-  }
-}
+      default: () => {},
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
