@@ -1,0 +1,167 @@
+{
+  "title": "Test article with a very, very, very long title",
+  "author": "Lukas Grimm",
+  "created": "2020-03-22T16:31:16+00:00",
+  "updated": "2020-03-22T17:13:56+00:00",
+  "content": [
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis arcu ipsum, nec ullamcorper tortor tristique porttitor. Cras a fermentum purus. Ut faucibus posuere maximus. Cras malesuada felis ut urna cursus consectetur. Nullam eget accumsan erat, sagittis hendrerit lorem. In hac habitasse platea dictumst. In placerat quam ut lacus pellentesque accumsan. Nunc venenatis velit id erat ultrices, vitae scelerisque ante luctus."
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Vestibulum vitae gravida diam, sed imperdiet justo. Maecenas posuere libero ac molestie pulvinar. Donec venenatis tincidunt mauris quis ultricies. Donec feugiat, elit ac interdum consequat, justo felis condimentum dui, iaculis tincidunt lorem lacus et eros. Maecenas scelerisque ante a magna suscipit, in sodales augue malesuada. Integer viverra magna massa. Sed congue ligula leo, at laoreet eros lobortis in. Morbi consequat erat non risus suscipit pellentesque. Maecenas dictum molestie eros nec volutpat. Maecenas feugiat rutrum velit, eget pharetra purus interdum sed. Nunc lobortis pretium dolor vitae aliquet. Aliquam volutpat vel massa ut ultrices. Morbi sit amet urna eu enim rutrum dapibus dictum in magna. Donec egestas, ante faucibus porttitor fermentum, justo erat faucibus nisi, sit amet aliquet elit tortor ut purus. Suspendisse vitae cursus dui."
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Nullam pharetra ac eros in dictum. Pellentesque magna nisi, tempor eu sodales sed, laoreet at tortor. Morbi eget pharetra augue, eget mollis nisl. Morbi eu tempus ante. Nullam laoreet ex a turpis mattis, sed rutrum diam luctus. Nulla eu nisl eu nunc rhoncus tristique. Ut ultrices sapien eu tincidunt iaculis."
+        }
+      ]
+    },
+    {
+      "layout": "full",
+      "content": [
+        {
+          "type": "TITLE",
+          "title": "Long title that breaks text bounds and may overlap"
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "CODE",
+          "language": "javascript",
+          "code": "function hello() {\n  console.log('Looooooooooooooooooooonnnnnnnnnnnnnnnnnnnng string!!!!!!!!!!!!!!!!11111111111111111111eleven');\n  return 'Hello World!';\n}",
+          "caption": "'Hello World' code example"
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "IMAGE",
+          "src": "https://i.pinimg.com/originals/ae/c4/53/aec453161b2f33ffc6219d8a758307a9.jpg",
+          "alt": "Cute Puppy",
+          "caption": "Some cute puppy"
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "LINK",
+          "link": "https://vuejs.org/",
+          "imageUrl": "https://vuejs.org/images/logo.png",
+          "imageAltText": "Vue logo",
+          "title": "Some link",
+          "text": "to some website"
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "YOUTUBE_VIDEO",
+          "videoId": "9HDEHj2yzew",
+          "caption": "Music video for Dua Lipa's Physical"
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
+        }
+      ]
+    },
+    {
+      "layout": "double",
+      "content": [
+        {
+          "type": "IMAGE",
+          "src": "https://i.pinimg.com/originals/ae/c4/53/aec453161b2f33ffc6219d8a758307a9.jpg",
+          "alt": "Cute Puppy",
+          "caption": "Some cute puppy"
+        },
+        {
+          "type": "TEXT",
+          "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
+        }
+      ]
+    },
+    {
+      "layout": "single",
+      "content": [
+        {
+          "type": "TEXT",
+          "text": "Donec fringilla risus eget lacinia malesuada. Pellentesque et porta leo, at varius odio. Integer vitae rutrum leo, in sagittis sem. Nunc massa neque, pulvinar et dui vitae, blandit pharetra erat. Pellentesque nec risus in nulla aliquet aliquet eu eu ligula. Pellentesque nisl dolor, fermentum a eleifend fermentum, tempor non turpis. Curabitur at ullamcorper quam, et sodales orci. Aenean non hendrerit mauris. Phasellus maximus tincidunt consequat. Cras bibendum neque blandit eros tincidunt, ac sollicitudin risus interdum. Nunc vel mi laoreet, hendrerit eros in, porttitor leo. Vivamus sit amet nulla at turpis malesuada porta. Phasellus et egestas leo."
+        }
+      ]
+    }
+  ]
+}

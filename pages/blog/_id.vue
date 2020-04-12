@@ -1,13 +1,14 @@
 <template>
-  <h1 class="title">
-    Blog Post
-  </h1>
+  <blog-post />
 </template>
 
 <script>
+import BlogPost from '../../components/BlogPost.vue';
 
 export default {
-
+  components: {
+    BlogPost,
+  },
 };
 </script>
 
