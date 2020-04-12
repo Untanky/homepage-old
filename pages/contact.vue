@@ -1,5 +1,5 @@
 <template>
-  <h1>
+  <h1 class="title">
     Contact
   </h1>
 </template>
@@ -12,5 +12,8 @@ export default {
 </script>
 
 <style>
-
+.title {
+  text-align: center;
+  font-weight: 800;
+}
 </style>

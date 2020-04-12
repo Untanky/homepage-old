@@ -1,6 +1,6 @@
 <template>
   <div class="socials">
-    <h1>Socials</h1>
+    <h1 class="title">Socials</h1>
     <SocialList />
   </div>
 </template>
@@ -15,5 +15,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.title {
+  text-align: center;
+  font-weight: 800;
+}
 </style>

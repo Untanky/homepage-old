@@ -120,6 +120,7 @@ export default {
 
 .title {
   text-align: center;
+  font-weight: 800;
 }
 
 .category-wrapper {
