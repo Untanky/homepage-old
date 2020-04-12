@@ -77,13 +77,7 @@ $double-width: 900px;
   border-radius: $border-radius;
   padding: 2em 1em 0.25em;
   margin: 0 auto;
-  margin-bottom: 72px;
   box-shadow: $shadow;
-
-  @include tablet-up {
-    margin-top: 64px;
-    margin-bottom: 0;
-  }
 
   header {
     .title {
@@ -91,11 +85,11 @@ $double-width: 900px;
       text-align: center;
 
       @include tablet-up {
-        margin: 1em 0;
+        margin: 1em 1em;
       }
 
       @include laptop-up {
-        margin: 2em 0;
+        margin: 2em 1em;
       }
     }
 

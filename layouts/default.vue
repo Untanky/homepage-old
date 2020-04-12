@@ -35,13 +35,11 @@ html {
 }
 
 .root {
-  > .wrapper {
-    margin-bottom: 64px;
+  margin-bottom: 72px;
 
-    @include tablet-up {
-      margin-top: 64px;
-      margin-bottom: 0;
-    }
+  @include tablet-up {
+    margin-top: 80px;
+    margin-bottom: 0;
   }
 }
 </style>
