@@ -1,5 +1,5 @@
 <template>
-  <blog-post />
+  <blog-post class="blog-post"/>
 </template>
 
 <script>
@@ -12,9 +12,12 @@ export default {
 };
 </script>
 
-<style>
-.title {
-  text-align: center;
-  font-weight: 800;
+<style lang="scss">
+@import "../../assets/scss/responsive";
+
+.blog-post {
+  @include tablet-up {
+    top: 64px;
+  }
 }
 </style>

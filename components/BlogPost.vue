@@ -1,5 +1,5 @@
 <template>
-  <div class="project-post">
+  <div class="blog-post">
     <header>
       <h1 class="title">
         {{ article.title }}
@@ -71,13 +71,19 @@ export default {
 $single-width: 600px;
 $double-width: 900px;
 
-.project-post {
+.blog-post {
   background-color: white;
   max-width: 1000px;
   border-radius: $border-radius;
   padding: 2em 1em 0.25em;
   margin: 0 auto;
+  margin-bottom: 72px;
   box-shadow: $shadow;
+
+  @include tablet-up {
+    margin-top: 64px;
+    margin-bottom: 0;
+  }
 
   header {
     .title {
