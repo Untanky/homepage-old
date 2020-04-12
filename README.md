@@ -1,37 +1,22 @@
 # homepage
 
-## Configure
+> My phenomenal Nuxt.js project
 
-Setup environment variables
+## Build Setup
 
-```environment
-VUE_APP_API_HOST="<url_to_api_host>"
-```
+```bash
+# install dependencies
+$ yarn install
 
-## Project setup
-```
-yarn install
-```
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-### Compiles and minifies for production
-```
-yarn build
+# generate static project
+$ yarn generate
 ```
 
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
