@@ -67,9 +67,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/variables";
 @import "../assets/scss/responsive";
-
-$single-width: 600px;
-$double-width: 900px;
+@import "../assets/scss/blog-post";
 
 .blog-post {
   background-color: white;

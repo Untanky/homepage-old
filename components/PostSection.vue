@@ -62,9 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/responsive";
-
-$single-width: 600px;
-$double-width: 900px;
+@import "../assets/scss/blog-post";
 
 .post-section {
   margin: 0.5em auto;
