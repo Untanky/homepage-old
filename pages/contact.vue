@@ -11,7 +11,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .title {
   text-align: center;
   font-weight: 800;
