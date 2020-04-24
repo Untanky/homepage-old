@@ -19,7 +19,7 @@
         <slot name="footer" />
         <nuxt-link
           class="primary action"
-          to="/portfolio"
+          :to="linkPath"
         >
           <span class="material-icons">
             remove_red_eye
@@ -44,6 +44,10 @@ export default {
       required: true,
       default: () => 'Title',
     },
+    linkPath: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
@@ -53,7 +57,7 @@ export default {
 @import "../assets/scss/landing-page";
 
 .website-content {
-  width: $landing-page-width;
+  max-width: $landing-page-width;
   text-align: left;
   margin: 1em auto 0;
 

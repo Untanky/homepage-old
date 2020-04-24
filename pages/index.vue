@@ -2,7 +2,8 @@
   <div class="home">
     <introduction />
     <website-content
-      heading="Protfolio"
+      heading="Portfolio"
+      link-path="/portfolio"
     >
       Got an open position? Want to hire a new face? Interested in Lukas? <br>
       You can check if he matches your requirements for an open position by reading
@@ -21,6 +22,12 @@
           Download
         </a>
       </template>
+    </website-content>
+    <website-content
+      heading="Social Media"
+      link-path="/socials"
+    >
+      Interested in getting to know me a bit more? Follow me on my social media platforms.
     </website-content>
   </div>
 </template>
