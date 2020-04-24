@@ -25,9 +25,22 @@
     </website-content>
     <website-content
       heading="Social Media"
-      link-path="/socials"
+      link-path="/social"
     >
-      Interested in getting to know me a bit more? Follow me on my social media platforms.
+      On his social media, Lukas posts about his life. He shares progress on his projects,
+      recipes he cooked and adventures he survived. Interested in getting to know him
+      a bit more? <br>
+      So, go on and follow him on my social media platforms.
+    </website-content>
+    <website-content
+      heading="Blog"
+      link-path="/blog"
+    >
+      Lukas writes a small blog about his personal projects. Did you ever want to know how
+      he creates all that awesome stuff, he has on his <a href="https://github.com/Untanky">GitHub</a>?
+      Do you like little anecdotes out of the life of a young developer? <br>
+      Then check out Lukas' blog. <br>
+      Below you also find a selection of his articles.
     </website-content>
   </div>
 </template>
