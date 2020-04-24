@@ -1,37 +1,43 @@
 <template>
-  <div class="website-content">
-    <div class="content-header">
-      <h3>{{ heading }}</h3>
-    </div>
-    <div class="content-body">
+  <card
+      class="website-content"
+      :footer-border="false"
+    >
+      <template
+        slot="header"
+      >
+        <h3>
+          {{ heading }}
+        </h3>
+      </template>
+
       <slot />
-    </div>
-    <div class="content-footer">
-      <nuxt-link
-        class="primary action"
-        to="/portfolio"
+
+      <template
+        slot="footer"
       >
-        <span class="material-icons">
-          remove_red_eye
-        </span>
-        View
-      </nuxt-link>
-      <a
-        class="action"
-        href="#"
-      >
-        <span class="material-icons">
-          cloud_download
-        </span>
-        Download
-      </a>
-    </div>
-  </div>
+        <slot name="footer" />
+        <nuxt-link
+          class="primary action"
+          to="/portfolio"
+        >
+          <span class="material-icons">
+            remove_red_eye
+          </span>
+          View
+        </nuxt-link>
+      </template>
+    </card>
 </template>
 
 <script>
+import Card from './Card.vue';
+
 export default {
   name: 'WebsiteContent',
+  components: {
+    Card,
+  },
   props: {
     heading: {
       type: String,
@@ -42,45 +48,28 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../assets/scss/variables";
 @import "../assets/scss/landing-page";
 
 .website-content {
-  box-sizing: border-box;
-  max-width: $landing-page-width;
-  background-color: white;
-  border-radius: $border-radius;
+  width: $landing-page-width;
+  text-align: left;
   margin: 1em auto 0;
-  box-shadow: $shadow;
 
-  .content-header {
-    padding: 1em;
-    text-align: left;
-    border-bottom: $border-primary;
-
+  header {
     h3 {
       margin: 0;
     }
   }
 
-  .content-body {
-    padding: 1em 1em 0.25em;
-    text-align: left;
-
-    h3 {
-      margin: 0;
-    }
-  }
-
-  .content-footer {
+  footer {
     display: flex;
     justify-content: flex-end;
-    padding: 0.25em 1em 1em;
     text-align: left;
 
     .action {
-      display: block;
+      display: inline-block;
       color: inherit;
       text-decoration: none;
       padding: 0.25em 1em;
