@@ -24,6 +24,14 @@
       </template>
     </website-content>
     <website-content
+      heading="Projects"
+      link-path="/projects"
+    >
+      Want to see what Lukas has already created? <br>
+      Go checkout his projects page, where you can see his most recent projects and
+      previously complete projects. For some there might even be a live-demo.
+    </website-content>
+    <website-content
       heading="Social Media"
       link-path="/social"
     >
@@ -31,16 +39,6 @@
       recipes he cooked and adventures he survived. Interested in getting to know him
       a bit more? <br>
       So, go on and follow him on my social media platforms.
-    </website-content>
-    <website-content
-      heading="Blog"
-      link-path="/blog"
-    >
-      Lukas writes a small blog about his personal projects. Did you ever want to know how
-      he creates all that awesome stuff, he has on his <a href="https://github.com/Untanky">GitHub</a>?
-      Do you like little anecdotes out of the life of a young developer? <br>
-      Then check out Lukas' blog. <br>
-      Below you also find a selection of his articles.
     </website-content>
   </div>
 </template>
@@ -69,6 +67,9 @@ export default {
         dataUrl: '/api/v1/blog/post/1',
       },
     ],
+  }),
+  head: () => ({
+    title: 'Lukas Grimm - Homepage',
   }),
 };
 </script>
