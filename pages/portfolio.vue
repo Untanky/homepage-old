@@ -110,8 +110,9 @@ export default {
       link: '/contact',
     },
   }),
-  mounted() {
-  },
+  head: () => ({
+    title: 'Lukas Grimm - Portfolio',
+  }),
 };
 </script>
 

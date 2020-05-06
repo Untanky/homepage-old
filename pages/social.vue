@@ -11,6 +11,9 @@ import SocialList from '../components/SocialList.vue';
 export default {
   name: 'Socials',
   components: { SocialList },
+  head: () => ({
+    title: 'Lukas Grimm - Social Media',
+  }),
 };
 </script>
 
