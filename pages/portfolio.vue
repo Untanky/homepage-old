@@ -107,11 +107,12 @@ export default {
       },
       phone: '+4915129102880',
       email: 'lukaskingsmail@gmail.com',
-      link: 'lukasgrimm.me/contact',
+      link: '/contact',
     },
   }),
-  mounted() {
-  },
+  head: () => ({
+    title: 'Lukas Grimm - Portfolio',
+  }),
 };
 </script>
 

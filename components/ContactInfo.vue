@@ -26,7 +26,7 @@
           <i class="material-icons">message</i>
         </div>
         <div class="info">
-          <a :href="`http://contact.link`">
+          <a :href="contact.link">
             Contact Form
           </a>
         </div>

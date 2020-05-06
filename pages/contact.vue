@@ -7,11 +7,13 @@
 <script>
 
 export default {
-
+  head: () => ({
+    title: 'Lukas Grimm - Contact',
+  }),
 };
 </script>
 
-<style>
+<style scoped>
 .title {
   text-align: center;
   font-weight: 800;

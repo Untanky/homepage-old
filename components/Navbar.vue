@@ -19,10 +19,10 @@
     <nuxt-link
       active-class="active"
       class="link"
-      to="/blog"
+      to="/projects"
     >
       <span class="material-icons-outlined">keyboard</span>
-      <span class="text">Blog</span>
+      <span class="text">Projects</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
