@@ -22,7 +22,7 @@
       to="/blog"
     >
       <span class="material-icons-outlined">keyboard</span>
-      <span class="text">Blog</span>
+      <span class="text">Projects</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"

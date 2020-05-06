@@ -54,5 +54,21 @@ export default {
     Introduction,
     WebsiteContent,
   },
+  data: () => ({
+    previews: [
+      {
+        id: 1,
+        title: 'Test post',
+        author: 'Lukas Grimm',
+        created: 'Mon 3',
+        updated: 'Mon 3',
+        text: 'Lorem ipsum',
+        postUrl: '/blog/1',
+        imageUrl: 'https://i.pinimg.com/originals/ae/c4/53/aec453161b2f33ffc6219d8a758307a9.jpg',
+        imageAltText: 'Cute puppy',
+        dataUrl: '/api/v1/blog/post/1',
+      },
+    ],
+  }),
 };
 </script>
