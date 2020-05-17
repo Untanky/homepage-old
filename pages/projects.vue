@@ -3,44 +3,36 @@
     <h1 class="title">
       Projects
     </h1>
-    <project-list :projects="projects"/>
+    <div
+      v-if="error"
+    >
+      There was an error
+    </div>
+    <div
+      v-else
+    >
+      <project-list :projects="projects"/>
+    </div>
   </div>
 </template>
 
 <script>
+// eslint-disable-next-line import/no-extraneous-dependencies
+import axios from 'axios';
+
 import ProjectList from '../components/ProjectList.vue';
 
 export default {
   components: {
     ProjectList,
   },
+  asyncData() {
+    return axios.get(`${process.env.VUE_APP_API_HOST}/project`)
+      .then(({ data }) => ({ projects: data }))
+      .catch(() => ({ error: true }));
+  },
   data: () => ({
-    projects: [
-      {
-        title: 'Project 1',
-        tags: [
-          'Vue.js',
-          'UI/UX',
-          'Frontend',
-        ],
-      },
-      {
-        title: 'Project 2',
-        tags: [
-          'Vue.js',
-          'UI/UX',
-          'Frontend',
-        ],
-      },
-      {
-        title: 'Project 3',
-        tags: [
-          'Vue.js',
-          'UI/UX',
-          'Frontend',
-        ],
-      },
-    ],
+    error: false,
   }),
   head: () => ({
     title: 'Lukas Grimm - Projects',
