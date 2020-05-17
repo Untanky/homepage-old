@@ -37,6 +37,7 @@ export default {
   padding: 0.125em 1em;
   border-radius: $border-radius;
   box-shadow: $shadow;
+  user-select: none;
 
   &.primary {
     background-color: $primary;
