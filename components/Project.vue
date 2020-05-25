@@ -14,7 +14,7 @@
         >
           <a
             class="project-link github"
-            href="https://github.com/Untanky"
+            :href="project.gitHubUrl"
           >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
@@ -23,10 +23,10 @@
           </a>
           <a
             class="project-link demo"
-            href="https://github.com/Untanky"
+            :href="project.demoUrl"
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Globe_icon.svg"
               alt="Demo"
             />
           </a>
