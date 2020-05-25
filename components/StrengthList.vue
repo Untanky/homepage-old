@@ -68,9 +68,6 @@ export default {
     list-style: none;
 
     .sublist-item {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 1em;
       background-color: $background-color;
       padding: 0.5em;
       border-radius: 8px;
