@@ -79,6 +79,7 @@ export default {
     const skillsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/skills.json`);
     const categoriesPromise = axios.get(`${process.env.VUE_APP_API_HOST}/categories.json`);
     const strengthsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/strengths.json`);
+    const contactPromise = axios.get(`${process.env.VUE_APP_API_HOST}/contact.json`);
 
     return Promise.all([
       educationPromise,
@@ -86,29 +87,19 @@ export default {
       skillsPromise,
       categoriesPromise,
       strengthsPromise,
+      contactPromise,
     ]).then((res) => ({
       education: res[0].data,
       experience: res[1].data,
       skills: res[2].data,
       categories: res[3].data,
       strengths: res[4].data,
+      contact: res[5].data,
     }))
       .catch(() => ({ error: true }));
   },
   data: () => ({
     error: false,
-    contact: {
-      name: 'Lukas Grimm',
-      address: {
-        street: 'Ahornallee 16',
-        zip: '12555',
-        city: 'Berlin',
-        country: 'Germany',
-      },
-      phone: '+4915129102880',
-      email: 'lukaskingsmail@gmail.com',
-      link: '/contact',
-    },
   }),
   head: () => ({
     title: 'Lukas Grimm - Portfolio',
