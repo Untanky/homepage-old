@@ -63,6 +63,9 @@ export default {
       required: true,
     },
   },
+  computed: {
+    backgroundImage() { return `background-image: url(${this.project.imageUrl})`; },
+  },
 };
 </script>
 
