@@ -27,7 +27,7 @@ export default {
     ProjectList,
   },
   asyncData() {
-    return axios.get(`${process.env.VUE_APP_API_HOST}/project`)
+    return axios.get(`${process.env.VUE_APP_API_HOST}/projects.json`)
       .then(({ data }) => ({ projects: data }))
       .catch(() => ({ error: true }));
   },

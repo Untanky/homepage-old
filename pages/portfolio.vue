@@ -74,11 +74,11 @@ export default {
     ContactInfo,
   },
   asyncData() {
-    const educationPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/education`);
-    const experiencePromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/experience`);
-    const skillsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/skills`);
-    const categoriesPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/categories`);
-    const strengthsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/portfolio/strengths`);
+    const educationPromise = axios.get(`${process.env.VUE_APP_API_HOST}/education.json`);
+    const experiencePromise = axios.get(`${process.env.VUE_APP_API_HOST}/experience.json`);
+    const skillsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/skills.json`);
+    const categoriesPromise = axios.get(`${process.env.VUE_APP_API_HOST}/categories.json`);
+    const strengthsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/strengths.json`);
 
     return Promise.all([
       educationPromise,
