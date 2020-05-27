@@ -3,8 +3,11 @@ const express = require('express');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const consola = require('consola');
 const { Nuxt, Builder } = require('nuxt');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+app.use(bodyParser.json());
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js');
