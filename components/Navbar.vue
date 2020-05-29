@@ -60,18 +60,16 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background: $primary-secondary-gradient;
   text-align: center;
-  border-top: $thick-border-primary;
   z-index: 1;
 
   @include tablet-up {
     display: block;
     top: 0;
     bottom: unset;
+    color: white;
     text-align: left;
-    border-top: unset;
-    border-bottom: $thick-border-primary;
   }
 
   .link {

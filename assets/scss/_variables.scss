@@ -1,12 +1,14 @@
-$primary: rgb(211, 102, 102);
+$primary: rgb(255, 81, 81);
 $primary-variation1: rgb(236, 126, 126);
 $primary-variation2: rgb(255, 159, 159);
 $text-on-primary: rgb(46, 46, 46);
 
-$secondary: rgb(107, 245, 130);
+$secondary: rgb(255, 162, 56);
 $secondary-variation1: rgb(139, 255, 158);
 $secondary-variation2: rgb(169, 255, 184);
 $text-on-secondary: rgb(46, 46, 46);
+
+$primary-secondary-gradient: linear-gradient(to bottom right, $primary, $secondary);
 
 $border-radius: 12px;
 
