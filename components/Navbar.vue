@@ -6,6 +6,7 @@
       to="/"
     >
       <span class="material-icons-outlined">home</span>
+      <span class="material-icons">home</span>
       <span class="text">Home</span>
     </nuxt-link>
     <nuxt-link
@@ -14,6 +15,7 @@
       to="/portfolio"
     >
       <span class="material-icons-outlined">list_alt</span>
+      <span class="material-icons">list_alt</span>
       <span class="text">Portfolio</span>
     </nuxt-link>
     <nuxt-link
@@ -22,6 +24,7 @@
       to="/projects"
     >
       <span class="material-icons-outlined">keyboard</span>
+      <span class="material-icons">keyboard</span>
       <span class="text">Projects</span>
     </nuxt-link>
     <nuxt-link
@@ -30,6 +33,7 @@
       to="/social"
     >
       <span class="material-icons-outlined">people</span>
+      <span class="material-icons">people</span>
       <span class="text">Social</span>
     </nuxt-link>
     <nuxt-link
@@ -38,6 +42,7 @@
       to="/contact"
     >
       <span class="material-icons-outlined">more</span>
+      <span class="material-icons">more</span>
       <span class="text">Contact</span>
     </nuxt-link>
   </nav>
@@ -62,6 +67,7 @@ export default {
   width: 100%;
   background: $primary-secondary-gradient;
   text-align: center;
+  box-shadow: $shadow;
   z-index: 1;
 
   @include tablet-up {
@@ -74,6 +80,8 @@ export default {
 
   .link {
     display: inline-block;
+    // background-color: transparent;
+    // background-blend-mode: overlay;
     color: $text-on-primary;
     text-decoration: none;
     padding: 0.5em 0;
@@ -88,19 +96,15 @@ export default {
     @include tablet-up {
       padding: 0.75em 1.5em;
 
-      .material-icons-outlined {
+      .material-icons, .material-icons-outlined {
         vertical-align: text-bottom;
         margin-right: 0.25em;
       }
     }
 
     &:hover {
-      background-color: $background-color;
+      background-color: rgba(240, 240, 240, 0.25);
       transition: background-color 0.5s ease;
-    }
-
-    &.active-exact {
-      background-color: $primary-variation2;
     }
 
     .text {
@@ -116,6 +120,28 @@ export default {
 
       @include tablet-up {
         display: inline;
+      }
+    }
+
+    .material-icons {
+      display: none;
+    }
+
+    &.exact-active {
+      border-bottom: 2px solid black;
+
+      .material-icons {
+        display: block;
+        text-decoration: unset;
+
+        @include tablet-up {
+          display: inline;
+          text-decoration: none;
+        }
+      }
+
+      .material-icons-outlined {
+        display: none;
       }
     }
   }
