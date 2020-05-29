@@ -38,8 +38,8 @@ html {
   margin-bottom: 72px;
 
   @include tablet-up {
-    margin-top: 80px;
-    margin-bottom: 0;
+    margin-top: 8em;
+    margin-bottom: 5em;
   }
 }
 </style>

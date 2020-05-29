@@ -51,7 +51,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   max-width: $landing-page-width;
-  background-color: white;
+  background: $primary-secondary-gradient;
   justify-content: center;
   align-content: center;
   padding: 1em;
@@ -73,7 +73,7 @@ export default {
       width: 256px;
       height: 256px;
       border-radius: 100%;
-      border: $thick-border-primary;
+      box-shadow: $shadow;
     }
   }
 

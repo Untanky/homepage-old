@@ -59,7 +59,7 @@ export default {
 .website-content {
   max-width: $landing-page-width;
   text-align: left;
-  margin: 1em auto 0;
+  margin: 3em auto 0;
 
   header {
     h3 {
@@ -75,21 +75,27 @@ export default {
     .action {
       display: inline-block;
       color: inherit;
-      text-decoration: none;
-      padding: 0.25em 1em;
-      border: $thin-border-primary;
-      border-radius: $border-radius / 2;
+      background-color: transparent;
+      background-blend-mode: overlay;
+      text-decoration: white;
+      padding: 0.5em 2em;
+      border-radius: $border-radius;
       box-shadow: $shadow;
-      transition: 0.25s linear box-shadow;
+      transition: 0.25s linear box-shadow, 0.25s ease-in-out background-color;
 
       &:hover {
         box-shadow: $hover-shadow;
-        transition: 0.25s linear box-shadow;
+        transition: 0.25s linear box-shadow, 0.25s ease-in-out background-color;
       }
 
       &.primary {
-        background-color: $primary;
-        color: white;
+        background: $primary-secondary-gradient;
+        // background-color: $primary;
+        color: $text-on-primary;
+
+        &:hover {
+          background-color: rgb(163, 163, 163);
+        }
       }
 
       &:not(:last-child) {
