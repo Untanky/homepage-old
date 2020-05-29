@@ -149,7 +149,7 @@ export default {
       margin-top: -0.25em;
 
       .badge {
-      margin: 0.25em 0.25em 0 0;
+        margin: 0.25em 0.25em 0 0;
       }
     }
   }

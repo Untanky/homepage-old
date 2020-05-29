@@ -11,43 +11,54 @@
     <div
       v-else
     >
-      <div class="category-wrapper">
-        <h3 class="category-title">
-          Education
-        </h3>
+      <card :footerBorder="false">
+        <template slot="header">
+          <h3 class="category-title">
+            Education
+          </h3>
+        </template>
+
         <EducationList :list="education" />
-      </div>
-      <div class="category-wrapper">
-        <h3 class="category-title">
-          Experience
-        </h3>
+      </card>
+      <card :footerBorder="false">
+        <template slot="header">
+          <h3 class="category-title">
+            Experience
+          </h3>
+        </template>
+
         <ExperienceList :list="experience" />
-      </div>
-      <div class="category-wrapper">
-        <h3 class="category-title">
-          Skills
-        </h3>
+      </card>
+      <card :footerBorder="false">
+        <template slot="header">
+          <h3 class="category-title">
+            Skills
+          </h3>
+        </template>
+
         <CategoryList
           :list="skills"
           :categories="categories"
         />
-      </div>
-      <div class="category-wrapper">
-        <h3 class="category-title">
-          Strenghts
-        </h3>
-        <StrengthList
-          :strengths="strengths"
-        />
-      </div>
-      <div class="category-wrapper">
-        <h3 class="category-title">
-          Contact
-        </h3>
-        <ContactInfo
-          :contact="contact"
-        />
-      </div>
+      </card>
+      <card :footerBorder="false">
+        <template slot="header">
+          <h3 class="category-title">
+            Strenghts
+          </h3>
+        </template>
+
+        <StrengthList :strengths="strengths" />
+      </card>
+      <card :footerBorder="false">
+        <template slot="header">
+          <h3 class="category-title">
+            Contact data
+          </h3>
+        </template>
+
+        <ContactInfo :contact="contact" />
+      </card>
     </div>
   </div>
 </template>
@@ -56,6 +67,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
+import Card from '../components/Card.vue';
 import EducationList from '../components/EducationList.vue';
 import ExperienceList from '../components/ExperienceList.vue';
 import CategoryList from '../components/CategoryList.vue';
@@ -67,6 +79,7 @@ import ContactInfo from '../components/ContactInfo.vue';
 export default {
   name: 'Portfolio',
   components: {
+    Card,
     EducationList,
     ExperienceList,
     CategoryList,
@@ -110,29 +123,27 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/variables";
 
-.title {
-  text-align: center;
-  font-weight: 800;
-}
 
-.category-wrapper {
-  background-color: rgb(255, 255, 255);
+.portfolio {
   text-align: left;
-  border-radius: $border-radius;
-  box-shadow: $shadow;
 
   @media screen and (min-width: 819px) {
     width: 820px;
     margin: 0 auto;
   }
 
-  .category-title {
-    // background-color: $primary;
-    // border-radius: $border-radius $border-radius 0 0;
-    border-bottom: $border-primary;
-    padding: 1em;
-    border-radius: $border-radius $border-radius 0 0;
-    margin-block-end: 0;
+  .title {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 3em;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .card {
+    margin-bottom: 3em;
   }
 }
 </style>

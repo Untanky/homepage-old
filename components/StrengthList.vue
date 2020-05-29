@@ -48,7 +48,7 @@ export default {
 @import "../assets/scss/variables";
 
 .strength-list {
-  padding: 1em;
+  padding: 0 1em;
   list-style: none;
 
   > li {
@@ -58,7 +58,7 @@ export default {
   }
 
   .sublist-heading {
-    border-bottom: $thin-border-primary;
+    padding: 8px;
     margin-block-start: 0;
     margin-block-end: 0;
   }
@@ -68,11 +68,11 @@ export default {
     list-style: none;
 
     .sublist-item {
-      background-color: $background-color;
+      background-color: $primary-variation1;
       padding: 0.5em;
       border-radius: 8px;
       margin-top: 0.5em;
-      box-shadow: $shadow;
+      box-shadow: $collapsed-shadow;
     }
   }
 }

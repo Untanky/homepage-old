@@ -59,6 +59,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  router: {
+    linkExactActiveClass: 'exact-active',
+  },
   build: {
     /*
     ** You can extend webpack config here
