@@ -14,7 +14,8 @@
       >
         <a
           class="action"
-          href="#"
+          href="data/en/cv.pdf"
+          download
         >
           <span class="material-icons">
             cloud_download
