@@ -4,7 +4,6 @@
       type="checkbox"
       class="checkbox"
       :id="id"
-      :class="classes"
       :value="value"
       @input="$emit('input', $event.target.value)"
     >
@@ -32,11 +31,6 @@ export default {
     value: {
       type: Boolean,
       default: () => false,
-    },
-  },
-  computed: {
-    classes() {
-      return this.class;
     },
   },
 };

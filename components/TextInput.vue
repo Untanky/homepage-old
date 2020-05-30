@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import classNames from 'classnames';
+
 export default {
   name: 'TextInput',
   props: {
@@ -60,7 +62,7 @@ export default {
   },
   computed: {
     classes() {
-      return this.fullWidth ? 'full-width' : '';
+      return classNames({ 'full-width': this.fullWidth });
     },
     style() {
       return `height: ${(this.rows) * 22}px;`;
