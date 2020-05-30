@@ -54,20 +54,33 @@ $logo-size: 96px;
   display: grid;
   grid-template-columns: $logo-size 1fr;
   gap: 2em;
-  background-color: white;
-  border-left: $border-primary;
+  background-color: transparent;
+  background-blend-mode: overlay;
+  background: $primary-secondary-gradient;
   border-radius: $border-radius;
   margin: 0 auto;
   box-shadow: $shadow;
   text-decoration: none;
+  transition: 0.25s ease-in-out box-shadow, 0.25s ease-in-out background-color;
+
+  &:hover {
+    background-color: rgb(163, 163, 163);
+    box-shadow: $hover-shadow;
+    transition: 0.25s ease-in-out box-shadow, 0.25s ease-in-out background-color;
+
+    .link-image {
+      filter: brightness(1.2);
+      transition: 0.25s ease-in-out filter;
+    }
+  }
 
   .link-image {
     box-sizing: border-box;
     height: $logo-size;
-    padding: 0.5em;
-    border-top: $border-primary;
-    border-bottom: $border-primary;
-    border-radius: $border-radius 0 0 $border-radius;
+    background: white;
+    padding: 1em;
+    border-radius: $border-radius;
+    transition: 0.25s ease-in-out filter;
   }
 
   .wrapper {
