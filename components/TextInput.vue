@@ -11,14 +11,20 @@
       type="text"
       class="text-input"
       :class="classes"
+      :id="id"
       :placeholder="placeholder"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
     >
     <textarea
       v-else
       class="text-input"
       :class="classes"
+      :id="id"
       :placeholder="placeholder"
       :style="style"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
     />
   </div>
 </template>
@@ -39,7 +45,7 @@ export default {
       type: String,
       required: true,
     },
-    class: {
+    value: {
       type: String,
       default: () => '',
     },
@@ -54,7 +60,7 @@ export default {
   },
   computed: {
     classes() {
-      return this.class + this.fullWidth ? 'full-width' : '';
+      return this.fullWidth ? 'full-width' : '';
     },
     style() {
       return `height: ${(this.rows) * 22}px;`;
@@ -89,7 +95,7 @@ export default {
     }
 
     &:focus {
-      border: 1px solid $secondary;
+      background-color: $primary-variation2;
     }
   }
 }

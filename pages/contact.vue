@@ -9,6 +9,18 @@
           slot="header"
         >
           <h3 class="title">
+            Contact form
+          </h3>
+        </template>
+        <contact-form />
+      </card>
+      <card
+        :footerBorder="false"
+      >
+        <template
+          slot="header"
+        >
+          <h3 class="title">
             Contact data
           </h3>
         </template>
@@ -34,11 +46,13 @@
 import axios from 'axios';
 
 import Card from '../components/Card.vue';
+import ContactForm from '../components/ContactForm.vue';
 import ContactInfo from '../components/ContactInfo.vue';
 
 export default {
   components: {
     Card,
+    ContactForm,
     ContactInfo,
   },
   data: () => ({
