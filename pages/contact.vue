@@ -3,6 +3,7 @@
     <div class="content-wrapper">
       <h1>Contact</h1>
       <card
+        class="card"
         :footerBorder="false"
       >
         <template
@@ -15,6 +16,7 @@
         <contact-form />
       </card>
       <card
+        class="card"
         :footerBorder="false"
       >
         <template
@@ -85,6 +87,10 @@ export default {
     text-align: left;
     font-weight: 800;
     margin: 0;
+  }
+
+  .card {
+    margin-top: 4em;
   }
 }
 </style>

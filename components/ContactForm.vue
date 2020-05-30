@@ -1,14 +1,14 @@
 <template>
   <form>
     <text-input
-      label="Name"
+      label="Name *"
       id="name"
       placeholder="Paul Smith"
       :fullWidth="true"
       v-model="name"
     />
     <text-input
-      label="E-mail"
+      label="E-mail *"
       id="email"
       placeholder="you@domain.com"
       :fullWidth="true"
@@ -29,13 +29,17 @@
       v-model="sendCopy"
     />
     <button-input
-      type="secondary"
+      type="gradient"
       class="block"
       :disabled="!canSend"
       @click="sendEmail"
     >
       Submit
     </button-input>
+
+    <div class="indent">
+      * required
+    </div>
   </form>
 </template>
 
