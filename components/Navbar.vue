@@ -11,7 +11,7 @@
     "home": "Start",
     "cv": "Lebenlauf",
     "projects": "Projekte",
-    "social": "Soziale Medien",
+    "social": "Sozial",
     "contact": "Kontakt"
   }
 }
