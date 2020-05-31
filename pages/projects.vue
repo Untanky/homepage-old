@@ -1,12 +1,23 @@
+<i18n>
+{
+  "en": {
+    "projects": "Projects"
+  },
+  "de": {
+    "projects": "Projekte"
+  }
+}
+</i18n>
+
 <template>
   <div>
     <h1 class="title">
-      Projects
+      {{ $t('projects') }}
     </h1>
     <div
       v-if="error"
     >
-      There was an error
+      {{ $t('error') }}
     </div>
     <div
       v-else
@@ -26,8 +37,15 @@ export default {
   components: {
     ProjectList,
   },
-  asyncData() {
-    return axios.get(`${process.env.VUE_APP_API_HOST}/projects.json`)
+  asyncData(ctx) {
+    return axios.get(
+      `${process.env.VUE_APP_API_HOST}/projects.json`,
+      {
+        headers: {
+          'Accept-Language': ctx.app.i18n.locale,
+        },
+      },
+    )
       .then(({ data }) => ({ projects: data }))
       .catch(() => ({ error: true }));
   },
