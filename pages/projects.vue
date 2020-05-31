@@ -38,14 +38,7 @@ export default {
     ProjectList,
   },
   asyncData(ctx) {
-    return axios.get(
-      `${process.env.VUE_APP_API_HOST}/projects.json`,
-      {
-        headers: {
-          'Accept-Language': ctx.app.i18n.locale,
-        },
-      },
-    )
+    return axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/projects.json`)
       .then(({ data }) => ({ projects: data }))
       .catch(() => ({ error: true }));
   },
