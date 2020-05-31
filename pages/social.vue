@@ -1,6 +1,17 @@
+<i18n>
+{
+  "en": {
+    "socials": "Socials"
+  },
+  "de": {
+    "socials": "Soziale Medien"
+  }
+}
+</i18n>
+
 <template>
   <div class="socials">
-    <h1 class="title">Socials</h1>
+    <h1 class="title">{{ $t('socials') }}</h1>
     <SocialList />
   </div>
 </template>
@@ -21,5 +32,7 @@ export default {
 .title {
   text-align: center;
   font-weight: 800;
+  margin-top: 5em;
+  margin-bottom: 3em;
 }
 </style>

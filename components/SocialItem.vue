@@ -45,6 +45,12 @@ $logo-size: 96px;
     padding: 1em;
   }
 
+  &.twitter {
+    .logo {
+      padding: 0.5em;
+    }
+  }
+
   .network-name {
     margin-bottom: 0.25em;
   }
