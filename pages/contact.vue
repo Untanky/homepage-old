@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Contact</h1>
     <div class="content-wrapper">
+      <h1>Contact</h1>
       <card
         :footerBorder="false"
       >
@@ -9,7 +9,7 @@
           slot="header"
         >
           <h3 class="title">
-            Contact
+            Contact data
           </h3>
         </template>
         <div
@@ -62,6 +62,10 @@ export default {
   max-width: 600px;
   text-align: left;
   margin: 0 auto;
+
+  h1 {
+    text-align: center;
+  }
 
   .title {
     text-align: left;

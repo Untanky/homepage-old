@@ -93,7 +93,7 @@ export default {
       transition: 0.5s linear background-color;
 
       &:hover {
-        background-color: rgba(1, 1, 1, 0.6);
+        background-color: rgba(1, 1, 1, 0.65);
         background-repeat: no-repeat;
         background-position: center top;
         background-size: cover;
@@ -105,7 +105,9 @@ export default {
           width: 64px;
           height: 64px;
           align-self: center;
-          background-color: $primary;
+          background-color: transparent;
+          background-blend-mode: overlay;
+          background: $primary-secondary-gradient;
           // border: 1px solid black;
           border-radius: 100%;
           box-shadow: $shadow;
@@ -122,7 +124,7 @@ export default {
           }
 
           &:hover {
-            background-color: $primary-variation1;
+            background-color: rgb(163, 163, 163);
             box-shadow: $hover-shadow;
             transition: 0.25s linear background-color, 0.25s linear box-shadow;
           }
@@ -149,7 +151,7 @@ export default {
       margin-top: -0.25em;
 
       .badge {
-      margin: 0.25em 0.25em 0 0;
+        margin: 0.25em 0.25em 0 0;
       }
     }
   }

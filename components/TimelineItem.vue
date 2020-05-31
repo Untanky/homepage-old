@@ -91,7 +91,7 @@ export default {
 }
 
 .timeline-info {
-  background-color: rgb(250, 250, 250);
+  background: $primary-secondary-gradient;
   padding: 1em;
   border-radius: 12px;
   margin-top: 3px;

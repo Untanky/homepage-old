@@ -13,7 +13,7 @@
         slot="footer"
       >
         <a
-          class="action"
+          class="action primary"
           href="data/en/cv.pdf"
           download
         >

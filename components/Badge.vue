@@ -36,7 +36,7 @@ export default {
   width: auto;
   padding: 0.125em 1em;
   border-radius: $border-radius;
-  box-shadow: $shadow;
+  box-shadow: $collapsed-shadow;
   user-select: none;
 
   &.primary {

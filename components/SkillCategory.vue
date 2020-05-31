@@ -15,21 +15,27 @@
         {{ category.description }}
       </div>
       <div class="skill-list">
-        <span
+        <badge
           v-for="(skill, index) in category.skills"
           :key="index"
+          type="primary"
           class="skill"
         >
           {{ skill.name }}
-        </span>
+        </badge>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Badge from './Badge.vue';
+
 export default {
   name: 'SkillCategory',
+  components: {
+    Badge,
+  },
   props: {
     category: {
       type: Object,
@@ -77,14 +83,8 @@ export default {
     .skill-list {
       width: 100%;
 
-      .skill {
-        display: inline-block;
-        background-color: rgb(250, 250, 250);
-        padding: 0.125em 1em;
-        border-radius: 16px;
-        margin-right: 0.5em;
-        margin-bottom: 0.5em;
-        box-shadow: $shadow;
+      .badge {
+        margin: 0.25em 0.25em 0.25em 0;
       }
     }
   }

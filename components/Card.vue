@@ -1,9 +1,9 @@
 <template>
   <section class="card">
     <header
-      :class="{ 'has-border': headerBorder }"
+      class="header"
     >
-      <slot name="header" />
+        <slot name="header" />
     </header>
 
     <div class="body">
@@ -41,7 +41,7 @@ export default {
 
 .card {
   box-sizing: border-box;
-  background-color: white;
+  background: white;
   border-radius: $border-radius;
   box-shadow: $shadow;
 
@@ -49,19 +49,13 @@ export default {
     padding: 1em;
   }
 
-  header {
-    &.has-border {
-      border-bottom: $border-primary;
-    }
-
-    &:not(.has-border) {
-      padding-bottom: 0;
-    }
+  .header {
+    background: $primary-secondary-gradient;
+    border-radius: $border-radius $border-radius 0 0;
   }
 
   footer {
     &.has-border {
-      border-top: $border-primary;
     }
 
     &:not(.has-border) {
