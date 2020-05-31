@@ -1,17 +1,6 @@
-<i18n>
-{
-  "en": {
-    "socials": "Socials"
-  },
-  "de": {
-    "socials": "Soziale Medien"
-  }
-}
-</i18n>
-
 <template>
   <div class="socials">
-    <h1 class="title">{{ $t('socials') }}</h1>
+    <h1 class="title">{{ $t('pages.socials') }}</h1>
     <SocialList />
   </div>
 </template>

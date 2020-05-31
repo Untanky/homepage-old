@@ -1,22 +1,3 @@
-<i18n>
-{
-  "en": {
-    "home": "Home",
-    "cv": "CV",
-    "projects": "Projects",
-    "social": "Social",
-    "contact": "Contact"
-  },
-  "de": {
-    "home": "Start",
-    "cv": "Lebenlauf",
-    "projects": "Projekte",
-    "social": "Sozial",
-    "contact": "Kontakt"
-  }
-}
-</i18n>
-
 <template>
   <nav class="navbar">
     <nuxt-link
@@ -26,7 +7,7 @@
     >
       <span class="material-icons-outlined">home</span>
       <span class="material-icons">home</span>
-      <span class="text">{{ $t('home') }}</span>
+      <span class="text">{{ $t('pages.home') }}</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
@@ -35,7 +16,7 @@
     >
       <span class="material-icons-outlined">list_alt</span>
       <span class="material-icons">list_alt</span>
-      <span class="text">{{ $t('cv') }}</span>
+      <span class="text">{{ $t('pages.cv') }}</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
@@ -44,7 +25,7 @@
     >
       <span class="material-icons-outlined">keyboard</span>
       <span class="material-icons">keyboard</span>
-      <span class="text">{{ $t('projects') }}</span>
+      <span class="text">{{ $t('pages.projects') }}</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
@@ -53,7 +34,7 @@
     >
       <span class="material-icons-outlined">people</span>
       <span class="material-icons">people</span>
-      <span class="text">{{ $t('social') }}</span>
+      <span class="text">{{ $t('pages.socials') }}</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
@@ -62,7 +43,7 @@
     >
       <span class="material-icons-outlined">more</span>
       <span class="material-icons">more</span>
-      <span class="text">{{ $t('contact') }}</span>
+      <span class="text">{{ $t('pages.contact') }}</span>
     </nuxt-link>
   </nav>
 </template>

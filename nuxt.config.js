@@ -70,9 +70,68 @@ module.exports = {
       messages: {
         en: {
           error: 'Unfortunately, there was an error',
+          pages: {
+            home: 'Home',
+            cv: 'Curriculum Vitae',
+            projects: 'Projects',
+            socials: 'Socials',
+            contact: 'Contact',
+          },
+          homepageContent: {
+            subTitle: 'Computer Scientist, Programmer and Hobby-Cook',
+            introduction: `<p>
+                Lukas was born and grew up in Berlin, Germany.
+                He studied applied computer science at the University of Applied Sciences in Berlin.
+                There he learn how to develop applications and work in a team. His focus of study was
+                on Usability and User Experience.
+              </p>
+              <p>
+                He got his first job at WBS Coding School, where he developed an online platform for
+                the students and worked on micro services with AWS.
+              </p>`,
+            portfolio: `Got an open position? Want to hire a new face? Interested in Lukas? <br> 
+              You can check if he matches your requirements for an open position by reading through his cv. 
+              You can check his skills and previous employments there.`,
+            projects: `Want to see what Lukas has already created? <br>
+              Go checkout his projects page, where you can see his most recent projects and
+              previously complete projects. For some there might even be a live-demo.`,
+            socials: `On his social media, Lukas posts about his life. He shares progress on his projects,
+              recipes he cooked and adventures he survived. Interested in getting to know him
+              a bit more? <br>
+              So, go on and follow him on my social media platforms.`,
+          },
         },
         de: {
           error: 'Es kam leider zu einem Fehler',
+          pages: {
+            home: 'Start',
+            cv: 'Lebenslauf',
+            projects: 'Projekte',
+            socials: 'Sozial',
+            contact: 'Kontakt',
+          },
+          homepageContent: {
+            subTitle: 'Informatiker, Entwickler and Hobby-Koch',
+            introduction: `<p>
+                Lukas ist geborener Berliner und wohnt dort schon sein ganzes Leben.
+                Aktuelle studiert er Angewandte Informatik an der Hochschule für Technik und Wirtschaft in Berlin.
+                Dort lernte er wie mir Anwendungen im Team entwicklet. Sein Fokus lag dabei auf Usability und User
+                Experience.
+              </p>
+              <p>
+                Während seiner ersten Joberfahrungen sammelte er viele Erfahrungen im entwickeln einer Online-Lernplattform 
+                und machte Erfahrungen mit AWS.
+              </p>`,
+            portfolio: `Offene Stelle? Neues Gesicht fürs Unternehmen gesucht? Interessiert an Lukas? <br> 
+              Sie können schauen ob er in Ihre Unternehmen passen würde, in dem Sie seinen Lebenslauf lesen. 
+              Dort finden Sie unter anderem seine vorherigen Arbeitsgeber und eine Übersicht über seine Fähigkeiten.`,
+            projects: `Wollen Sie sehen was Lukas bereits erstellt hat? <br>
+              Besuchen Sie seine Projektseite um seine neuesten und abgeschlossenen Projekte zu sehen.
+              Für einige gibt es sogar Live-Demos.`,
+            socials: `Auf seinen Social Media Kanälen postet Lukas über sein Leben, Rezepte, die er gekocht hat, und Abenteuer,
+              die er überstanden hat. Willen Sie ihn etwas näher kennenlernen? <br>
+              Besuchen Sie eine Seiten und folgen Sie ihm doch auch.`,
+          },
         },
       },
     },

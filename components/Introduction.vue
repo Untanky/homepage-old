@@ -12,18 +12,11 @@
         Lukas Grimm
       </h1>
       <h3 class="subtitle">
-        Proud Computer Scientist, Programmer and Hobby-Cook
+        {{ $t('homepageContent.subTitle') }}
       </h3>
-      <p>
-        Lukas was born and grew up in Berlin, Germany.
-        He studied applied computer science at the University of Applied Sciences in Berlin.
-        There he learn how to develop applications and work in a team. His focus of study was
-        on Usability and User Experience.
-      </p>
-      <p>
-        He got his first job at WBS Coding School, where he developed an online platform for
-        the students and worked on micro services with AWS.
-      </p>
+      <div
+        v-html="$t('homepageContent.introduction')"
+      />
     </div>
   </div>
 </template>

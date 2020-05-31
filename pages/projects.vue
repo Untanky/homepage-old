@@ -1,18 +1,7 @@
-<i18n>
-{
-  "en": {
-    "projects": "Projects"
-  },
-  "de": {
-    "projects": "Projekte"
-  }
-}
-</i18n>
-
 <template>
   <div>
     <h1 class="title">
-      {{ $t('projects') }}
+      {{ $t('pages.projects') }}
     </h1>
     <div
       v-if="error"

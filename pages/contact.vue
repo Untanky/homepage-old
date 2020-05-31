@@ -1,12 +1,10 @@
 <i18n>
 {
   "en": {
-    "contact": "Contact",
     "contactForm": "Contact Form",
     "contactData": "Contact Data"
   },
   "de": {
-    "contact": "Kontakt",
     "contactForm": "Kontaktanfrage",
     "contactData": "Kontaktdaten"
   }
@@ -16,7 +14,7 @@
 <template>
   <div>
     <div class="content-wrapper">
-      <h1>{{ $t('contact') }}</h1>
+      <h1>{{ $t('pages.contact') }}</h1>
       <card
         class="card"
         :footerBorder="false"

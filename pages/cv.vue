@@ -1,7 +1,6 @@
 <i18n>
 {
   "en": {
-    "cv": "Curriculum Vitae",
     "education": "Education",
     "experience": "Exprience",
     "skills": "Skills",
@@ -9,7 +8,6 @@
     "contactData": "Contact data"
   },
   "de": {
-    "cv": "Lebenslauf",
     "education": "Ausbildung",
     "experience": "Erfahrung",
     "skills": "Fähigkeiten",
@@ -22,7 +20,7 @@
 <template>
   <div class="portfolio">
     <h1 class="title">
-      {{ $t('cv') }}
+      {{ $t('pages.cv') }}
     </h1>
     <div
       v-if="error"
