@@ -1,3 +1,14 @@
+<i18n>
+{
+  "en": {
+    "companyPre": "at"
+  },
+  "de": {
+    "companyPre": "bei"
+  }
+}
+</i18n>
+
 <template>
   <TimelineItem
     :start-date="startDate"
@@ -8,7 +19,8 @@
         <b>{{ item.jobTitle }}</b>
       </div>
       <div class="company">
-        bei <a :href="item.link">{{ item.company }}</a>
+        {{ $t('companyPre') }}
+        <a :href="item.link">{{ item.company }}</a>
       </div>
       <div class="description">
         {{ item.description }}
@@ -37,6 +49,7 @@ export default {
     startDate() {
       return DateTime
         .fromObject(this.item.startDate)
+        .setLocale(this.$i18n.locale)
         .toLocaleString(dateFormat);
     },
     endDate() {
@@ -45,6 +58,7 @@ export default {
       if (finished && endDate) {
         return DateTime
           .fromObject(this.item.endDate)
+          .setLocale(this.$i18n.locale)
           .toLocaleString(dateFormat);
       }
 

@@ -1,12 +1,33 @@
+<i18n>
+{
+  "en": {
+    "cv": "Curriculum Vitae",
+    "education": "Education",
+    "experience": "Exprience",
+    "skills": "Skills",
+    "strengths": "Strengths",
+    "contactData": "Contact data"
+  },
+  "de": {
+    "cv": "Lebenslauf",
+    "education": "Ausbildung",
+    "experience": "Erfahrung",
+    "skills": "Fähigkeiten",
+    "strengths": "Stärken",
+    "contactData": "Kontaktdaten"
+  }
+}
+</i18n>
+
 <template>
   <div class="portfolio">
     <h1 class="title">
-      Portfolio
+      {{ $t('cv') }}
     </h1>
     <div
       v-if="error"
     >
-      There was an error
+      {{ $t('error') }}
     </div>
     <div
       v-else
@@ -14,7 +35,7 @@
       <card :footerBorder="false">
         <template slot="header">
           <h3 class="category-title">
-            Education
+            {{ $t('education') }}
           </h3>
         </template>
 
@@ -23,7 +44,7 @@
       <card :footerBorder="false">
         <template slot="header">
           <h3 class="category-title">
-            Experience
+            {{ $t('experience') }}
           </h3>
         </template>
 
@@ -32,7 +53,7 @@
       <card :footerBorder="false">
         <template slot="header">
           <h3 class="category-title">
-            Skills
+            {{ $t('skills') }}
           </h3>
         </template>
 
@@ -44,7 +65,7 @@
       <card :footerBorder="false">
         <template slot="header">
           <h3 class="category-title">
-            Strenghts
+            {{ $t('strengths') }}
           </h3>
         </template>
 
@@ -53,7 +74,7 @@
       <card :footerBorder="false">
         <template slot="header">
           <h3 class="category-title">
-            Contact data
+            {{ $t('contactData') }}
           </h3>
         </template>
 
@@ -86,13 +107,13 @@ export default {
     StrengthList,
     ContactInfo,
   },
-  asyncData() {
-    const educationPromise = axios.get(`${process.env.VUE_APP_API_HOST}/education.json`);
-    const experiencePromise = axios.get(`${process.env.VUE_APP_API_HOST}/experience.json`);
-    const skillsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/skills.json`);
-    const categoriesPromise = axios.get(`${process.env.VUE_APP_API_HOST}/categories.json`);
-    const strengthsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/strengths.json`);
-    const contactPromise = axios.get(`${process.env.VUE_APP_API_HOST}/contact.json`);
+  asyncData(ctx) {
+    const educationPromise = axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/education.json`);
+    const experiencePromise = axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/experience.json`);
+    const skillsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/skills.json`);
+    const categoriesPromise = axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/categories.json`);
+    const strengthsPromise = axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/strengths.json`);
+    const contactPromise = axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/contact.json`);
 
     return Promise.all([
       educationPromise,
