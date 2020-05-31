@@ -64,14 +64,15 @@ module.exports = {
   i18n: {
     locales: ['en', 'de'],
     defaultLocale: 'en',
+    vueI18nLoader: true,
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
         en: {
-          welcome: 'Welcome',
+          error: 'Unfortunately, there was an error',
         },
         de: {
-          welcome: 'Willkommen',
+          error: 'Es kam leider zu einem Fehler',
         },
       },
     },

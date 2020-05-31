@@ -1,3 +1,14 @@
+<i18n>
+{
+  "en": {
+    "contactForm": "Contact Form"
+  },
+  "de": {
+    "contactForm": "Kontaktanfrage"
+  }
+}
+</i18n>
+
 <template>
   <div class="contact-info">
     <div class="main-contact">
@@ -27,7 +38,7 @@
         </div>
         <div class="info">
           <a :href="contact.link">
-            Contact Form
+            {{ $t('contactForm') }}
           </a>
         </div>
       </div>

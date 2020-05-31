@@ -1,31 +1,62 @@
+<i18n>
+{
+  "en": {
+    "name": "Name",
+    "email": "E-mail",
+    "message": "Message",
+    "placeholder": {
+      "name": "John Doe",
+      "email": "john.doe@domain.com",
+      "message": "Your message"
+    },
+    "sendCopy": "Send copy of message to your email",
+    "submit": "Submit",
+    "requiredHint": "* required"
+  },
+  "de": {
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "placeholder": {
+      "name": "Max Mustermann",
+      "email": "max.mustermann@domain.com",
+      "message": "Ihre Nachricht"
+    },
+    "sendCopy": "Schicke eine Kopie der Nachricht an Ihre Email-Adresse",
+    "submit": "Abschicken",
+    "requiredHint": "* Pflichtfelder"
+  }
+}
+</i18n>
+
 <template>
   <form>
     <text-input
-      label="Name *"
       id="name"
-      placeholder="Paul Smith"
+      :label="$t('name')"
+      :placeholder="$t('placeholder.name')"
       :fullWidth="true"
       v-model="name"
     />
     <text-input
-      label="E-mail *"
       id="email"
-      placeholder="you@domain.com"
+      :label="$t('email')"
+      :placeholder="$t('placeholder.email')"
       :fullWidth="true"
       v-model="email"
     />
     <text-input
-      label="Message"
       id="message"
-      placeholder="Your message"
+      :label="$t('message')"
+      :placeholder="$t('placeholder.message')"
       :fullWidth="true"
       :rows="8"
       v-model="message"
     />
     <checkbox
-      label="Send copy to your email"
       id="send-copy"
       class="indent"
+      :label="$t('sendCopy')"
       v-model="sendCopy"
     />
     <button-input
@@ -34,11 +65,11 @@
       :disabled="!canSend"
       @click="sendEmail"
     >
-      Submit
+      {{ $t('submit') }}
     </button-input>
 
     <div class="indent">
-      * required
+      {{ $t('requiredHint') }}
     </div>
   </form>
 </template>

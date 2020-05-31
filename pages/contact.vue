@@ -1,7 +1,22 @@
+<i18n>
+{
+  "en": {
+    "contact": "Contact",
+    "contactForm": "Contact Form",
+    "contactData": "Contact Data"
+  },
+  "de": {
+    "contact": "Kontakt",
+    "contactForm": "Kontaktanfrage",
+    "contactData": "Kontaktdaten"
+  }
+}
+</i18n>
+
 <template>
   <div>
     <div class="content-wrapper">
-      <h1>Contact</h1>
+      <h1>{{ $t('contact') }}</h1>
       <card
         class="card"
         :footerBorder="false"
@@ -10,7 +25,7 @@
           slot="header"
         >
           <h3 class="title">
-            Contact form
+            {{ $t('contactForm') }}
           </h3>
         </template>
         <contact-form />
@@ -23,13 +38,13 @@
           slot="header"
         >
           <h3 class="title">
-            Contact data
+            {{ $t('contactData') }}
           </h3>
         </template>
         <div
           v-if="error"
         >
-          There was an error
+          {{ $t('error') }}
         </div>
         <div
           v-else
