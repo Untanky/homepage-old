@@ -3,7 +3,7 @@
     <nuxt-link
       active-class="active"
       class="link"
-      to="/"
+      :to="localePath('/')"
     >
       <span class="material-icons-outlined">home</span>
       <span class="material-icons">home</span>
@@ -12,16 +12,16 @@
     <nuxt-link
       active-class="active"
       class="link"
-      to="/portfolio"
+      :to="localePath('/cv')"
     >
       <span class="material-icons-outlined">list_alt</span>
       <span class="material-icons">list_alt</span>
-      <span class="text">Portfolio</span>
+      <span class="text">CV</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
       class="link"
-      to="/projects"
+      :to="localePath('/projects')"
     >
       <span class="material-icons-outlined">keyboard</span>
       <span class="material-icons">keyboard</span>
@@ -30,7 +30,7 @@
     <nuxt-link
       active-class="active"
       class="link"
-      to="/social"
+      :to="localePath('/social')"
     >
       <span class="material-icons-outlined">people</span>
       <span class="material-icons">people</span>
@@ -39,7 +39,7 @@
     <nuxt-link
       active-class="active"
       class="link"
-      to="/contact"
+      :to="localePath('/contact')"
     >
       <span class="material-icons-outlined">more</span>
       <span class="material-icons">more</span>

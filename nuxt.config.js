@@ -49,12 +49,32 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    // Doc: https://nuxt-community.github.io/nuxt-i18n/
+    'nuxt-i18n',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  /*
+  ** Nuxt i18n
+  */
+  i18n: {
+    locales: ['en', 'de'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          welcome: 'Welcome',
+        },
+        de: {
+          welcome: 'Willkommen',
+        },
+      },
+    },
   },
   /*
   ** Build configuration
