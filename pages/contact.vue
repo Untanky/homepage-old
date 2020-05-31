@@ -3,6 +3,20 @@
     <div class="content-wrapper">
       <h1>Contact</h1>
       <card
+        class="card"
+        :footerBorder="false"
+      >
+        <template
+          slot="header"
+        >
+          <h3 class="title">
+            Contact form
+          </h3>
+        </template>
+        <contact-form />
+      </card>
+      <card
+        class="card"
         :footerBorder="false"
       >
         <template
@@ -34,11 +48,13 @@
 import axios from 'axios';
 
 import Card from '../components/Card.vue';
+import ContactForm from '../components/ContactForm.vue';
 import ContactInfo from '../components/ContactInfo.vue';
 
 export default {
   components: {
     Card,
+    ContactForm,
     ContactInfo,
   },
   data: () => ({
@@ -71,6 +87,10 @@ export default {
     text-align: left;
     font-weight: 800;
     margin: 0;
+  }
+
+  .card {
+    margin-top: 4em;
   }
 }
 </style>
