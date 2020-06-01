@@ -2,15 +2,18 @@
   <div class="root">
     <navbar />
     <nuxt class="wrapper" />
+    <legal-footer />
   </div>
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue';
+import LegalFooter from '../components/LegalFooter.vue';
 
 export default {
   components: {
     Navbar,
+    LegalFooter,
   },
 };
 </script>
@@ -38,8 +41,16 @@ html {
   margin-bottom: 72px;
 
   @include tablet-up {
-    margin-top: 8em;
-    margin-bottom: 5em;
+    margin-bottom: 0;
+  }
+
+  .wrapper {
+    min-height: 100vh;
+
+    @include tablet-up {
+      margin-top: 8em;
+      margin-bottom: 6em;
+    }
   }
 }
 </style>
