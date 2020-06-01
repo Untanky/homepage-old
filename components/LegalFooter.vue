@@ -21,9 +21,9 @@
         {{ $t('pages.sitemap') }}
       </nuxt-link>
       <choice-box-input
-        label="Language:"
         id="lanuage-switcher"
         class="language-switcher"
+        :label="`${$t('language')}:`"
         :choices="languages"
         v-model="selected"
         @change="changeLanguage"

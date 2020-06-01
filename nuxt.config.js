@@ -62,7 +62,16 @@ module.exports = {
   ** Nuxt i18n
   */
   i18n: {
-    locales: ['en', 'de'],
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+      },
+      {
+        code: 'de',
+        name: 'Deutsch',
+      },
+    ],
     defaultLocale: 'en',
     vueI18nLoader: true,
     vueI18n: {
@@ -70,12 +79,17 @@ module.exports = {
       messages: {
         en: {
           error: 'Unfortunately, there was an error',
+          language: 'Language',
           pages: {
             home: 'Home',
-            cv: 'Curriculum Vitae',
+            cv: 'CV',
             projects: 'Projects',
             socials: 'Socials',
             contact: 'Contact',
+            imprint: 'Imprint',
+            dataProtection: 'Data protection',
+            privacyNotice: 'Privacy notice',
+            sitemap: 'Sitemap',
           },
           homepageContent: {
             subTitle: 'Computer Scientist, Programmer and Hobby-Cook',
@@ -103,12 +117,17 @@ module.exports = {
         },
         de: {
           error: 'Es kam leider zu einem Fehler',
+          language: 'Sprache',
           pages: {
             home: 'Start',
             cv: 'Lebenslauf',
             projects: 'Projekte',
             socials: 'Sozial',
             contact: 'Kontakt',
+            imprint: 'Impressum',
+            dataProtection: 'Datenschutz',
+            privacyNotice: 'Privacy notice',
+            sitemap: 'Sitemap',
           },
           homepageContent: {
             subTitle: 'Informatiker, Entwickler and Hobby-Koch',

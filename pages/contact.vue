@@ -73,8 +73,8 @@ export default {
   data: () => ({
     error: false,
   }),
-  asyncData() {
-    return axios.get(`${process.env.VUE_APP_API_HOST}/contact.json`)
+  asyncData(ctx) {
+    return axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/contact.json`)
       .then((res) => ({
         contact: res.data,
       }))

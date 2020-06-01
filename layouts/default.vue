@@ -44,12 +44,13 @@ html {
     margin-bottom: 0;
   }
 
-  .wrapper {
-    min-height: 100vh;
+  > .wrapper {
+    box-sizing: border-box;
+    min-height: 70vh;
 
     @include tablet-up {
-      margin-top: 8em;
-      margin-bottom: 6em;
+      padding-top: 8em;
+      padding-bottom: 6em;
     }
   }
 }
