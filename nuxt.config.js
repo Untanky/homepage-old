@@ -16,7 +16,7 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons+Outlined|Material+Icons' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap' },
     ],
-  },// Will register file from project api directory to handle /api/* requires
+  }, // Will register file from project api directory to handle /api/* requires
   serverMiddleware: [
     { path: '/api/v1/mail', handler: '~/api/v1/mail.js' },
   ],
@@ -82,7 +82,7 @@ module.exports = {
           language: 'Language',
           pages: {
             home: 'Home',
-            cv: 'CV',
+            cv: 'Porfolio',
             projects: 'Projects',
             socials: 'Socials',
             contact: 'Contact',
@@ -168,6 +168,13 @@ module.exports = {
     // eslint-disable-next-line no-unused-vars
     extend(config, ctx) {
 
+    },
+  },
+  loaders: {
+    vue: {
+      compilerOptions: {
+        preserveWhitespace: true,
+      },
     },
   },
 };

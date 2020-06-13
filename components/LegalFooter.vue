@@ -5,41 +5,33 @@
       <nuxt-link
         class="footer-link"
         :to="localePath('/imprint')"
-      >
-        {{ $t('pages.imprint') }}
-      </nuxt-link>
+      >{{ $t('pages.imprint') }}</nuxt-link>
       <nuxt-link
         class="footer-link"
         :to="localePath('/data-protection')"
-      >
-        {{ $t('pages.dataProtection') }}
-      </nuxt-link>
+      >{{ $t('pages.dataProtection') }}</nuxt-link>
       <nuxt-link
         class="footer-link"
         :to="localePath('/sitemap')"
-      >
-        {{ $t('pages.sitemap') }}
-      </nuxt-link>
-      <choice-box-input
-        id="lanuage-switcher"
-        class="language-switcher"
-        :label="`${$t('language')}:`"
-        :choices="languages"
-        v-model="selected"
-        @change="changeLanguage"
-      />
+      >{{ $t('pages.sitemap') }}</nuxt-link>
+    </div>
+    <div class="footer-container">
+      <span>
+        {{ `${$t('language')}:` }}
+      </span>
+      <nuxt-link
+        class="footer-link"
+        v-for="(link, index, key) in languages"
+        :key="key"
+        :to="switchLocalePath(link.code)"
+      >{{ link.name }}</nuxt-link>
     </div>
   </footer>
 </template>
 
 <script>
-import ChoiceBoxInput from './ChoiceBoxInput.vue';
-
 export default {
   name: 'LegalFooter',
-  components: {
-    ChoiceBoxInput,
-  },
   data() {
     return {
       selected: this.$i18n.locale,
