@@ -1,7 +1,20 @@
+<i18n>
+{
+  "en": {
+    "contactForm": "Contact Form",
+    "contactData": "Contact Data"
+  },
+  "de": {
+    "contactForm": "Kontaktanfrage",
+    "contactData": "Kontaktdaten"
+  }
+}
+</i18n>
+
 <template>
   <div>
     <div class="content-wrapper">
-      <h1>Contact</h1>
+      <h1>{{ $t('pages.contact') }}</h1>
       <card
         class="card"
         :footerBorder="false"
@@ -10,7 +23,7 @@
           slot="header"
         >
           <h3 class="title">
-            Contact form
+            {{ $t('contactForm') }}
           </h3>
         </template>
         <contact-form />
@@ -23,13 +36,13 @@
           slot="header"
         >
           <h3 class="title">
-            Contact data
+            {{ $t('contactData') }}
           </h3>
         </template>
         <div
           v-if="error"
         >
-          There was an error
+          {{ $t('error') }}
         </div>
         <div
           v-else
@@ -60,8 +73,8 @@ export default {
   data: () => ({
     error: false,
   }),
-  asyncData() {
-    return axios.get(`${process.env.VUE_APP_API_HOST}/contact.json`)
+  asyncData(ctx) {
+    return axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/contact.json`)
       .then((res) => ({
         contact: res.data,
       }))

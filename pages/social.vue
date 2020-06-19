@@ -1,6 +1,6 @@
 <template>
   <div class="socials">
-    <h1 class="title">Socials</h1>
+    <h1 class="title">{{ $t('pages.socials') }}</h1>
     <SocialList />
   </div>
 </template>
@@ -21,5 +21,6 @@ export default {
 .title {
   text-align: center;
   font-weight: 800;
+  margin-bottom: 3em;
 }
 </style>

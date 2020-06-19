@@ -3,47 +3,47 @@
     <nuxt-link
       active-class="active"
       class="link"
-      to="/"
+      :to="localePath('/')"
     >
       <span class="material-icons-outlined">home</span>
       <span class="material-icons">home</span>
-      <span class="text">Home</span>
+      <span class="text">{{ $t('pages.home') }}</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
       class="link"
-      to="/portfolio"
+      :to="localePath('/cv')"
     >
       <span class="material-icons-outlined">list_alt</span>
       <span class="material-icons">list_alt</span>
-      <span class="text">Portfolio</span>
+      <span class="text">{{ $t('pages.cv') }}</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
       class="link"
-      to="/projects"
+      :to="localePath('/projects')"
     >
       <span class="material-icons-outlined">keyboard</span>
       <span class="material-icons">keyboard</span>
-      <span class="text">Projects</span>
+      <span class="text">{{ $t('pages.projects') }}</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
       class="link"
-      to="/social"
+      :to="localePath('/social')"
     >
       <span class="material-icons-outlined">people</span>
       <span class="material-icons">people</span>
-      <span class="text">Social</span>
+      <span class="text">{{ $t('pages.socials') }}</span>
     </nuxt-link>
     <nuxt-link
       active-class="active"
       class="link"
-      to="/contact"
+      :to="localePath('/contact')"
     >
       <span class="material-icons-outlined">more</span>
       <span class="material-icons">more</span>
-      <span class="text">Contact</span>
+      <span class="text">{{ $t('pages.contact') }}</span>
     </nuxt-link>
   </nav>
 </template>

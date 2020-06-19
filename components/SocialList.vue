@@ -5,12 +5,18 @@
       :key="key"
       :social="social"
       class="social-item"
+      :class="index"
     />
   </div>
 </template>
 
 <script>
 import SocialItem from './SocialItem.vue';
+
+import InstagramLogo from '../assets/img/instagram.svg';
+import TwitterLogo from '../assets/img/twitter.svg';
+import GitHubLogo from '../assets/img/github.png';
+import LinkedInLogo from '../assets/img/linkedin.png';
 
 export default {
   name: 'SocialList',
@@ -21,25 +27,25 @@ export default {
         network: 'Instagram',
         link: 'https://instagram.com/Untanky',
         handle: '@Untanky',
-        imageURI: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/264px-Instagram_logo_2016.svg.png',
+        imageURI: InstagramLogo,
       },
       github: {
         network: 'GitHub',
         link: 'https://github.com/Untanky',
         handle: 'Untanky',
-        imageURI: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg',
+        imageURI: GitHubLogo,
       },
       linkedIn: {
         network: 'LinkedIn',
         link: 'https://linkedin.com/in/lukasgrimm',
         handle: 'Lukas Grimm',
-        imageURI: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png',
+        imageURI: LinkedInLogo,
       },
       twitter: {
         network: 'Twitter',
         link: 'https://twitter.com/Untanky',
         handle: '@Untanky',
-        imageURI: 'https://upload.wikimedia.org/wikipedia/de/thumb/9/9f/Twitter_bird_logo_2012.svg/600px-Twitter_bird_logo_2012.svg.png',
+        imageURI: TwitterLogo,
       },
     },
   }),

@@ -2,12 +2,10 @@
   <div class="home">
     <introduction />
     <website-content
-      heading="Portfolio"
-      link-path="/portfolio"
+      :heading="$t('pages.cv')"
+      link-path="/cv"
     >
-      Got an open position? Want to hire a new face? Interested in Lukas? <br>
-      You can check if he matches your requirements for an open position by reading
-      through his portfolio. You can check his skills and previous employments there.
+      <div v-html="$t('homepageContent.portfolio')" />
 
       <template
         slot="footer"
@@ -25,7 +23,7 @@
       </template>
     </website-content>
     <website-content
-      heading="Projects"
+      :heading="$t('pages.projects')"
       link-path="/projects"
     >
       Want to see what Lukas has already created? <br>
@@ -33,7 +31,7 @@
       previously complete projects. For some there might even be a live-demo.
     </website-content>
     <website-content
-      heading="Social Media"
+      :heading="$t('pages.socials')"
       link-path="/social"
     >
       On his social media, Lukas posts about his life. He shares progress on his projects,

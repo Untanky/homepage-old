@@ -1,3 +1,14 @@
+<i18n>
+{
+  "en": {
+    "grade": "grade"
+  },
+  "de": {
+    "grade": "Note"
+  }
+}
+</i18n>
+
 <template>
   <TimelineItem
     :start-date="startDate"
@@ -48,7 +59,7 @@ export default {
       }
 
       if (finished && grade) {
-        result += ` (grade: ${grade})`;
+        result += ` (${this.$t('grade')}: ${grade})`;
       }
 
       return result;
@@ -56,6 +67,7 @@ export default {
     startDate() {
       return DateTime
         .fromObject(this.item.startDate)
+        .setLocale(this.$i18n.locale)
         .toLocaleString(dateFormat);
     },
     endDate() {
@@ -64,6 +76,7 @@ export default {
       if (finished && endDate) {
         return DateTime
           .fromObject(this.item.endDate)
+          .setLocale(this.$i18n.locale)
           .toLocaleString(dateFormat);
       }
 

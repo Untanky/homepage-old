@@ -1,3 +1,14 @@
+<i18n>
+{
+  "en": {
+    "view": "View"
+  },
+  "de": {
+    "view": "Anschauen"
+  }
+}
+</i18n>
+
 <template>
   <card
       class="website-content"
@@ -24,7 +35,7 @@
           <span class="material-icons">
             remove_red_eye
           </span>
-          View
+          {{ $t('view') }}
         </nuxt-link>
       </template>
     </card>

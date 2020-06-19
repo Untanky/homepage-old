@@ -1,12 +1,12 @@
 <template>
   <div>
     <h1 class="title">
-      Projects
+      {{ $t('pages.projects') }}
     </h1>
     <div
       v-if="error"
     >
-      There was an error
+      {{ $t('error') }}
     </div>
     <div
       v-else
@@ -26,8 +26,8 @@ export default {
   components: {
     ProjectList,
   },
-  asyncData() {
-    return axios.get(`${process.env.VUE_APP_API_HOST}/projects.json`)
+  asyncData(ctx) {
+    return axios.get(`${process.env.VUE_APP_API_HOST}/${ctx.app.i18n.locale}/projects.json`)
       .then(({ data }) => ({ projects: data }))
       .catch(() => ({ error: true }));
   },
