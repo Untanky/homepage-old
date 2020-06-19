@@ -34,13 +34,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/responsive';
 @import '../assets/scss/variables';
 
 .timeline-item {
   position: relative;
   padding-top: 8px;
-  margin-left: 135px;
-  margin-bottom: 1em;
+  margin-left: 2em;
 
   &:not(:first-child) {
     margin-top: 60px;
@@ -73,18 +73,18 @@ export default {
   .time-wrapper {
     .time {
       position: absolute;
-      left: -140px;
+      left: -40px;
       width: 90px;
-      text-align: right;
+      text-align: left;
       font-size: 10px;
       font-weight: bold;
       padding: 0 0.5em;
       border-radius: 16px;
       &:first-child {
-        top: 0;
+        top: -20px;
       }
       &:last-child {
-        top: 100%;
+        bottom: -30px;
       }
     }
   }
@@ -94,8 +94,8 @@ export default {
   background: $primary-secondary-gradient;
   padding: 1em;
   border-radius: 12px;
-  margin-top: 3px;
-  margin-right: 1em;
+  // margin-top: 3px;
+  // margin-right: 1em;
   box-shadow: $shadow;
 }
 </style>
