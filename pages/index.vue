@@ -3,7 +3,7 @@
     <introduction />
     <website-content
       :heading="$t('pages.cv')"
-      link-path="/cv"
+      :link-path="localePath('/cv')"
     >
       <div v-html="$t('homepageContent.portfolio')" />
 
@@ -12,7 +12,7 @@
       >
         <a
           class="action primary"
-          href="data/en/cv.pdf"
+          :href="cvDownload"
           download
         >
           <span class="material-icons">
@@ -24,20 +24,15 @@
     </website-content>
     <website-content
       :heading="$t('pages.projects')"
-      link-path="/projects"
+      :link-path="localePath('/projects')"
     >
-      Want to see what Lukas has already created? <br>
-      Go checkout his projects page, where you can see his most recent projects and
-      previously complete projects. For some there might even be a live-demo.
+      <div v-html="$t('homepageContent.projects')" />
     </website-content>
     <website-content
       :heading="$t('pages.socials')"
-      link-path="/social"
+      :link-path="localePath('/social')"
     >
-      On his social media, Lukas posts about his life. He shares progress on his projects,
-      recipes he cooked and adventures he survived. Interested in getting to know him
-      a bit more? <br>
-      So, go on and follow him on my social media platforms.
+      <div v-html="$t('homepageContent.socials')" />
     </website-content>
   </div>
 </template>
@@ -52,6 +47,12 @@ export default {
     WebsiteContent,
   },
   data: () => ({}),
+  computed: {
+    cvDownload() {
+      console.log(this.$i18n.locale);
+      return `data/${this.$i18n.locale}/cv.pdf`;
+    },
+  },
   head: () => ({
     title: 'Lukas Grimm - Homepage',
   }),
