@@ -123,12 +123,12 @@ module.exports = {
             accept: 'Provision required or required:',
             cancelation: 'Revocation of consent:',
             general: {
-              title: 'Collection of general information when visiting our website',
-              reason: `<p>If you access our website, i.e. if you do not register or otherwise provide information, information of a general nature is automatically collected. This information (server log files) includes, for example, the type of web browser, the operating system used, the domain name of your Internet service provider, your IP address and the like.</p>
+              title: 'Collection of general information when visiting my website',
+              reason: `<p>If you access my website, i.e. if you do not register or otherwise provide information, information of a general nature is automatically collected. This information (server log files) includes, for example, the type of web browser, the operating system used, the domain name of your Internet service provider, your IP address and the like.</p>
               <p>The purpose of these information is:</p>
               <ul>
               <li>creating a connection to the website,</li>
-              <li>assuring problem-free usage of our Website,</li>
+              <li>assuring problem-free usage of my Website,</li>
               <li>assessment of system security and stability, as well as</li>
               <li>other administrive purposes.</li>
               </ul>
@@ -214,37 +214,37 @@ module.exports = {
             accept: 'Bereitstellung vorgeschrieben oder erforderlich:',
             cancelation: 'Widerruf der Einwilligung:',
             general: {
-              title: 'Erfassung allgemeiner Informationen beim Besuch unserer Website',
-              reason: `<p>Wenn Sie auf unsere Website zugreifen, d.h., wenn Sie sich nicht registrieren oder anderweitig Informationen übermitteln, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers, Ihre IP-Adresse und ähnliches. </p>
+              title: 'Erfassung allgemeiner Informationen beim Besuch meiner Website',
+              reason: `<p>Wenn Sie auf meine Website zugreifen, d.h., wenn Sie sich nicht registrieren oder anderweitig Informationen übermitteln, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers, Ihre IP-Adresse und ähnliches. </p>
               <p>Sie werden insbesondere zu folgenden Zwecken verarbeitet:</p>
               <ul>
               <li>Sicherstellung eines problemlosen Verbindungsaufbaus der Website,</li>
-              <li>Sicherstellung einer reibungslosen Nutzung unserer Website,</li>
+              <li>Sicherstellung einer reibungslosen Nutzung meiner Website,</li>
               <li>Auswertung der Systemsicherheit und -stabilität sowie</li>
               <li>zu weiteren administrativen Zwecken.</li>
               </ul>
-              <p>Wir verwenden Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Informationen dieser Art werden von uns ggfs. statistisch ausgewertet, um unseren Internetauftritt und die dahinterstehende Technik zu optimieren.</p>`,
-              legal: '<p>Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website.</p>',
-              receiver: '<p>Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung unserer Webseite als Auftragsverarbeiter tätig werden.</p>',
+              <p>Ich verwende Ihre Daten nicht, um Rückschlüsse auf Ihre Person zu ziehen. Informationen dieser Art werden von mir ggfs. statistisch ausgewertet, um meinen Internetauftritt und die dahinterstehende Technik zu optimieren.</p>`,
+              legal: '<p>Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis meines berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität meiner Website.</p>',
+              receiver: '<p>Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb und die Wartung meiner Webseite als Auftragsverarbeiter tätig werden.</p>',
               duration: '<p>Die Daten werden gelöscht, sobald diese für den Zweck der Erhebung nicht mehr erforderlich sind. Dies ist für die Daten, die der Bereitstellung der Webseite dienen, grundsätzlich der Fall, wenn die jeweilige Sitzung beendet ist.</p>',
-              accept: '<p>Die Bereitstellung der vorgenannten personenbezogenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne die IP-Adresse ist jedoch der Dienst und die Funktionsfähigkeit unserer Website nicht gewährleistet. Zudem können einzelne Dienste und Services nicht verfügbar oder eingeschränkt sein. Aus diesem Grund ist ein Widerspruch ausgeschlossen.</p>',
+              accept: '<p>Die Bereitstellung der vorgenannten personenbezogenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne die IP-Adresse ist jedoch der Dienst und die Funktionsfähigkeit meiner Website nicht gewährleistet. Zudem können einzelne Dienste und Services nicht verfügbar oder eingeschränkt sein. Aus diesem Grund ist ein Widerspruch ausgeschlossen.</p>',
             },
             contact: {
               title: 'Kontaktformular',
               reason: '<p>Die von Ihnen eingegebenen Daten werden zum Zweck der individuellen Kommunikation mit Ihnen gespeichert. Hierfür ist die Angabe einer validen E-Mail-Adresse sowie Ihres Namens erforderlich. Diese dient der Zuordnung der Anfrage und der anschließenden Beantwortung derselben. Die Angabe weiterer Daten ist optional.</p>',
               legal: `<p>Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt auf der Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).</p>
-              <p>Durch Bereitstellung des Kontaktformulars möchten wir Ihnen eine unkomplizierte Kontaktaufnahme ermöglichen. Ihre gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert.</p>`,
+              <p>Durch Bereitstellung des Kontaktformulars möchte ich Ihnen eine unkomplizierte Kontaktaufnahme ermöglichen. Ihre gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert.</p>`,
               receiver: '<p>Empfänger der Daten sind ggf. Auftragsverarbeiter.</p>',
               duration: '<p>Daten werden spätestens 6 Monate nach Bearbeitung der Anfrage gelöscht.</p>',
-              accept: '<p>Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig. Wir können Ihre Anfrage jedoch nur bearbeiten, sofern Sie uns Ihren Namen, Ihre E-Mail-Adresse und den Grund der Anfrage mitteilen.</p>',
+              accept: '<p>Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig. Ich kann Ihre Anfrage jedoch nur bearbeiten, sofern Sie mir Ihren Namen, Ihre E-Mail-Adresse und den Grund der Anfrage mitteilen.</p>',
             },
             script: {
               title: 'Verwendung von Scriptbibliotheken (Google Webfonts)',
-              reason: `<p>Um unsere Inhalte browserübergreifend korrekt und grafisch ansprechend darzustellen, verwenden wir auf dieser Website „Google Web Fonts“ der Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; nachfolgend „Google“) zur Darstellung von Schriften.</p>
+              reason: `<p>Um meine Inhalte browserübergreifend korrekt und grafisch ansprechend darzustellen, verwende ich auf dieser Website „Google Web Fonts“ der Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; nachfolgend „Google“) zur Darstellung von Schriften.</p>
               <p>Die Datenschutzrichtlinie des Bibliothekbetreibers Google finden Sie hier: <a href="https://www.google.com/policies/privacy/">https://www.google.com/policies/privacy/</a></p>`,
               legal: '<p>Rechtsgrundlage für die Einbindung von Google Webfonts und dem damit verbundenen Datentransfer zu Google ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). </p>',
               receiver: '<p>Der Aufruf von Scriptbibliotheken oder Schriftbibliotheken löst automatisch eine Verbindung zum Betreiber der Bibliothek aus. Dabei ist es theoretisch möglich – aktuell allerdings auch unklar ob und ggf. zu welchen Zwecken – dass der Betreiber in diesem Fall Google Daten erhebt.</p>',
-              duration: `<p>Wir erheben keine personenbezogenen Daten, durch die Einbindung von Google Webfonts.</p>
+              duration: `<p>Ich erhebe keine personenbezogenen Daten, durch die Einbindung von Google Webfonts.</p>
               <p>Weitere Informationen zu Google Web Fonts finden Sie unter <a href="https://developers.google.com/fonts/faq">https://developers.google.com/fonts/faq</a> und in der Datenschutzerklärung von Google: <a href="https://www.google.com/policies/privacy/">https://www.google.com/policies/privacy/</a>.</p>`,
               transfer: '<p>Google verarbeitet Ihre Daten in den USA und hat sich dem EU_US Privacy Shield unterworfen <a href="https://www.privacyshield.gov/EU-US-Framework">https://www.privacyshield.gov/EU-US-Framework</a>.</p>',
               accept: '<p>Die Bereitstellung der personenbezogenen Daten ist weder gesetzlich, noch vertraglich vorgeschrieben. Allerdings kann ggfs. die korrekte Darstellung der Inhalte durch Standardschriften nicht möglich sein.</p>',
@@ -252,11 +252,11 @@ module.exports = {
             },
             ssl: {
               title: 'SSL-Verschlüsselung',
-              text: '<p>Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.</p>',
+              text: '<p>Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwende ich dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.</p>',
             },
             change: {
-              title: 'Änderung unserer Datenschutzbestimmungen',
-              text: '<p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>',
+              title: 'Änderung meiner Datenschutzbestimmungen',
+              text: '<p>Ich behalte mir vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen meiner Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>',
             },
           },
         },
