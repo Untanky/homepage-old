@@ -37,6 +37,10 @@ html {
   }
 }
 
+* {
+  word-break: break-all;
+}
+
 .root {
   margin-bottom: 72px;
 
