@@ -82,7 +82,7 @@ module.exports = {
           language: 'Language',
           pages: {
             home: 'Home',
-            cv: 'Porfolio',
+            cv: 'Portfolio',
             projects: 'Projects',
             socials: 'Socials',
             contact: 'Contact',

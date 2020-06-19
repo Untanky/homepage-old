@@ -10,7 +10,7 @@
       <div class="project-image-container">
         <div
           class="project-links project-image"
-          style="background-image: url(https://www.guidedogs.org/wp-content/uploads/2019/11/website-donate-mobile.jpg)"
+          :style="`background-image: url(${project.imageUrl})`"
         >
           <a
             class="project-link github"

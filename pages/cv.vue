@@ -19,9 +19,9 @@
 
 <template>
   <div class="portfolio">
-    <h1 class="title">
+    <Title>
       {{ $t('pages.cv') }}
-    </h1>
+    </Title>
     <div
       v-if="error"
     >
@@ -86,6 +86,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
+import Title from '../components/Title.vue';
 import Card from '../components/Card.vue';
 import EducationList from '../components/EducationList.vue';
 import ExperienceList from '../components/ExperienceList.vue';
@@ -98,6 +99,7 @@ import ContactInfo from '../components/ContactInfo.vue';
 export default {
   name: 'Portfolio',
   components: {
+    Title,
     Card,
     EducationList,
     ExperienceList,
@@ -149,12 +151,6 @@ export default {
   @media screen and (min-width: 819px) {
     width: 820px;
     margin: 0 auto;
-  }
-
-  .title {
-    text-align: center;
-    font-weight: 800;
-    margin-bottom: 3em;
   }
 
   h3 {
