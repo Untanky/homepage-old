@@ -14,7 +14,7 @@
 <template>
   <div>
     <div class="content-wrapper">
-      <h1>{{ $t('pages.contact') }}</h1>
+      <Title>{{ $t('pages.contact') }}</Title>
       <card
         class="card"
         :footerBorder="false"
@@ -60,12 +60,14 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
+import Title from '../components/Title.vue';
 import Card from '../components/Card.vue';
 import ContactForm from '../components/ContactForm.vue';
 import ContactInfo from '../components/ContactInfo.vue';
 
 export default {
   components: {
+    Title,
     Card,
     ContactForm,
     ContactInfo,
@@ -92,13 +94,8 @@ export default {
   text-align: left;
   margin: 0 auto;
 
-  h1 {
-    text-align: center;
-  }
-
-  .title {
+  h3 {
     text-align: left;
-    font-weight: 800;
     margin: 0;
   }
 

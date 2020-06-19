@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1 class="title">
+    <Title>
       {{ $t('pages.projects') }}
-    </h1>
+    </Title>
     <div
       v-if="error"
     >
@@ -20,10 +20,12 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
+import Title from '../components/Title.vue';
 import ProjectList from '../components/ProjectList.vue';
 
 export default {
   components: {
+    Title,
     ProjectList,
   },
   asyncData(ctx) {
@@ -39,10 +41,3 @@ export default {
   }),
 };
 </script>
-
-<style scoped>
-.title {
-  text-align: center;
-  font-weight: 800;
-}
-</style>

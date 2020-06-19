@@ -1,26 +1,22 @@
 <template>
   <div class="socials">
-    <h1 class="title">{{ $t('pages.socials') }}</h1>
+    <Title>{{ $t('pages.socials') }}</Title>
     <SocialList />
   </div>
 </template>
 
 <script>
+import Title from '../components/Title.vue';
 import SocialList from '../components/SocialList.vue';
 
 export default {
   name: 'Socials',
-  components: { SocialList },
+  components: {
+    Title,
+    SocialList,
+  },
   head: () => ({
     title: 'Lukas Grimm - Social Media',
   }),
 };
 </script>
-
-<style lang="scss" scoped>
-.title {
-  text-align: center;
-  font-weight: 800;
-  margin-bottom: 3em;
-}
-</style>
