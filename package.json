@@ -1,9 +1,9 @@
 {
   "name": "homepage",
-  "version": "1.0.0",
-  "description": "My phenomenal Nuxt.js project",
-  "author": "Lukas Grimm",
-  "private": true,
+  "version": "2.0.0--alpha",
+  "description": "Homepage web app displaying my CV and projects",
+  "author": "Lukas 'Untaky' Grimm",
+  "private": "false",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
