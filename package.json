@@ -1,49 +1,30 @@
 {
   "name": "homepage",
-  "version": "2.0.0--pre-alpha",
-  "description": "Homepage web app displaying my CV and projects",
-  "author": "Lukas 'Untaky' Grimm",
-  "private": "false",
+  "description": "A homepage webapp for displaying my cv and projects",
+  "version": "2.0.0--pre-alpha-0",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "start": "nuxt start"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/dotenv": "^1.4.0",
-    "axios": "^0.19.2",
-    "body-parser": "^1.19.0",
-    "classnames": "^2.2.6",
-    "cross-env": "^5.2.0",
-    "express": "^4.16.4",
-    "luxon": "^1.23.0",
-    "nuxt": "^2.0.0",
-    "nuxt-i18n": "^6.12.1"
+    "nuxt": "^2.14.7",
+    "nuxt-i18n": "^6.15.4"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^2.0.0",
-    "@nuxtjs/eslint-module": "^1.0.0",
-    "@vue/test-utils": "^1.0.0-beta.27",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "jest": "^24.1.0",
-    "node-sass": "^4.13.1",
-    "nodemon": "^1.18.9",
+    "@nuxtjs/tailwindcss": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint": "^7.8.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.1.0",
+    "postcss-loader": "^4.0.4",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^8.0.2",
-    "ts-loader": "^8.0.11",
     "typescript": "^4.0.5",
-    "vue": "^2.6.11",
-    "vue-jest": "^4.0.0-0"
+    "typescript-loader": "^1.1.3"
   }
 }
