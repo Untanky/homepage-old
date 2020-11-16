@@ -1,0 +1,10 @@
+.nuxt/
+.github/
+.git/
+.gitignore
+.dockerignore
+node_modules/
+coverage/
+Dockerfile
+README.md
+TECHSTACK.md
