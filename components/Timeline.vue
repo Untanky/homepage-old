@@ -3,6 +3,9 @@
     .relative
       div(v-for="(element, index) in elements")
         timeline-event(:element="element")
+          .text-xl.font-bold {{element.title}}
+          .italic {{element.subtitle}}
+          .text-gray-600 {{element.description}}
 </template>
 
 <script lang="ts">

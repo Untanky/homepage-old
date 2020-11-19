@@ -1,9 +1,7 @@
 <template lang="pug">
   .timeline-event(:class="{ active: element.active }")
     .text-xl.font-medium {{element.date}}
-    .text-xl.font-bold {{element.title}}
-    .italic {{element.subtitle}}
-    .text-gray-600 {{element.description}}
+    slot
 </template>
 
 <script lang="ts">
