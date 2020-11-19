@@ -1,7 +1,8 @@
 <template lang="pug">
   .timeline
-    div(v-for="(element, index) in elements")
-      timeline-event(:element="element")
+    .relative
+      div(v-for="(element, index) in elements")
+        timeline-event(:element="element")
 </template>
 
 <script lang="ts">
@@ -30,25 +31,38 @@ export default Vue.extend({
   @apply relative;
 }
 
-.timeline::before {
+.timeline > .relative::before {
   content: "";
   @apply w-1;
   @apply h-full;
   @apply block;
   @apply absolute;
   @apply bg-gray-600;
-  @apply left-11;
-  @apply top-11;
+  @apply left-7;
 }
 
-.timeline > *:last-child::before {
+.timeline > .relative > *:first-child::before {
   content: "";
   @apply block;
   @apply absolute;
   @apply bg-white;
   @apply w-1;
-  @apply h-48;
-  @apply left-11;
-  @apply -bottom-20;
+  @apply h-4;
+  @apply left-7;
+}
+
+.timeline > .relative > *:last-child {
+  @apply relative;
+}
+
+.timeline > .relative > *:last-child > *::before {
+  content: "";
+  @apply block;
+  @apply absolute;
+  @apply bg-white;
+  @apply w-1;
+  @apply h-full;
+  @apply left-7;
+  @apply -bottom-4;
 }
 </style>
