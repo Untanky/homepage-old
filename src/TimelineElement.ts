@@ -28,10 +28,13 @@ class TimelineElement {
 
   description: string;
 
+  component: Object;
+
   constructor(
     title: string,
     subtitle: string,
     description: string,
+    component: Object,
     from: DateTime,
     to: DateTime | null,
     active: boolean | null,
@@ -41,6 +44,7 @@ class TimelineElement {
     this.description = description;
     this.active = active === null ? false : active;
     this.date = formatDateString(from, to, active);
+    this.component = component;
   }
 }
 

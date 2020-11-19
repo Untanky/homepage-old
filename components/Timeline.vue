@@ -3,9 +3,7 @@
     .relative
       div(v-for="(element, index) in elements")
         timeline-event(:element="element")
-          .text-xl.font-bold {{element.title}}
-          .italic {{element.subtitle}}
-          .text-gray-600 {{element.description}}
+          components(:is="element.component", :element="element")
 </template>
 
 <script lang="ts">
