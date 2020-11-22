@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Timeline should render correctly 1`] = `
+exports[`Timeline Empty Timeline should render correctly 1`] = `
+<div
+  class="timeline"
+>
+  <div
+    class="relative"
+  />
+</div>
+`;
+
+exports[`Timeline Timeline with one entry should render correctly 1`] = `
 <div
   class="timeline"
 >
@@ -9,29 +19,40 @@ exports[`Timeline should render correctly 1`] = `
   >
     <div>
       <div
-        class="timeline-event active"
+        class="timeline-event"
       >
         <div
           class="text-xl font-medium"
         >
-          November 2020 - November 2020
+          July 2020 - November 2020
         </div>
         <div>
-          <div
-            class="text-xl font-bold"
-          >
-            Test
-          </div>
-          <div
-            class="italic"
-          >
-            Subtest
-          </div>
-          <div
-            class="text-gray-600"
-          >
-            Very long description
-          </div>
+          Content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Timeline Timeline with one entry should render correctly 2`] = `
+<div
+  class="timeline"
+>
+  <div
+    class="relative"
+  >
+    <div>
+      <div
+        class="timeline-event"
+      >
+        <div
+          class="text-xl font-medium"
+        >
+          July 2020 - November 2020
+        </div>
+        <div>
+          This Content
         </div>
       </div>
     </div>
@@ -42,52 +63,10 @@ exports[`Timeline should render correctly 1`] = `
         <div
           class="text-xl font-medium"
         >
-          November 2020
+          February 2019 - July 2020
         </div>
         <div>
-          <div
-            class="text-xl font-bold"
-          >
-            Test 2
-          </div>
-          <div
-            class="italic"
-          >
-            Subtest - even more test
-          </div>
-          <div
-            class="text-gray-600"
-          >
-            Very long description - much longer than before
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div
-        class="timeline-event active"
-      >
-        <div
-          class="text-xl font-medium"
-        >
-          November 2020 - Now
-        </div>
-        <div>
-          <div
-            class="text-xl font-bold"
-          >
-            Test 3
-          </div>
-          <div
-            class="italic"
-          >
-            Subtest - even more test
-          </div>
-          <div
-            class="text-gray-600"
-          >
-            Very long description - much longer than before
-          </div>
+          Other Content
         </div>
       </div>
     </div>
