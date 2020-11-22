@@ -7,13 +7,12 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import TimelineElement from '~/src/TimelineElement';
 
 export default Vue.extend({
   name: 'StackedExperienceText',
   props: {
     element: {
-      type: TimelineElement,
+      type: Object,
       required: true,
     },
   },

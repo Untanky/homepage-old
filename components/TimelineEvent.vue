@@ -6,13 +6,13 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import TimelineElement from '../src/TimelineElement';
+import TimelineEntry from '../src/TimelineEntry';
 
 export default Vue.extend({
   name: 'TimelineEvent',
   props: {
     element: {
-      type: Object as PropType<TimelineElement>,
+      type: Object as PropType<TimelineEntry>,
       required: true,
     },
   },

@@ -1,15 +1,15 @@
 <template lang="pug">
   .timeline
     .relative
-      div(v-for="(element, index) in elements")
-        timeline-event(:element="element")
-          components(:is="element.component", :element="element")
+      div(v-for="(element, index) in elements.list", :key="index")
+        timeline-event(:element="element.timelineEntry")
+          slot(:name="`timeline-event__${index}`")
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
 import TimelineEvent from './TimelineEvent.vue';
-import TimelineElement from '../src/TimelineElement';
+import TimelineList from '../src/TimelineList';
 
 export default Vue.extend({
   name: 'Timeline',
@@ -18,7 +18,7 @@ export default Vue.extend({
   },
   props: {
     elements: {
-      type: Array as PropType<Array<TimelineElement>>,
+      type: Object as PropType<TimelineList>,
       required: true,
     },
   },
