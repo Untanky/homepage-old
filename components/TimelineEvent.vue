@@ -1,6 +1,6 @@
 <template lang="pug">
   .timeline-event(:class="{ active: element.active }")
-    .text-xl.font-medium {{element.date}}
+    .text-xl.font-medium {{dateString}}
     slot
 </template>
 
@@ -8,12 +8,36 @@
 import Vue, { PropType } from 'vue';
 import TimelineEntry from '../src/TimelineEntry';
 
+const DATE_FORMAT = { month: 'long', year: 'numeric' };
+
 export default Vue.extend({
   name: 'TimelineEvent',
   props: {
     element: {
       type: Object as PropType<TimelineEntry>,
       required: true,
+    },
+  },
+  computed: {
+    dateString(): string {
+      const fromString = this.element.from.toLocaleString(DATE_FORMAT); // TODO: localize
+      const toString = this.formatToString();
+      const optionalHyphen = toString !== '' ? ' - ' : '';
+
+      return `${fromString}${optionalHyphen}${toString}`;
+    },
+  },
+  methods: {
+    formatToString(): string {
+      if (this.element.active) {
+        return 'now'; // TODO: localize
+      }
+
+      if (this.element.to) {
+        return this.element.to.toLocaleString(DATE_FORMAT); // TODO: localize
+      }
+
+      return '';
     },
   },
 });
