@@ -20,7 +20,9 @@ export default Vue.extend({
   },
   computed: {
     dateString(): string {
-      const fromString = this.element.from.toLocaleString(DATE_FORMAT); // TODO: localize
+      const fromString = this.element.from
+        .setLocale(this.$i18n.locale)
+        .toLocaleString(DATE_FORMAT);
       const toString = this.formatToString();
       const optionalHyphen = toString !== '' ? ' - ' : '';
 
@@ -34,7 +36,9 @@ export default Vue.extend({
       }
 
       if (this.element.to) {
-        return this.element.to.toLocaleString(DATE_FORMAT); // TODO: localize
+        return this.element.to
+          .setLocale(this.$i18n.locale)
+          .toLocaleString(DATE_FORMAT);
       }
 
       return '';

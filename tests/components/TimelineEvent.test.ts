@@ -14,7 +14,15 @@ describe('TimelineEvent', () => {
       },
     };
 
-    const comp = mount(TimelineEvent, { propsData: props });
+    const comp = mount(TimelineEvent, {
+      propsData: props,
+      mocks: {
+        $t: () => 'now',
+        $i18n: {
+          locale: 'en',
+        },
+      },
+    });
     expect(comp.element).toMatchSnapshot();
   });
 
@@ -27,7 +35,15 @@ describe('TimelineEvent', () => {
       },
     };
 
-    const comp = mount(TimelineEvent, { propsData: props });
+    const comp = mount(TimelineEvent, {
+      propsData: props,
+      mocks: {
+        $t: () => 'now',
+        $i18n: {
+          locale: 'en',
+        },
+      },
+    });
     expect(comp.element).toMatchSnapshot();
   });
 
@@ -40,7 +56,15 @@ describe('TimelineEvent', () => {
       },
     };
 
-    const comp = mount(TimelineEvent, { propsData: props });
+    const comp = mount(TimelineEvent, {
+      propsData: props,
+      mocks: {
+        $t: () => 'now',
+        $i18n: {
+          locale: 'en',
+        },
+      },
+    });
     expect(comp.element).toMatchSnapshot();
   });
 
@@ -53,7 +77,15 @@ describe('TimelineEvent', () => {
       },
     };
 
-    const comp = mount(TimelineEvent, { propsData: props });
+    const comp = mount(TimelineEvent, {
+      propsData: props,
+      mocks: {
+        $t: () => 'now',
+        $i18n: {
+          locale: 'en',
+        },
+      },
+    });
     expect(comp.element).toMatchSnapshot();
   });
 });
