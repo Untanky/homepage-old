@@ -2,8 +2,8 @@
   div
     rich-link(linkUrl="https://www.google.com" title="GitHub" text="Untanky" imageUrl="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png")
     timeline(:elements="timelineElements")
-      template(v-for="(element, index) in timelineElements.list" v-slot:[`timeline-event__${index}`])
-        stacked-experience-text(:key="index" :element="element.content")
+      template(v-for="(element, i) in timelineElements.list" v-slot:[`timeline-event__${i}`])
+        stacked-experience-text(:key="i" :element="element.content")
 </template>
 
 <script lang="ts">
@@ -58,8 +58,8 @@ export default Vue.extend({
             active: false,
           },
         },
-      ]
-    }
+      ],
+    },
   }),
 });
 </script>

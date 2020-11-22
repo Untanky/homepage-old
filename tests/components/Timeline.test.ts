@@ -14,9 +14,9 @@ describe('Timeline', () => {
     const comp = mount(Timeline, {
       propsData: props,
       mocks: {
-        $t: () => 'now',
         $i18n: {
           locale: 'en',
+          t: () => 'now',
         },
       },
     });
@@ -47,9 +47,9 @@ describe('Timeline', () => {
       propsData: props,
       slots,
       mocks: {
-        $t: () => 'now',
         $i18n: {
           locale: 'en',
+          t: () => 'now',
         },
       },
     });
@@ -89,9 +89,9 @@ describe('Timeline', () => {
       propsData: props,
       slots,
       mocks: {
-        $t: () => 'now',
         $i18n: {
           locale: 'en',
+          t: () => 'now',
         },
       },
     });

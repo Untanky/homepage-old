@@ -5,7 +5,7 @@ interface TimelineElement {
 
   to?: DateTime;
 
-  active: boolean;
+  active?: boolean;
 }
 
 export default TimelineElement;

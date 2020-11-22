@@ -1,6 +1,21 @@
+<i18n>
+{
+  "en": {
+    "timeline": {
+      "now": "now"
+    }
+  },
+  "de": {
+    "timeline": {
+      "now": "zurzeit"
+    }
+  }
+}
+</i18n>
+
 <template lang="pug">
   .timeline-event(:class="{ active: element.active }")
-    .text-xl.font-medium {{dateString}}
+    .text-xl.font-medium {{ dateString }}
     slot
 </template>
 
@@ -32,7 +47,7 @@ export default Vue.extend({
   methods: {
     formatToString(): string {
       if (this.element.active) {
-        return 'now'; // TODO: localize
+        return this.$i18n.t('timeline.now').toString();
       }
 
       if (this.element.to) {
