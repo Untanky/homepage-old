@@ -48,7 +48,7 @@ export default Vue.extend({
   @apply absolute;
   @apply bg-white;
   @apply w-1;
-  @apply h-4;
+  @apply h-5;
   @apply left-7;
 }
 

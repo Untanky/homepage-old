@@ -77,7 +77,9 @@ export default Vue.extend({
   @apply h-3;
   @apply block;
   @apply absolute;
-  @apply bg-red-500;
+  @apply bg-gradient-to-r;
+  @apply from-primary-500;
+  @apply to-secondary-500;
   @apply rounded-full;
   @apply top-4;
   @apply left-6;
@@ -89,7 +91,7 @@ export default Vue.extend({
   @apply h-3;
   @apply block;
   @apply absolute;
-  @apply text-red-500;
+  @apply text-primary-500;
   @apply font-black;
   @apply text-2xl;
   @apply top-0.25;

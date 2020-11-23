@@ -1,8 +1,21 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
   },
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: '#000',
+      white: '#fff',
+      gray: defaultTheme.colors.gray,
+      primary: defaultTheme.colors.red,
+      secondary: defaultTheme.colors.purple,
+      tertiary: defaultTheme.colors.amber,
+      link: defaultTheme.colors.blue,
+    },
     inset: {
       0: 0,
       auto: 'auto',
