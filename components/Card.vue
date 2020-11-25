@@ -4,7 +4,7 @@
     slot
     div.h-8(v-if="linkText")
     a.card-link(v-if="linkText" :href="linkUrl")
-      div.card-link__text(class="after:chevron hover:underline") {{ linkText }}
+      div.card-link__text(class="after:chevron") {{ linkText }}
 
 </template>
 
@@ -46,13 +46,19 @@ export default Vue.extend({
   @apply from-white;
   @apply via-white;
   @apply to-transparent;
+  @apply text-center;
   /* @apply after\:chevron; */
 }
 
 .card-link__text {
+  @apply inline-block;
   @apply text-link-500;
-  @apply text-center;
   @apply cursor-pointer;
   @apply pt-8;
+  @apply mx-auto;
+}
+
+.card-link__text:hover {
+  @apply underline;
 }
 </style>
