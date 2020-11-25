@@ -2,7 +2,7 @@
   a.flex.flex-col.p-4.items-center.justify-between.group(:href="linkUrl" :title="linkAltText")
     img.w-16.h-16(:src="imageUrl" :alt="linkAltText")
     .text-xl {{title}}
-    div(class="after:chevron") {{text}}
+    div.link(class="after:chevron group-hover:underline") {{text}}
 </template>
 
 <script lang="ts">

@@ -17,7 +17,7 @@ exports[`should run 1`] = `
     Title
   </div>
   <div
-    class="after:chevron"
+    class="link after:chevron group-hover:underline"
   >
     Link Text
   </div>
