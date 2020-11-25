@@ -27,9 +27,10 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 .timeline {
-  @apply p-4;
   @apply h-auto;
   @apply relative;
+  @apply p-4;
+  @apply my-4;
 }
 
 .timeline > .relative::before {

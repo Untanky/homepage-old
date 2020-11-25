@@ -3,6 +3,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    extend: {
+      cursor: ['hover', 'focus'],
+    },
   },
   theme: {
     colors: {

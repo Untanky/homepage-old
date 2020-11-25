@@ -3,3 +3,30 @@
 @tailwind components;
 
 @tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+.after\:chevron::after {
+  content: " ›";
+}
+
+.before\:chevron::before {
+  content: " ›";
+}
+
+.card {
+  @apply inline-block;
+  @apply overflow-hidden;
+  @apply p-4;
+  @apply rounded-lg;
+  @apply border-gray-600;
+  @apply border-2;
+}
+
+.card__title {
+  @apply inline-block;
+  @apply text-gray-700;
+  @apply mb-2;
+}
