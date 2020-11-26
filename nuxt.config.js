@@ -14,6 +14,17 @@ export default {
     '~/assets/css/main.css',
     '~/assets/css/main.scss',
   ],
+  head: {
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'my website description',
+      },
+    ],
+  },
   i18n: {
     locales: [
       {
