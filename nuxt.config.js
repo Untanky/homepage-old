@@ -9,6 +9,7 @@ export default {
     ],
   ],
   plugins: [
+    '~/plugins/vueflags.js',
   ],
   css: [
     '~/assets/css/main.css',
@@ -29,14 +30,16 @@ export default {
     locales: [
       {
         code: 'en',
-        name: 'Deutsch',
+        name: 'English',
         iso: 'en-US',
+        flag: 'us',
         file: 'en.js',
       },
       {
         code: 'de',
-        name: 'English',
+        name: 'Deutsch',
         iso: 'de-DE',
+        flag: 'de',
         file: 'de.js',
       },
     ],
@@ -46,6 +49,6 @@ export default {
     },
     vueI18nLoader: true,
     lazy: true,
-    langDir: 'assets/i18n/',
+    langDir: 'static/i18n/',
   },
 };

@@ -6,6 +6,7 @@ module.exports = {
     textDecoration: ['responsive', 'hover', 'focus', 'group-hover'],
     extend: {
       cursor: ['hover', 'focus'],
+      borderRadius: ['active'],
     },
   },
   theme: {

@@ -5,6 +5,7 @@
     div.text-center
       a.block.link.text-2xl.mb-4(class="md:mr-12 md:inline-block after:chevron" href="/contact") {{ $t('titlePage.contactCTA') }}
       a.block.link.text-2xl.mb-4(class="md:inline-block after:chevron" href="/contact") {{ $t('titlePage.downloadCTA') }}
+    lang-switcher
 </template>
 
 <i18n>
@@ -23,3 +24,15 @@
   }
 }
 </i18n>
+
+<script lang="ts">
+import Vue from 'vue';
+import LangSwitcher from '../components/LangSwitcher.vue';
+
+export default Vue.extend({
+  name: 'Index',
+  components: {
+    LangSwitcher,
+  },
+});
+</script>

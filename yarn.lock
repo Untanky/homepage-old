@@ -913,6 +913,11 @@
     postcss "7.0.32"
     purgecss "^2.3.0"
 
+"@growthbunker/vueflags@^0.1.14":
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/@growthbunker/vueflags/-/vueflags-0.1.14.tgz#a4e756789c4e7c258c4bb82ebf5736c9549db5cb"
+  integrity sha512-iw0r5QIHV9j2YDLf71m0RsZPIueVwGyBlYfqtzHZUtXJq+uBYERSmpZeTeGh6XhwFR63aIvOITvq6hRHBxdXLw==
+
 "@intlify/vue-i18n-extensions@^1.0.1":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@intlify/vue-i18n-extensions/-/vue-i18n-extensions-1.0.2.tgz#ab7f8507f7d423c368e44fa21d6dece700261fca"
