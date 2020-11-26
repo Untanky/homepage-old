@@ -48,5 +48,13 @@ module.exports = {
       '-8': '-2rem',
       '-20': '-5rem',
     },
+    extend: {
+      height: {
+        '5/6': '83.3333%',
+      },
+      fontSize: {
+        '10xl': '10rem',
+      },
+    },
   },
 };

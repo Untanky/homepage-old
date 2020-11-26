@@ -62,11 +62,7 @@ exports[`Card should render without title and with link 1`] = `
 <div
   class="card relative"
 >
-  <div
-    class="card__title"
-  >
-    Title
-  </div>
+  <!---->
   <div>
     Content
   </div>
