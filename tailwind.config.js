@@ -4,9 +4,10 @@ module.exports = {
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     textDecoration: ['responsive', 'hover', 'focus', 'group-hover'],
+    borderRadius: ['responsive', 'active', 'group-hover'],
+    display: ['responsive', 'hover', 'group-hover'],
     extend: {
       cursor: ['hover', 'focus'],
-      borderRadius: ['active'],
     },
   },
   theme: {

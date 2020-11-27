@@ -1,18 +1,24 @@
 <template lang="pug">
-  .group
-    div.p-2.rounded-md.bg-gray-300.inline-block(class="active:rounded-t-0")
-      gb-flag.mr-1(:code="currentLocale.flag" size="mini")
-      span {{ currentLocale.name }}
-    nuxt-link.p-2.rounded-md.bg-gray-300.inline-block(v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)") 
-      gb-flag(:code="locale.flag" size="mini")
-      span {{ locale.name }}
+  .group.inline-flex.flex-col.divide-y-2.divide-gray-400
+    .rounded-md.bg-gray-200(class="group-hover:rounded-b-none")
+        language-display(:flag="currentLocale.flag") {{ currentLocale.name }}
+    div(class="group-hover:inline-block hidden rounded-b-md bg-gray-200")
+      nuxt-link.block(v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)") 
+        language-display(:flag="locale.flag" class="hover:bg-gray-300") {{ locale.name }}
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import LanguageDisplay from './LanguageDisplay.vue';
 
 export default Vue.extend({
   name: 'LangSwitcher',
+  components: {
+    LanguageDisplay,
+  },
+  data: () => ({
+    expanded: false,
+  }),
   computed: {
     currentLocale() {
       if (!this.$i18n.locales) return this.$i18n.fallbackLocale;
