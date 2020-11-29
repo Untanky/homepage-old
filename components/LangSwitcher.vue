@@ -6,13 +6,9 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import LanguageDisplay from './LanguageDisplay.vue';
 
 export default Vue.extend({
   name: 'LangSwitcher',
-  components: {
-    LanguageDisplay,
-  },
   props: {
     openToTop: Boolean,
   },
