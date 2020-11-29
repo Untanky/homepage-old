@@ -1,10 +1,7 @@
 <template lang="pug">
-  .group.inline-flex.flex-col.divide-y-2.divide-gray-400
-    .rounded-md.bg-gray-200(class="group-hover:rounded-b-none")
-        language-display(:flag="currentLocale.flag") {{ currentLocale.name }}
-    div(class="group-hover:inline-block hidden rounded-b-md bg-gray-200")
-      nuxt-link.block(v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)") 
-        language-display(:flag="locale.flag" class="hover:bg-gray-300") {{ locale.name }}
+  .lang-switcher
+    select.bg-gray-200.pl-4.pr-6.py-2.rounded-md.border-gray-300.border.appearance-none(@change="changeLocale")
+      option(v-for="locale in locales" :key="locale.code" :value="locale.code" :selected="locale.isSelected") {{ `${locale.flag}&nbsp;&nbsp;${locale.name}` }}
 </template>
 
 <script lang="ts">
@@ -16,18 +13,46 @@ export default Vue.extend({
   components: {
     LanguageDisplay,
   },
-  data: () => ({
-    expanded: false,
-  }),
-  computed: {
-    currentLocale() {
-      if (!this.$i18n.locales) return this.$i18n.fallbackLocale;
-      return this.$i18n.locales.find((locale) => (typeof locale === 'string' ? locale : locale.code) === this.$i18n.locale);
+  props: {
+    openToTop: Boolean,
+  },
+  methods: {
+    changeLocale(event) {
+      this.$i18n.setLocale(event.target.value);
     },
-    availableLocales() {
-      if (!this.$i18n.locales) return this.$i18n.fallbackLocale;
-      return this.$i18n.locales.filter((locale) => (typeof locale === 'string' ? locale : locale.code) !== this.$i18n.locale);
+  },
+  computed: {
+    locales() {
+      if (!this.$i18n.locales) return [];
+      return this.$i18n.locales.map((locale) => {
+        if (typeof locale === 'string') {
+          return null;
+        }
+
+        return {
+          isSelected: locale.code === this.$i18n.locale,
+          ...locale,
+        };
+      });
     },
   },
 });
 </script>
+
+<style lang="postcss">
+.lang-switcher {
+  @apply inline;
+  @apply relative;
+}
+
+.lang-switcher::before {
+  content: "›";
+  @apply block;
+  @apply absolute;
+  @apply right-3;
+  @apply -top-1;
+  @apply transform;
+  @apply rotate-90;
+  @apply text-lg;
+}
+</style>

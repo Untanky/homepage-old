@@ -5,6 +5,8 @@ module.exports = {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     textDecoration: ['responsive', 'hover', 'focus', 'group-hover'],
     borderRadius: ['responsive', 'active', 'group-hover'],
+    borderColor: ['responsive', 'hover', 'group-hover'],
+    borderWidth: ['responsive', 'hover', 'group-hover'],
     display: ['responsive', 'hover', 'group-hover'],
     extend: {
       cursor: ['hover', 'focus'],
@@ -41,6 +43,7 @@ module.exports = {
       10: '2.5rem',
       11: '2.75rem',
       12: '3rem',
+      16: '4rem',
       32: '8rem',
       '-1': '-0.25rem',
       '-2': '-0.5rem',
@@ -49,6 +52,10 @@ module.exports = {
       '-6': '-1.5rem',
       '-8': '-2rem',
       '-20': '-5rem',
+      full: '100%',
+    },
+    rotate: {
+      90: '90deg',
     },
     extend: {
       height: {
