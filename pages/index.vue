@@ -1,19 +1,19 @@
 <template lang="pug">
   #home.h-full
-    page-header
+    gradient-header
     grid-layout
 
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import PageHeader from '../components/PageHeader.vue';
+import GradientHeader from '../components/headers/GradientHeader.vue';
 import GridLayout from '../components/layouts/GridLayout.vue';
 
 export default Vue.extend({
   name: 'Index',
   components: {
-    PageHeader,
+    GradientHeader,
     GridLayout,
   },
 });
