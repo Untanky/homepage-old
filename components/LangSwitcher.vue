@@ -7,14 +7,20 @@
 <script lang="ts">
 import Vue from 'vue';
 
+type SelectEvent = {
+  target: HTMLSelectElement;
+}
+
 export default Vue.extend({
   name: 'LangSwitcher',
   props: {
     openToTop: Boolean,
   },
   methods: {
-    changeLocale(event) {
-      this.$i18n.setLocale(event.target.value);
+    changeLocale(event: SelectEvent) {
+      this.$i18n.setLocale(event.target
+        ? event.target.value
+        : this.$i18n.fallbackLocale.toString());
     },
   },
   computed: {
