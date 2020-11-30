@@ -71,6 +71,11 @@ module.exports = {
         '9xl': '9rem',
         '10xl': '10rem',
       },
+      gridAutoRows: {
+        80: '20rem',
+        96: '24rem',
+        128: '32rem',
+      },
     },
   },
 };
