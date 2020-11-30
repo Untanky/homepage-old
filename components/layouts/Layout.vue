@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import GridConfig from '../../src/layouts/GridConfig';
+import Vue, { PropType } from 'vue';
+import LayoutConfig from '../../src/layouts/LayoutConfig';
 
 export default Vue.extend({
   name: 'Layout',
   props: {
     config: {
-      type: GridConfig,
+      type: Object as PropType<LayoutConfig<any>>,
       required: true,
     },
     data: {
