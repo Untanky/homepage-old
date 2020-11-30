@@ -9,3 +9,21 @@
       .card.m-0.row-span-2 Hello
       .card.m-0.row-span-2 Hello
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  name: 'GridLayout',
+  props: {
+    config: {
+      type: Object,
+      required: true,
+    },
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
+});
+</script>
