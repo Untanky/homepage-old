@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import LangSwitcher from '../LangSwitcher.vue';
+import LangSwitcher from '../common/LangSwitcher.vue';
 
 export default Vue.extend({
   name: 'GradientHeader',
