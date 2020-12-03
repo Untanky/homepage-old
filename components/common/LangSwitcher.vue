@@ -13,9 +13,6 @@ type SelectEvent = {
 
 export default Vue.extend({
   name: 'LangSwitcher',
-  props: {
-    openToTop: Boolean,
-  },
   methods: {
     changeLocale(event: SelectEvent) {
       this.$i18n.setLocale(event.target
