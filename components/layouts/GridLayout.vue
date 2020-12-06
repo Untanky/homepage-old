@@ -1,22 +1,16 @@
 <template lang="pug">
   section.content.w-full.relative.my-16
     .container.px-2.grid.grid-cols-1.gap-4.auto-rows-80.grid-flow-column-dense(class="lg:grid-cols-3 sm:mx-auto")
-      .card.m-0
-        stacked-text.justify-between.h-full(:formattedTexts="formattedTexts")
-      .card.m-0.p-0
-        full-image(:data="{imageUrl: '/img/profile.jpg'}")
-      .card.m-0 Hello
-      .card.m-0.row-span-3 Hello
-      .card.m-0 Hello
-      .card.m-0.row-span-2 Hello
-      .card.m-0.row-span-2 Hello
+      .card.m-0(v-for="data, index in layout.layout" :key="index" :class="gridClass(data)")
+        component(:is="data.setting.component" :data="data.data")
 </template>
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
 import StackedText from '../StackedText.vue';
 import FullImage from '../FullImage.vue';
-import GridConfig from '../../src/layouts/GridConfig';
+import LayoutData from '../../src/LayoutData';
+import GridSetting from '../../src/layouts/GridSetting';
 
 export default Vue.extend({
   name: 'GridLayout',
@@ -25,26 +19,26 @@ export default Vue.extend({
     FullImage,
   },
   props: {
-    config: {
-      type: Object as PropType<GridConfig>,
-      required: true,
-    },
-    data: {
-      type: Object,
+    layout: {
+      type: Object as PropType<LayoutData<GridSetting>>,
       required: true,
     },
   },
-  data: () => ({
-    formattedTexts: [
-      {
-        text: 'Hello World',
-        classes: ['font-bold', 'text-xl'],
-      },
-      {
-        text: 'Goodbye World',
-        classes: ['italic', 'text-xl'],
-      },
-    ],
-  }),
+  methods: {
+    gridClass(data: Object) {
+      return [...data.setting.classes, this.getSizeClass(data.setting.size)];
+    },
+    getSizeClass(size: string) {
+      switch (size) {
+        case 'LARGE':
+          return 'row-span-2';
+        case 'MEDIUM':
+          return 'row-span-2';
+        case 'SMALL':
+        default:
+          return '';
+      }
+    },
+  },
 });
 </script>

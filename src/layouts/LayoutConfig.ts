@@ -1,4 +1,4 @@
-type LayoutConfig<SettingType> = {
+interface LayoutConfig<SettingType> {
   configType: String;
 
   version: String;

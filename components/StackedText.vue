@@ -1,6 +1,6 @@
 <template lang="pug">
-  .stacked-text.flex.flex-col
-    div(v-for="formattedText, index in formattedTexts" :key="index" :class="formattedText.classes") {{ formattedText.text }}
+  .stacked-text.flex.flex-col.h-full(:class="data.stackedTextOptions.classes")
+    div(v-for="formattedText, index in data.formattedTexts" :key="index" :class="formattedText.classes") {{ formattedText.text }}
 </template>
 
 <script lang="ts">
@@ -10,8 +10,8 @@ import { FormattedText } from '../src/components';
 export default Vue.extend({
   name: 'StackedText',
   props: {
-    formattedTexts: {
-      type: Array as PropType<Array<FormattedText>>,
+    data: {
+      type: Object as PropType<FormattedText>,
       required: true,
     },
   },

@@ -11,6 +11,7 @@ export default {
   plugins: [
     '~/plugins/vueflags.js',
     '~/plugins/layouts.js',
+    '~/plugins/components.js',
   ],
   css: [
     '~/assets/css/main.css',
