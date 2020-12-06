@@ -3,7 +3,8 @@
     .container.px-2.grid.grid-cols-1.gap-4.auto-rows-80.grid-flow-column-dense(class="lg:grid-cols-3 sm:mx-auto")
       .card.m-0
         stacked-text.justify-between.h-full(:formattedTexts="formattedTexts")
-      .card.m-0 Hello
+      .card.m-0.p-0
+        full-image(:data="{imageUrl: '/img/profile.jpg'}")
       .card.m-0 Hello
       .card.m-0.row-span-3 Hello
       .card.m-0 Hello
@@ -14,12 +15,14 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue';
 import StackedText from '../StackedText.vue';
+import FullImage from '../FullImage.vue';
 import GridConfig from '../../src/layouts/GridConfig';
 
 export default Vue.extend({
   name: 'GridLayout',
   components: {
     StackedText,
+    FullImage,
   },
   props: {
     config: {
