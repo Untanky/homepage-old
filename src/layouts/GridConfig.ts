@@ -19,6 +19,7 @@ class GridConfig implements LayoutConfig<GridSetting> {
         title: 'Card title',
         component: 'stacked-text',
         dataId: 0,
+        classes: [],
       },
     ];
   }

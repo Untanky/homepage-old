@@ -10,6 +10,8 @@ type GridSetting = {
   component: String;
 
   dataId: Number;
+
+  classes: String[];
 }
 
 export default GridSetting;

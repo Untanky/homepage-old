@@ -1,7 +1,8 @@
 <template lang="pug">
   section.content.w-full.relative.my-16
     .container.px-2.grid.grid-cols-1.gap-4.auto-rows-80.grid-flow-column-dense(class="lg:grid-cols-3 sm:mx-auto")
-      .card.m-0 Hello
+      .card.m-0
+        stacked-text.justify-between.h-full(:formattedTexts="formattedTexts")
       .card.m-0 Hello
       .card.m-0 Hello
       .card.m-0.row-span-3 Hello
@@ -12,10 +13,14 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
+import StackedText from '../StackedText.vue';
 import GridConfig from '../../src/layouts/GridConfig';
 
 export default Vue.extend({
   name: 'GridLayout',
+  components: {
+    StackedText,
+  },
   props: {
     config: {
       type: Object as PropType<GridConfig>,
@@ -26,6 +31,17 @@ export default Vue.extend({
       required: true,
     },
   },
-  
+  data: () => ({
+    formattedTexts: [
+      {
+        text: 'Hello World',
+        classes: ['font-bold', 'text-xl'],
+      },
+      {
+        text: 'Goodbye World',
+        classes: ['italic', 'text-xl'],
+      },
+    ],
+  }),
 });
 </script>

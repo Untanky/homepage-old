@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should run 1`] = `
+<div
+  class="stacked-text flex row"
+>
+  <div
+    class="bold text-xl"
+  >
+    formattedText.text
+  </div>
+  <div
+    class="italic text-xl"
+  >
+    formattedText.text
+  </div>
+</div>
+`;

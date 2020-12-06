@@ -18,7 +18,18 @@ export default Vue.extend({
   },
   data: () => ({
     config: new GridConfig(),
-    data: {},
+    data: {
+      formattedTexts: [
+        {
+          text: 'Hello World',
+          classes: ['bold', 'text-xl'],
+        },
+        {
+          text: 'Goodbye World',
+          classes: ['italic', 'text-xl'],
+        },
+      ],
+    },
   }),
 });
 </script>
