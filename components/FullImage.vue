@@ -5,7 +5,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import FullImage from '../src/FullImage';
+import { FullImage } from '../src/components';
 
 export default Vue.extend({
   name: 'FullImage',

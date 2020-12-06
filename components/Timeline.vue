@@ -9,7 +9,7 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue';
 import TimelineEvent from './TimelineEvent.vue';
-import TimelineList from '../src/TimelineList';
+import { TimelineList } from '../src/components';
 
 export default Vue.extend({
   name: 'Timeline',

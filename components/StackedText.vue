@@ -5,7 +5,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import FormattedText from '../src/FormattedText';
+import { FormattedText } from '../src/components';
 
 export default Vue.extend({
   name: 'StackedText',
