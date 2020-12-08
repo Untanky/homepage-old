@@ -1,4 +1,6 @@
-type GridSetting = {
+import LayoutSetting from '../interfaces/LayoutSetting';
+
+interface GridSetting extends LayoutSetting {
   size: string;
 
   column: number;
