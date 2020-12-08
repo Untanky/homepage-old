@@ -9,9 +9,9 @@
 import Vue, { PropType } from 'vue';
 import StackedText from '../StackedText.vue';
 import FullImage from '../FullImage.vue';
-import LayoutData from '../../src/LayoutData';
+import LayoutController from '../../src/interfaces/LayoutController';
 import GridSetting from '../../src/layouts/GridSetting';
-import Composition from '~/src/Composition';
+import LayoutComposition from '../../src/interfaces/LayoutComposition';
 
 export default Vue.extend({
   name: 'GridLayout',
@@ -21,12 +21,12 @@ export default Vue.extend({
   },
   props: {
     layout: {
-      type: Object as PropType<LayoutData<GridSetting>>,
+      type: Object as PropType<LayoutController<GridSetting>>,
       required: true,
     },
   },
   methods: {
-    gridClass(data: Composition<GridSetting>) {
+    gridClass(data: LayoutComposition<GridSetting>) {
       return [
         ...data.setting.classes,
         this.getSizeClass(data.setting.size),

@@ -1,3 +1,3 @@
-type ComponentData = Object;
+interface ComponentData {}
 
 export default ComponentData;

@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import LayoutConfig from '../../src/layouts/LayoutConfig';
+import LayoutConfig from '../../src/interfaces/LayoutConfig';
 
 export default Vue.extend({
   name: 'Layout',

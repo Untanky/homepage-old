@@ -1,5 +1,5 @@
 import GridSetting from './GridSetting';
-import LayoutConfig from './LayoutConfig';
+import LayoutConfig from '../interfaces/LayoutConfig';
 
 class GridConfig implements LayoutConfig<GridSetting> {
   configType: String = 'GRID';

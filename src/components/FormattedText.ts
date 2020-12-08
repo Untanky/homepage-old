@@ -1,4 +1,4 @@
-import ComponentData from "../ComponentData";
+import ComponentData from '../interfaces/ComponentData';
 
 interface FormattedText extends ComponentData {
   text: string,

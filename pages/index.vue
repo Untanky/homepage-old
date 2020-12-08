@@ -10,7 +10,7 @@ import GradientHeader from '../components/headers/GradientHeader.vue';
 import Layout from '../components/layouts/index';
 import GridSetting from '~/src/layouts/GridSetting';
 import GridConfig from '../src/layouts/GridConfig';
-import LayoutData from '../src/LayoutData';
+import LayoutController from '../src/interfaces/LayoutController';
 
 export default Vue.extend({
   name: 'Index',
@@ -58,7 +58,7 @@ export default Vue.extend({
   }),
   computed: {
     layout() {
-      return new LayoutData<GridSetting>(this.config, this.data);
+      return new LayoutController<GridSetting>(this.config, this.data);
     },
   },
 });
