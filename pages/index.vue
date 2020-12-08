@@ -1,7 +1,7 @@
 <template lang="pug">
   #home.h-full
     gradient-header
-    grid-layout(:layout="layout")
+    layout(:config="config" :data="data")
 </template>
 
 <script lang="ts">

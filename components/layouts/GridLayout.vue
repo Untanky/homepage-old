@@ -1,8 +1,8 @@
 <template lang="pug">
   section.content.w-full.relative.my-16
     .container.px-2.grid.grid-cols-1.gap-4.auto-rows-80.grid-flow-column-dense(class="lg:grid-cols-3 sm:mx-auto")
-      .card.m-0(v-for="data, index in layout.layout" :key="index" :class="gridClass(data)")
-        component(:is="data.setting.component" :data="data.data")
+      .card.m-0(v-for="composition, index in controller.layout" :key="index" :class="gridClass(composition)")
+        component(:is="composition.setting.component" :data="composition.data")
 </template>
 
 <script lang="ts">
@@ -20,7 +20,7 @@ export default Vue.extend({
     FullImage,
   },
   props: {
-    layout: {
+    controller: {
       type: Object as PropType<LayoutController<GridSetting>>,
       required: true,
     },
