@@ -2,17 +2,17 @@
 
 exports[`should run 1`] = `
 <div
-  class="stacked-text flex row"
+  class="stacked-text flex flex-col h-full justify-between"
 >
   <div
-    class="bold text-xl"
+    class="font-bold text-xl"
   >
-    formattedText.text
+    Hello World
   </div>
   <div
     class="italic text-xl"
   >
-    formattedText.text
+    Goodbye World
   </div>
 </div>
 `;

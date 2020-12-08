@@ -5,16 +5,19 @@ import StackedText from '../../components/StackedText.vue';
 
 it('should run', () => {
   const props = {
-    formattedTexts: [
-      {
-        text: 'Hello World',
-        classes: ['font-bold', 'text-xl'],
-      },
-      {
-        text: 'Goodbye World',
-        classes: ['italic', 'text-xl'],
-      },
-    ],
+    data: {
+      formattedTexts: [
+        {
+          text: 'Hello World',
+          classes: ['font-bold', 'text-xl'],
+        },
+        {
+          text: 'Goodbye World',
+          classes: ['italic', 'text-xl'],
+        },
+      ],
+      classes: ['justify-between'],
+    },
   };
 
   const comp = mount(StackedText, { propsData: props });

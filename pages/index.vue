@@ -32,12 +32,11 @@ export default Vue.extend({
             classes: ['italic', 'text-xl'],
           },
         ],
-        stackedTextOptions: {
-          classes: ['justify-between'],
-        },
+        classes: ['justify-between'],
       },
       {
         imageUrl: '/img/profile.jpg',
+        classes: [],
       },
       {
         formattedTexts: [
@@ -50,9 +49,7 @@ export default Vue.extend({
             classes: ['italic', 'text-xl'],
           },
         ],
-        stackedTextOptions: {
-          classes: ['justify-between'],
-        },
+        classes: ['justify-between'],
       },
     ],
   }),

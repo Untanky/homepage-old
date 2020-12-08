@@ -1,3 +1,5 @@
-interface ComponentData {}
+interface ComponentData {
+  classes: string[];
+}
 
 export default ComponentData;
