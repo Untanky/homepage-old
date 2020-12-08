@@ -16,8 +16,11 @@ export default Vue.extend({
     },
   },
   computed: {
-    backgroundImage() {
-      return `background-image: url("${this.data.imageUrl}")`;
+    backgroundImage(): string {
+      if (this.data && this.data.imageUrl) {
+        return `background-image: url("${this.data.imageUrl}")`;
+      }
+      return '';
     },
   },
 });

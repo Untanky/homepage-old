@@ -1,17 +1,17 @@
 type GridSetting = {
-  size: String;
+  size: string;
 
-  column: Number;
+  column: number;
 
-  priority: Number;
+  priority: number;
 
-  title: String;
+  title: string;
 
-  component: String;
+  component: string;
 
-  dataId: Number;
+  dataId: number;
 
-  classes: String[];
+  classes: string[];
 }
 
 export default GridSetting;

@@ -11,6 +11,7 @@ import StackedText from '../StackedText.vue';
 import FullImage from '../FullImage.vue';
 import LayoutData from '../../src/LayoutData';
 import GridSetting from '../../src/layouts/GridSetting';
+import Composition from '~/src/Composition';
 
 export default Vue.extend({
   name: 'GridLayout',
@@ -25,7 +26,7 @@ export default Vue.extend({
     },
   },
   methods: {
-    gridClass(data: Object) {
+    gridClass(data: Composition<GridSetting>) {
       return [
         ...data.setting.classes,
         this.getSizeClass(data.setting.size),

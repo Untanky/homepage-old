@@ -1,4 +1,5 @@
 import ComponentData from "./ComponentData";
+import Composition from "./Composition";
 import LayoutConfig from "./layouts/LayoutConfig";
 
 class LayoutData<SettingType> {
@@ -9,7 +10,7 @@ class LayoutData<SettingType> {
       throw new Error('config and data do not match in length');
     }
 
-    this.layout = layoutConfig.config.map((setting, index) => ({
+    this.layout = layoutConfig.config.map((setting, index): Composition<SettingType> => ({
       setting,
       data: data[index],
     }));

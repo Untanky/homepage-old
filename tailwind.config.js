@@ -2,16 +2,9 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 const order = {};
 
-for (let index = 0; index < 128; index++) {
+for (let index = 0; index < 128; index += 1) {
   order[index] = `${index}`;
 }
-
-console.log({
-  none: '0',
-  first: '-9999',
-  last: '9999',
-  ...order,
-});
 
 module.exports = {
   variants: {
