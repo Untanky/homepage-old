@@ -15,7 +15,7 @@ class GridConfig implements LayoutConfig<GridSetting> {
       {
         size: 'SMALL',
         column: 1,
-        priority: 2,
+        priority: 3,
         title: 'Card title',
         component: 'stacked-text',
         dataId: 0,
@@ -33,7 +33,7 @@ class GridConfig implements LayoutConfig<GridSetting> {
       {
         size: 'MEDIUM',
         column: 3,
-        priority: 1,
+        priority: 2,
         title: 'Card title',
         component: 'stacked-text',
         dataId: 2,

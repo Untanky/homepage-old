@@ -1,4 +1,3 @@
-import Layout from "~/components/layouts";
 import ComponentData from "./ComponentData";
 import LayoutConfig from "./layouts/LayoutConfig";
 

@@ -26,18 +26,29 @@ export default Vue.extend({
   },
   methods: {
     gridClass(data: Object) {
-      return [...data.setting.classes, this.getSizeClass(data.setting.size)];
+      return [
+        ...data.setting.classes,
+        this.getSizeClass(data.setting.size),
+        this.getPriorityClass(data.setting.priority),
+        this.getColumnClass(data.setting.column),
+      ];
     },
-    getSizeClass(size: string) {
+    getSizeClass(size: string): string {
       switch (size) {
         case 'LARGE':
-          return 'row-span-2';
+          return 'row-span-3';
         case 'MEDIUM':
           return 'row-span-2';
         case 'SMALL':
         default:
           return '';
       }
+    },
+    getPriorityClass(priority: number): string {
+      return `order-${priority} md:order-none`;
+    },
+    getColumnClass(column: number): string {
+      return `md:column-start-${column}`;
     },
   },
 });

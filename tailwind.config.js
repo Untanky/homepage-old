@@ -1,5 +1,18 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const order = {};
+
+for (let index = 0; index < 128; index++) {
+  order[index] = `${index}`;
+}
+
+console.log({
+  none: '0',
+  first: '-9999',
+  last: '9999',
+  ...order,
+});
+
 module.exports = {
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
@@ -56,6 +69,12 @@ module.exports = {
     },
     rotate: {
       90: '90deg',
+    },
+    order: {
+      none: '0',
+      first: '-9999',
+      last: '9999',
+      ...order,
     },
     extend: {
       height: {
