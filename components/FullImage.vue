@@ -5,7 +5,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import FullImage from '../src/FullImage';
+import { FullImage } from '../src/components';
 
 export default Vue.extend({
   name: 'FullImage',
@@ -16,8 +16,11 @@ export default Vue.extend({
     },
   },
   computed: {
-    backgroundImage() {
-      return `background-image: url("${this.data.imageUrl}")`;
+    backgroundImage(): string {
+      if (this.data && this.data.imageUrl) {
+        return `background-image: url("${this.data.imageUrl}")`;
+      }
+      return '';
     },
   },
 });

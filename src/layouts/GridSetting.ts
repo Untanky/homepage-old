@@ -1,17 +1,19 @@
-type GridSetting = {
-  size: String;
+import LayoutSetting from '../interfaces/LayoutSetting';
 
-  column: Number;
+interface GridSetting extends LayoutSetting {
+  size: string;
 
-  priority: Number;
+  column: number;
 
-  title: String;
+  priority: number;
 
-  component: String;
+  title: string;
 
-  dataId: Number;
+  component: string;
 
-  classes: String[];
+  dataId: number;
+
+  classes: string[];
 }
 
 export default GridSetting;
