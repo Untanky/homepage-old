@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { mount } from '@vue/test-utils';
 import { DateTime } from 'luxon';
-import Timeline from '../../components/Timeline.vue';
+import Timeline from '../../../components/blocks/Timeline.vue';
 
 describe('Timeline', () => {
   it('Empty Timeline should render correctly', () => {

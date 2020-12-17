@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { mount } from '@vue/test-utils';
 import { DateTime } from 'luxon';
-import Card from '../../components/Card.vue';
+import Card from '../../../components/common/Card.vue';
 
 describe('Card', () => {
   it('should render without title and link', () => {

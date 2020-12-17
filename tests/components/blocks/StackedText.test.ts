@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 // global it, expect
 import { mount } from '@vue/test-utils';
-import StackedText from '../../components/StackedText.vue';
+import StackedText from '../../../components/blocks/StackedText.vue';
 
 it('should run', () => {
   const props = {

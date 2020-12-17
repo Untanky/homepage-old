@@ -7,8 +7,8 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import StackedText from '../StackedText.vue';
-import FullImage from '../FullImage.vue';
+import StackedText from '../blocks/StackedText.vue';
+import FullImage from '../blocks/FullImage.vue';
 import LayoutController from '../../src/interfaces/LayoutController';
 import GridSetting from '../../src/layouts/GridSetting';
 import LayoutComposition from '../../src/interfaces/LayoutComposition';

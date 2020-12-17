@@ -2,7 +2,7 @@
 // global describe, it, expect
 import { mount } from '@vue/test-utils';
 import { DateTime } from 'luxon';
-import TimelineEvent from '../../components/TimelineEvent.vue';
+import TimelineEvent from '../../../components/blocks/TimelineEvent.vue';
 
 describe('TimelineEvent', () => {
   it('should render correctly when active with specified to date', () => {

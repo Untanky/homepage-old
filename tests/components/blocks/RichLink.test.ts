@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 // global it, expect
 import { mount } from '@vue/test-utils';
-import RichLink from '../../components/RichLink.vue';
+import RichLink from '../../../components/blocks/RichLink.vue';
 
 it('should run', () => {
   const props = {

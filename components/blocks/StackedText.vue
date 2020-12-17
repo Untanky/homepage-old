@@ -5,7 +5,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import { StackedTexts } from '../src/components';
+import { StackedTexts } from '../../src/components';
 
 export default Vue.extend({
   name: 'StackedText',

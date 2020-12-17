@@ -8,7 +8,7 @@
 import Vue from 'vue';
 import GradientHeader from '../components/headers/GradientHeader.vue';
 import Layout from '../components/layouts/index';
-import GridSetting from '~/src/layouts/GridSetting';
+import GridSetting from '../src/layouts/GridSetting';
 import GridConfig from '../src/layouts/GridConfig';
 import LayoutController from '../src/interfaces/LayoutController';
 
