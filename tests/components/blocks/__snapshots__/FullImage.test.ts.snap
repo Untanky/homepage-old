@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should run 1`] = `
+<div
+  class="w-full h-full bg-center bg-cover"
+  style="background-image: url(https://example.com/image.jpg);"
+/>
+`;
