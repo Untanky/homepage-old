@@ -1,3 +1,5 @@
-interface LayoutSetting {}
+interface LayoutSetting {
+  component: string;
+}
 
 export default LayoutSetting;
