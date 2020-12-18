@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormattedText should run as code snippet 1`] = `
+<code
+  class=""
+>
+  Hello World
+</code>
+`;
+
+exports[`FormattedText should run as header 1`] = `
+<h1
+  class=""
+>
+  Hello World
+</h1>
+`;
+
+exports[`FormattedText should run when everything configured 1`] = `
+<h2
+  class="text-green-500 text-center font-bold italic underline"
+>
+  Hello World
+</h2>
+`;
+
+exports[`FormattedText should run when underlined 1`] = `
+<div
+  class="underline"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with alignment center 1`] = `
+<div
+  class="text-center"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with alignment justify 1`] = `
+<div
+  class="text-justify"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with alignment left 1`] = `
+<div
+  class="text-left"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with alignment right 1`] = `
+<div
+  class="text-right"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with bold font 1`] = `
+<div
+  class="font-bold"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with classes 1`] = `
+<div
+  class="custom-class-1 test-class"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with color red 1`] = `
+<div
+  class="text-red-500"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with italic font 1`] = `
+<div
+  class="italic"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with size 1`] = `
+<div
+  class="text-xl"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run with size and header variant 1`] = `
+<h1
+  class=""
+>
+  Hello World
+</h1>
+`;
+
+exports[`FormattedText should run with size and normal variant 1`] = `
+<div
+  class="text-xl"
+>
+  Hello World
+</div>
+`;
+
+exports[`FormattedText should run without config 1`] = `
+<div
+  class=""
+>
+  Hello World
+</div>
+`;
