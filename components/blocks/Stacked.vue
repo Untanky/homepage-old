@@ -1,6 +1,6 @@
 <template>
   <div
-    class="stacked flex"
+    class="stacked flex h-full"
     :class="[flexDirection, data.classes]"
   >
     <component
@@ -28,9 +28,9 @@ export default Vue.extend({
     flexDirection() {
       switch (this.data.direction) {
         case StackDirection.Vertical:
-          return 'flex-row';
-        case StackDirection.Horizontal:
           return 'flex-col';
+        case StackDirection.Horizontal:
+          return 'flex-row';
         default:
           return '';
       }

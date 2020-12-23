@@ -11,6 +11,7 @@ import Layout from '../components/layouts/index';
 import GridSetting from '../src/layouts/GridSetting';
 import GridConfig from '../src/layouts/GridConfig';
 import LayoutController from '../src/interfaces/LayoutController';
+import { StackDirection } from '~/src/components/Stacked';
 
 export default Vue.extend({
   name: 'Index',
@@ -22,14 +23,33 @@ export default Vue.extend({
     config: new GridConfig(),
     data: [
       {
-        formattedTexts: [
+        direction: StackDirection.Vertical,
+        componentData: [
           {
-            text: 'Hello World',
-            classes: ['font-bold', 'text-xl'],
+            setting: {
+              component: 'formatted-text',
+            },
+            data: {
+              text: 'Hello World!',
+              bold: false,
+              italic: false,
+              underline: false,
+              classes: [],
+            },
           },
           {
-            text: 'Goodbye World',
-            classes: ['italic', 'text-xl'],
+            setting: {
+              component: 'formatted-text',
+            },
+            data: {
+              text: 'Goodbye World!',
+              bold: true,
+              italic: true,
+              underline: true,
+              size: 'xl',
+              color: 'primary-500',
+              classes: [],
+            },
           },
         ],
         classes: ['justify-between'],
@@ -39,14 +59,33 @@ export default Vue.extend({
         classes: [],
       },
       {
-        formattedTexts: [
+        direction: StackDirection.Vertical,
+        componentData: [
           {
-            text: 'Hello World',
-            classes: ['font-bold', 'text-xl'],
+            setting: {
+              component: 'formatted-text',
+            },
+            data: {
+              text: 'Hello World!',
+              bold: false,
+              italic: false,
+              underline: false,
+              classes: [],
+            },
           },
           {
-            text: 'Goodbye World',
-            classes: ['italic', 'text-xl'],
+            setting: {
+              component: 'formatted-text',
+            },
+            data: {
+              text: 'Goodbye World!',
+              bold: true,
+              italic: true,
+              underline: true,
+              size: 'xl',
+              color: 'primary-500',
+              classes: [],
+            },
           },
         ],
         classes: ['justify-between'],
