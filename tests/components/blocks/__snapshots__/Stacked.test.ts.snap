@@ -2,7 +2,7 @@
 
 exports[`Stacked should run with classes 1`] = `
 <div
-  class="stacked flex flex-col test-class my-class"
+  class="stacked flex h-full flex-row test-class my-class"
 >
   <div
     data="[object Object]"
@@ -15,7 +15,7 @@ exports[`Stacked should run with classes 1`] = `
 
 exports[`Stacked should run with horizontal stack 1`] = `
 <div
-  class="stacked flex flex-col"
+  class="stacked flex h-full flex-row"
 >
   <div
     data="[object Object]"
@@ -28,7 +28,7 @@ exports[`Stacked should run with horizontal stack 1`] = `
 
 exports[`Stacked should run with vertical stack 1`] = `
 <div
-  class="stacked flex flex-row"
+  class="stacked flex h-full flex-col"
 >
   <div
     data="[object Object]"
@@ -41,13 +41,13 @@ exports[`Stacked should run with vertical stack 1`] = `
 
 exports[`Stacked should run without data 1`] = `
 <div
-  class="stacked flex flex-col"
+  class="stacked flex h-full flex-row"
 />
 `;
 
 exports[`Stacked should run without direction 1`] = `
 <div
-  class="stacked flex"
+  class="stacked flex h-full"
 >
   <div
     data="[object Object]"

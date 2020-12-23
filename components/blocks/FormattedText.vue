@@ -10,7 +10,7 @@ export default Vue.extend({
       required: true,
     },
   },
-  methods: {
+  computed: {
     elementType() {
       if (!this.data.variant || this.data.variant === '') {
         return 'div';
@@ -49,11 +49,10 @@ export default Vue.extend({
     },
   },
   render(createElement) {
-    console.log(Object.keys(this));
     return createElement(
-      this.elementType(),
+      this.elementType,
       {
-        class: this.classes(),
+        class: this.classes,
       },
       [
         // eslint-disable-next-line no-underscore-dangle
