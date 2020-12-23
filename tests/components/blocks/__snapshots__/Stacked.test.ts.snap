@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stacked should run with classes 1`] = `
+<div
+  class="stacked flex flex-col test-class my-class"
+>
+  <div
+    data="[object Object]"
+  />
+  <div
+    data="[object Object]"
+  />
+</div>
+`;
+
+exports[`Stacked should run with horizontal stack 1`] = `
+<div
+  class="stacked flex flex-col"
+>
+  <div
+    data="[object Object]"
+  />
+  <div
+    data="[object Object]"
+  />
+</div>
+`;
+
+exports[`Stacked should run with vertical stack 1`] = `
+<div
+  class="stacked flex flex-row"
+>
+  <div
+    data="[object Object]"
+  />
+  <div
+    data="[object Object]"
+  />
+</div>
+`;
+
+exports[`Stacked should run without data 1`] = `
+<div
+  class="stacked flex flex-col"
+/>
+`;
+
+exports[`Stacked should run without direction 1`] = `
+<div
+  class="stacked flex"
+>
+  <div
+    data="[object Object]"
+  />
+  <div
+    data="[object Object]"
+  />
+</div>
+`;

@@ -17,6 +17,24 @@ module.exports = {
     'vue',
     '@typescript-eslint',
   ],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.vue', '.ts'],
+      },
+    },
+  },
   rules: {
+    'no-shadow': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        vue: 'never',
+        ts: 'never',
+      },
+    ],
+    '@typescript-eslint/no-shadow': ['error'],
   },
 };
