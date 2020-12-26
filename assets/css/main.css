@@ -1,0 +1,54 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html, body, #__nuxt, #__layout
+{
+  @apply h-full;
+}
+
+@layer components {
+  .link {
+    @apply text-link-500;
+    @apply cursor-pointer;
+  }
+
+  .link:hover {
+    @apply underline;
+  }
+
+  .link:visited {
+    @apply text-link-500;
+  }
+
+  .after\:chevron::after {
+    content: " ›";
+  }
+  
+  .before\:chevron::before {
+    content: " ›";
+  }
+  
+  .card {
+    @apply inline-block;
+    @apply overflow-hidden;
+    @apply p-4;
+    @apply rounded-lg;
+    @apply border-gray-500;
+    @apply border-2;
+    @apply mx-2;
+    @apply my-1;
+  }
+  
+  .card__title {
+    @apply inline-block;
+    @apply text-gray-600;
+    @apply mb-2;
+  }  
+}

@@ -1,6 +1,9 @@
-# homepage
+# Homepage
 
-> My phenomenal Nuxt.js project
+> Currently WIP
+
+This is a webapp created in Vue using Nuxt for Static Side Rendering.
+The app displays my portfolio as well as my projects. 
 
 ## Build Setup
 
@@ -18,5 +21,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

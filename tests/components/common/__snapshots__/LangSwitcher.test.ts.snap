@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LangSwitcher should run 1`] = `
+<div
+  class="lang-switcher"
+>
+  <select
+    class="bg-gray-200 pl-4 pr-6 py-2 rounded-md border-gray-300 border appearance-none"
+  >
+    <option
+      value="en"
+    >
+      🇺🇸  English
+    </option>
+    <option
+      value="de"
+    >
+      🇩🇪  Deutsch
+    </option>
+  </select>
+</div>
+`;
+
+exports[`LangSwitcher should run 2`] = `
+<div
+  class="lang-switcher"
+>
+  <select
+    class="bg-gray-200 pl-4 pr-6 py-2 rounded-md border-gray-300 border appearance-none"
+  >
+    <option
+      value="en"
+    >
+      🇺🇸  English
+    </option>
+    <option
+      value="de"
+    >
+      🇩🇪  Deutsch
+    </option>
+  </select>
+</div>
+`;
+
+exports[`LangSwitcher should run 3`] = `
+<div
+  class="lang-switcher"
+>
+  <select
+    class="bg-gray-200 pl-4 pr-6 py-2 rounded-md border-gray-300 border appearance-none"
+  >
+    <option
+      value="en"
+    >
+      🇺🇸  English
+    </option>
+    <option
+      value="de"
+    >
+      🇩🇪  Deutsch
+    </option>
+  </select>
+</div>
+`;

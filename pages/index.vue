@@ -1,60 +1,93 @@
-<template>
-  <div class="home">
-    <introduction />
-    <website-content
-      :heading="$t('pages.cv')"
-      :link-path="localePath('/cv')"
-    >
-      <div v-html="$t('homepageContent.portfolio')" />
-
-      <template
-        slot="footer"
-      >
-        <a
-          class="action primary"
-          :href="cvDownload"
-          download
-        >
-          <span class="material-icons">
-            cloud_download
-          </span>
-          Download
-        </a>
-      </template>
-    </website-content>
-    <website-content
-      :heading="$t('pages.projects')"
-      :link-path="localePath('/projects')"
-    >
-      <div v-html="$t('homepageContent.projects')" />
-    </website-content>
-    <website-content
-      :heading="$t('pages.socials')"
-      :link-path="localePath('/social')"
-    >
-      <div v-html="$t('homepageContent.socials')" />
-    </website-content>
-  </div>
+<template lang="pug">
+  #home.h-full
+    gradient-header
+    layout(:config="config" :data="data")
 </template>
 
-<script>
-import Introduction from '../components/Introduction.vue';
-import WebsiteContent from '../components/WebsiteContent.vue';
+<script lang="ts">
+import Vue from 'vue';
+import GradientHeader from '../components/headers/GradientHeader.vue';
+import Layout from '../components/layouts/index';
+import GridSetting from '../src/layouts/GridSetting';
+import GridConfig from '../src/layouts/GridConfig';
+import LayoutController from '../src/interfaces/LayoutController';
+import { StackDirection } from '~/src/components/Stacked';
 
-export default {
+export default Vue.extend({
+  name: 'Index',
   components: {
-    Introduction,
-    WebsiteContent,
+    GradientHeader,
+    Layout,
   },
-  data: () => ({}),
+  data: () => ({
+    config: new GridConfig(),
+    data: [
+      {
+        direction: StackDirection.Vertical,
+        componentData: [
+          {
+            setting: {
+              component: 'formatted-text',
+            },
+            data: {
+              text: 'Hello World!',
+              bold: false,
+              italic: false,
+              underline: false,
+              classes: [],
+            },
+          },
+          {
+            setting: {
+              component: 'formatted-text',
+            },
+            data: {
+              text: 'Goodbye World!',
+              bold: true,
+              italic: true,
+              underline: true,
+              size: 'xl',
+              color: 'primary-500',
+              classes: [],
+            },
+          },
+        ],
+        classes: ['justify-between'],
+      },
+      {
+        imageUrl: '/img/profile.jpg',
+        classes: [],
+      },
+      {
+        direction: StackDirection.Vertical,
+        componentData: [
+          {
+            setting: {
+              component: 'key-value',
+            },
+            data: {
+              key: 'Key',
+              value: 'Value',
+            },
+          },
+          {
+            setting: {
+              component: 'key-value',
+            },
+            data: {
+              key: 'Key',
+              value: 'Longer value with more text that might even break a line and show some layouting stuff',
+            },
+          },
+        ],
+        classes: ['justify-between'],
+      },
+    ],
+  }),
   computed: {
-    cvDownload() {
-      console.log(this.$i18n.locale);
-      return `data/${this.$i18n.locale}/cv.pdf`;
+    layout() {
+      return new LayoutController<GridSetting>(this.config, this.data);
     },
   },
-  head: () => ({
-    title: 'Lukas Grimm - Homepage',
-  }),
-};
+});
 </script>

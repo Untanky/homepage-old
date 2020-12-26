@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineEvent should render correctly when active with specified to date 1`] = `
+<div
+  class="timeline-event active"
+>
+  <div
+    class="text-xl font-medium"
+  >
+    November 2020 - now
+  </div>
+</div>
+`;
+
+exports[`TimelineEvent should render correctly when inactive with specified to date 1`] = `
+<div
+  class="timeline-event"
+>
+  <div
+    class="text-xl font-medium"
+  >
+    November 2020 - December 2020
+  </div>
+</div>
+`;
+
+exports[`TimelineEvent should render correctly when inactive with unspecified to date 1`] = `
+<div
+  class="timeline-event"
+>
+  <div
+    class="text-xl font-medium"
+  >
+    November 2020
+  </div>
+</div>
+`;
+
+exports[`TimelineEvent should render correctly when inactive with unspecified to date 2`] = `
+<div
+  class="timeline-event"
+>
+  <div
+    class="text-xl font-medium"
+  >
+    November 2020
+  </div>
+</div>
+`;

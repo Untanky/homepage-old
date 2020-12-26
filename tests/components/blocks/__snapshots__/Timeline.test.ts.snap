@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timeline Empty Timeline should render correctly 1`] = `
+<div
+  class="timeline"
+>
+  <div
+    class="relative"
+  />
+</div>
+`;
+
+exports[`Timeline Timeline with one entry should render correctly 1`] = `
+<div
+  class="timeline"
+>
+  <div
+    class="relative"
+  >
+    <div>
+      <div
+        class="timeline-event"
+      >
+        <div
+          class="text-xl font-medium"
+        >
+          July 2020 - November 2020
+        </div>
+        <div>
+          Content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Timeline Timeline with one entry should render correctly 2`] = `
+<div
+  class="timeline"
+>
+  <div
+    class="relative"
+  >
+    <div>
+      <div
+        class="timeline-event"
+      >
+        <div
+          class="text-xl font-medium"
+        >
+          July 2020 - November 2020
+        </div>
+        <div>
+          This Content
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="timeline-event"
+      >
+        <div
+          class="text-xl font-medium"
+        >
+          February 2019 - July 2020
+        </div>
+        <div>
+          Other Content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
