@@ -1,15 +1,8 @@
-import formattedText from './FormattedText';
-import fullImage from './FullImage';
-import keyValue from './KeyValue';
-import stacked from './Stacked';
-import timelineElement from './TimelineElement';
-import timelineEntry from './TimelineEntry';
-import timelineList from './TimelineList';
-
-export type FormattedText = formattedText;
-export type FullImage = fullImage;
-export type KeyValue = keyValue;
-export type Stacked = stacked;
-export type TimelineElement = timelineElement;
-export type TimelineEntry = timelineEntry;
-export type TimelineList = timelineList;
+export { default as FormattedText } from './FormattedText';
+export { default as FullImage } from './FullImage';
+export { default as KeyValue } from './KeyValue';
+export { default as RichLink } from './RichLink';
+export { default as Stacked } from './Stacked';
+export { default as TimelineElement } from './TimelineElement';
+export { default as TimelineEntry } from './TimelineEntry';
+export { default as TimelineList } from './TimelineList';
