@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import { TimelineEntry } from '../src/components';
+import { TimelineEntry } from '../../src/components';
 
 const DATE_FORMAT = { month: 'long', year: 'numeric' };
 

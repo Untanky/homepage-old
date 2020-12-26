@@ -1,5 +1,5 @@
 <script lang="ts">
-import Vue, { PropType } from 'vue';
+import Vue, { PropType, VNode } from 'vue';
 import FormattedText from '../../src/components/FormattedText';
 
 export default Vue.extend({
@@ -11,14 +11,14 @@ export default Vue.extend({
     },
   },
   computed: {
-    elementType() {
+    elementType(): string {
       if (!this.data.variant || this.data.variant === '') {
         return 'div';
       }
 
       return this.data.variant;
     },
-    classes() {
+    classes(): string[] {
       const classList = [...this.data.classes];
 
       if ([undefined, '', 'div', 'span', 'code'].includes(this.data.variant) && this.data.size) {
@@ -48,17 +48,13 @@ export default Vue.extend({
       return classList;
     },
   },
-  render(createElement) {
-    console.log(this.elementType);
+  render(createElement): VNode {
     return createElement(
       this.elementType,
       {
         class: this.classes,
       },
-      [
-        // eslint-disable-next-line no-underscore-dangle
-        this._v(this.data.text),
-      ],
+      this.data.text,
     );
   },
 });

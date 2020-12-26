@@ -7,8 +7,9 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import StackedText from '../blocks/StackedText.vue';
+import FormattedText from '../blocks/FormattedText.vue';
 import FullImage from '../blocks/FullImage.vue';
+import Stacked from '../blocks/Stacked.vue';
 import LayoutController from '../../src/interfaces/LayoutController';
 import GridSetting from '../../src/layouts/GridSetting';
 import LayoutComposition from '../../src/interfaces/LayoutComposition';
@@ -16,8 +17,9 @@ import LayoutComposition from '../../src/interfaces/LayoutComposition';
 export default Vue.extend({
   name: 'GridLayout',
   components: {
-    StackedText,
+    FormattedText,
     FullImage,
+    Stacked,
   },
   props: {
     controller: {
