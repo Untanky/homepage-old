@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyValue should run 1`] = `
+<div
+  class="text-lg"
+>
+  <span
+    class="font-bold"
+  >
+    
+    Key:
+  
+  </span>
+   
+  <span>
+    
+    Value
+  
+  </span>
+</div>
+`;
