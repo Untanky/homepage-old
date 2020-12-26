@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should run 1`] = `
+exports[`RichLink should run 1`] = `
 <a
   class="flex flex-col p-4 items-center justify-between group"
   href="https://example.com"
@@ -11,15 +11,21 @@ exports[`should run 1`] = `
     class="w-16 h-16"
     src="https://example.com/img.jpg"
   />
+   
   <div
     class="text-xl"
   >
+    
     Title
+  
   </div>
+   
   <div
     class="link after:chevron group-hover:underline"
   >
+    
     Link Text
+  
   </div>
 </a>
 `;

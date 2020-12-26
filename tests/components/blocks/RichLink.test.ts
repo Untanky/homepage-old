@@ -3,14 +3,18 @@
 import { mount } from '@vue/test-utils';
 import RichLink from '../../../components/blocks/RichLink.vue';
 
-it('should run', () => {
-  const props = {
-    title: 'Title',
-    text: 'Link Text',
-    linkUrl: 'https://example.com',
-    imageUrl: 'https://example.com/img.jpg',
-  };
+describe('RichLink', () => {
+  it('should run', () => {
+    const props = {
+      data: {
+        title: 'Title',
+        text: 'Link Text',
+        linkUrl: 'https://example.com',
+        imageUrl: 'https://example.com/img.jpg',
+      },
+    };
 
-  const comp = mount(RichLink, { propsData: props });
-  expect(comp.element).toMatchSnapshot();
+    const comp = mount(RichLink, { propsData: props });
+    expect(comp.element).toMatchSnapshot();
+  });
 });
