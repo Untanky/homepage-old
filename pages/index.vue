@@ -63,28 +63,20 @@ export default Vue.extend({
         componentData: [
           {
             setting: {
-              component: 'formatted-text',
+              component: 'key-value',
             },
             data: {
-              text: 'Hello World!',
-              bold: false,
-              italic: false,
-              underline: false,
-              classes: [],
+              key: 'Key',
+              value: 'Value',
             },
           },
           {
             setting: {
-              component: 'formatted-text',
+              component: 'key-value',
             },
             data: {
-              text: 'Goodbye World!',
-              bold: true,
-              italic: true,
-              underline: true,
-              size: 'xl',
-              color: 'primary-500',
-              classes: [],
+              key: 'Key',
+              value: 'Longer value with more text that might even break a line and show some layouting stuff',
             },
           },
         ],
