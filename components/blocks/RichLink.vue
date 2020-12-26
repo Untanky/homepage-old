@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-import RichLink from '../../src/components/RichLink';
+import { RichLink } from '../../src/components';
 
 export default Vue.extend({
   name: 'RichLink',
