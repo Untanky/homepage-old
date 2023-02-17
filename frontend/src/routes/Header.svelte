@@ -1,26 +1,30 @@
-<script>
+<script lang="ts">
+  import LocaleSelect from "./LocaleSelect.svelte";
+
   const navs = [
     {
-      title: 'Hello World',
+      title: 'Home',
       link: '#',
     },
     {
-      title: 'Goodbye World',
-      link: '#',
+      title: 'Projects',
+      link: '#'
     },
-  ]
+  ];
+  const locales = [ 'de-DE', 'en-US' ];
 </script>
 
-<header>
+<header class="flex items-center justify-between mx-auto w-[1024px] bg-gray-300 px-6 py-3 rounded-3xl mt-8 shadow">
   <nav>
-    <ul>
+    <ul class="flex">
       {#each navs as nav}
-        <li>
-          <a href={nav.link}>{nav.title}</a>
+        <li >
+          <a class="px-6 py-3 hover:cursor-pointer hover:bg-gray-600 rounded-xl" href={nav.link}>{nav.title}</a>
         </li>
       {/each}
     </ul>
   </nav>
+  <LocaleSelect locales={ locales } />
 </header>
 
 <style>
