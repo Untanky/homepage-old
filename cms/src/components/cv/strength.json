@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_cv_strengths",
+  "info": {
+    "displayName": "Strength"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

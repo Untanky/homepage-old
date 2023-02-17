@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_cv_skills",
+  "info": {
+    "displayName": "Skill",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Value": {
+      "required": true,
+      "max": 1,
+      "min": 0,
+      "type": "float"
+    }
+  }
+}

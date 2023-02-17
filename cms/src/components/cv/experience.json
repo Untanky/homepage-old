@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_cv_experiences",
+  "info": {
+    "displayName": "Experience",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Company": {
+      "type": "string",
+      "required": true
+    },
+    "JobTitle": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Start": {
+      "type": "date",
+      "required": true
+    },
+    "End": {
+      "type": "date"
+    }
+  }
+}
