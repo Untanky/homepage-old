@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 </script>
 
 <svelte:head>
@@ -9,7 +9,3 @@
 <section>
 	Hello World
 </section>
-
-<style lang="postcss">
-	
-</style>

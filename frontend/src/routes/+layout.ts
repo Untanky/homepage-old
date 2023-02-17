@@ -17,11 +17,11 @@ export const load: LayoutLoad = (): LayoutOutput => {
       header: [
         {
           title: 'Home',
-          link: '#',
+          link: '/',
         },
         {
           title: 'Projects',
-          link: '#'
+          link: '/projects'
         },
       ],
       footer: [

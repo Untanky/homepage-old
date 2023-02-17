@@ -2,7 +2,7 @@
 	import '../app.css';
   import type { LayoutData } from './$types';
 	import Footer from '../lib/Footer.svelte';
-	import Header from './Header.svelte';
+	import Header from '../lib/Header.svelte';
 
   export let data: LayoutData;
 </script>
@@ -11,7 +11,7 @@
   <div>
     <Header locales={ data.locales } navs={ data.navs.header } />
   
-    <main>
+    <main class="mt-8">
       <slot />
     </main>
   </div>
