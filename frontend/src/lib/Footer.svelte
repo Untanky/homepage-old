@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { NavigationLink } from "./$types";
+  import type { NavigationLink } from './NavigationLink';
 
   export let navs: NavigationLink[];
 </script>

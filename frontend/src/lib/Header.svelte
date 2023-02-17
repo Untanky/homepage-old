@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
-  import type { NavigationLink } from "./$types";
+  import type { NavigationLink } from "./NavigationLink";
   import LocaleSelect from "./LocaleSelect.svelte";
 
   export let navs: NavigationLink[];

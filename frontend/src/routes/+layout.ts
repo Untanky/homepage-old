@@ -1,9 +1,19 @@
-import type { LayoutData } from "./$types";
+import type { NavigationLink } from "$lib/NavigationLink";
+import type { LayoutLoad } from "./$types";
 
-export function load(): LayoutData {
+interface LayoutOutput {
+  locales: string[];
+  locale?: string;
+  navs: {
+    header: NavigationLink[];
+    footer: NavigationLink[];
+  }
+}
+
+export const load: LayoutLoad = (): LayoutOutput => {
   return {
     locales: [ 'de-DE', 'en-US' ],
-    nav: {
+    navs: {
       header: [
         {
           title: 'Home',
@@ -30,4 +40,4 @@ export function load(): LayoutData {
       ]
     }
   }
-}
+};
