@@ -4,7 +4,7 @@
   export let navs: NavigationLink[];
 </script>
 
-<footer class="mx-auto w-[500px] bottom-8">
+<footer class="mx-auto w-[500px] mt-12 bottom-8">
   <nav>
     <ul class="flex justify-between w-full">
       {#each navs as nav}

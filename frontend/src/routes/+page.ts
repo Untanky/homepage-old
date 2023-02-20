@@ -1,5 +1,6 @@
 import type { Education } from "$lib/cv/Education.svelte";
 import type { Experience } from "$lib/cv/Experience.svelte";
+import type { Language } from "$lib/cv/Language.svelte";
 import type { StrengthList } from "$lib/cv/StrengthList.svelte";
 import type { PageLoad } from "./$types";
 
@@ -7,6 +8,7 @@ export interface LandingPageOutput {
   experiences: Experience[];
   educations: Education[];
   strengths: StrengthList;
+  languages: Language[];
 }
 
 export const load: PageLoad = (): LandingPageOutput => {
@@ -68,6 +70,16 @@ export const load: PageLoad = (): LandingPageOutput => {
             description: 'in problem solving',
           }
         ]
+      }
+    ],
+    languages: [
+      {
+        language: 'German',
+        level: 'Native',
+      },
+      {
+        language: 'English',
+        level: 'C1'
       }
     ]
   };
