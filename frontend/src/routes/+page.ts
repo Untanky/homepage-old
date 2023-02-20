@@ -1,10 +1,12 @@
 import type { Education } from "$lib/cv/Education.svelte";
 import type { Experience } from "$lib/cv/Experience.svelte";
+import type { StrengthList } from "$lib/cv/StrengthList.svelte";
 import type { PageLoad } from "./$types";
 
 export interface LandingPageOutput {
   experiences: Experience[];
   educations: Education[];
+  strengths: StrengthList;
 }
 
 export const load: PageLoad = (): LandingPageOutput => {
@@ -42,6 +44,30 @@ export const load: PageLoad = (): LandingPageOutput => {
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.',
           'Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.'
         ],
+      }
+    ],
+    strengths: [
+      {
+        title: 'Foo',
+        strengths: [
+          {
+            label: 'Team player',
+            description: 'supporting my team at any possibility',
+          },
+          {
+            label: 'Self reliance',
+            description: 'with work to do'
+          }
+        ]
+      },
+      {
+        title: 'Bar',
+        strengths: [
+          {
+            label: 'Creativity',
+            description: 'in problem solving',
+          }
+        ]
       }
     ]
   };

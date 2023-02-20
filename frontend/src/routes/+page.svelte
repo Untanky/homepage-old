@@ -1,6 +1,7 @@
 <script lang="ts">
   import Education from '$lib/cv/Education.svelte';
   import Experience from '$lib/cv/Experience.svelte';
+  import StrengthList from '$lib/cv/StrengthList.svelte';
   import Timeline from '$lib/timeline/Timeline.svelte';
   import type { PageData } from './$types';
 
@@ -27,6 +28,16 @@
       elements={data.educations}
       component={Education}
     />
+  </section>
+  
+  <section>
+    <h2>Skills</h2>
+    <p>Foo</p>
+  </section>
+  
+  <section>
+    <h2>Strengths</h2>
+    <StrengthList strengthList={data.strengths} />
   </section>
 </article>
 

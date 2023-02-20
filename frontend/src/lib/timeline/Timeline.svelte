@@ -5,7 +5,7 @@
   export let component: typeof SvelteComponentTyped<{ element: any }>;
 </script>
 
-<ol>
+<ol class="space-y-6">
   {#each elements as element }
     <li>
       <svelte:component this={component} element={element} />
