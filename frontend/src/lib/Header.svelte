@@ -30,7 +30,7 @@
     <ul class="flex">
       {#each navs as nav}
         <li >
-          <a class="px-6 py-3 hover:cursor-pointer hover:bg-gray-600 rounded-xl" href={nav.link}>{nav.title}</a>
+          <a class="px-6 py-3 text-xl font-medium hover:cursor-pointer hover:bg-gray-600 rounded-xl" href={nav.link}>{nav.title}</a>
         </li>
       {/each}
     </ul>
