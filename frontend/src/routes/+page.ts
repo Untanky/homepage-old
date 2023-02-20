@@ -1,10 +1,10 @@
-import type { EducationModel } from "$lib/cv/Education";
-import type { ExperienceModel } from "$lib/cv/Experience";
+import type { Education } from "$lib/cv/Education.svelte";
+import type { Experience } from "$lib/cv/Experience.svelte";
 import type { PageLoad } from "./$types";
 
 export interface LandingPageOutput {
-  experiences: ExperienceModel[];
-  educations: EducationModel[];
+  experiences: Experience[];
+  educations: Education[];
 }
 
 export const load: PageLoad = (): LandingPageOutput => {

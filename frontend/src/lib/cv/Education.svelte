@@ -1,15 +1,28 @@
-<script lang="ts">
-  import { DateTime } from 'luxon';
-  import type { EducationModel } from './Education';
-
-  export let education: EducationModel;
-
-  const start = DateTime.fromJSDate(education.start).toFormat('LLLL yyyy');
-  const end = education.end ? DateTime.fromJSDate(education.end).toFormat('LLLL yyyy') : 'current';
+<script lang="ts" context="module">
+  export interface Education {
+    start: Date;
+    end?: Date;
+    school: string;
+    course: string;
+    grade: string;
+    description: string[];
+  }
 </script>
 
-<h3 class="text-xl font-medium mb-1">{ education.course }, { education.school }; Grade: { education.grade }</h3>
-<i class="block text-xl italic mb-1">{ start } - { end }</i>
-{#each education.description as paragraph}
-  <p>{ paragraph }</p>
-{/each}
+<script lang="ts">
+  import { DateTime } from 'luxon';
+  import TimelineElement from '../timeline/TimelineElement.svelte';
+
+  export let element: Education;
+
+  const start = DateTime.fromJSDate(element.start).toFormat('LLLL yyyy');
+  const end = element.end ? DateTime.fromJSDate(element.end).toFormat('LLLL yyyy') : 'current';
+</script>
+
+<TimelineElement
+  element={({
+    header: `${ element.course }, ${ element.school }; Grade: ${ element.grade }`,
+    formattedTime: `${ start } - ${ end }`,
+    description: element.description,
+  })}
+/>

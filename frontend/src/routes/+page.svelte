@@ -1,6 +1,7 @@
 <script lang="ts">
   import Education from '$lib/cv/Education.svelte';
-import Experience from '$lib/cv/Experience.svelte';
+  import Experience from '$lib/cv/Experience.svelte';
+  import Timeline from '$lib/timeline/Timeline.svelte';
   import type { PageData } from './$types';
 
   export let data: PageData;
@@ -14,24 +15,18 @@ import Experience from '$lib/cv/Experience.svelte';
 <article class="w-[620px] mx-auto space-y-12">
   <section>
     <h2>Experiences</h2>
-    <ul>
-      {#each data.experiences as experience }
-        <li>
-          <Experience experience={experience}></Experience>
-        </li>
-      {/each}
-    </ul>
+    <Timeline
+      elements={data.experiences} 
+      component={Experience}
+    />
   </section>
   
   <section>
     <h2>Education</h2>
-    <ul>
-      {#each data.educations as education }
-        <li>
-          <Education education={education}></Education>
-        </li>
-      {/each}
-    </ul>
+    <Timeline
+      elements={data.educations}
+      component={Education}
+    />
   </section>
 </article>
 

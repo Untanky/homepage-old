@@ -1,15 +1,27 @@
-<script lang="ts">
-  import { DateTime } from 'luxon';
-  import type { ExperienceModel } from './Experience';
-
-  export let experience: ExperienceModel;
-
-  const start = DateTime.fromJSDate(experience.start).toFormat('LLLL yyyy');
-  const end = experience.end ? DateTime.fromJSDate(experience.end).toFormat('LLLL yyyy') : 'current';
+<script lang="ts" context="module">
+  export interface Experience {
+    start: Date;
+    end?: Date;
+    company: string;
+    jobTitle: string;
+    description: string[];
+  };
 </script>
 
-<h3 class="text-xl font-medium mb-1">{ experience.jobTitle }, { experience.company }</h3>
-<i class="block text-xl italic mb-1">{ start } - { end }</i>
-{#each experience.description as paragraph}
-  <p>{ paragraph }</p>
-{/each}
+<script lang="ts">
+  import { DateTime } from 'luxon';
+  import TimelineElement from '../timeline/TimelineElement.svelte';
+
+  export let element: Experience;
+
+  const start = DateTime.fromJSDate(element.start).toFormat('LLLL yyyy');
+  const end = element.end ? DateTime.fromJSDate(element.end).toFormat('LLLL yyyy') : 'current';
+</script>
+
+<TimelineElement
+  element={({
+    header: `${ element.jobTitle }, ${ element.company }`,
+    formattedTime: `${ start } - ${ end }`,
+    description: element.description,
+  })}
+/>
