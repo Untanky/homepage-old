@@ -23,6 +23,10 @@ export const load: LayoutLoad = (): LayoutOutput => {
           title: 'Projects',
           link: '/projects'
         },
+        {
+          title: 'Posts',
+          link: '/posts'
+        },
       ],
       footer: [
         {
