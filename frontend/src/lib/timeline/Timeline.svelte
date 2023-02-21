@@ -5,10 +5,30 @@
   export let component: typeof SvelteComponentTyped<{ element: any }>;
 </script>
 
-<ol class="space-y-6">
+<ol class="relative">
   {#each elements as element }
-    <li>
-      <svelte:component this={component} element={element} />
+    <li class="timeline-item">
+      <div class="relative pb-6">
+        <div class="line">
+          <svelte:component this={component} element={element} />
+        </div>
+      </div>
     </li>
   {/each}
 </ol>
+
+<style>
+  .timeline-item {
+    @apply pl-8;
+  }
+
+  .timeline-item::before {
+    content: "";
+    @apply block absolute w-2 h-2 left-2 mt-2.5 rounded-full bg-gray-700 z-50;
+  }
+
+  .timeline-item:not(:last-child) .line::before {
+    content: "";
+    @apply block absolute w-1 h-full -left-[22px] top-3 rounded-full bg-gray-400;
+  }
+</style>
