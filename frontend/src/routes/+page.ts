@@ -3,9 +3,11 @@ import type { Experience } from "$lib/cv/Experience.svelte";
 import type { Language } from "$lib/cv/Language.svelte";
 import type { Skill } from "$lib/cv/Skill.svelte";
 import type { StrengthList } from "$lib/cv/StrengthList.svelte";
+import type { ProfileHero } from "$lib/hero/ProfileHero.svelte";
 import type { PageLoad } from "./$types";
 
 export interface LandingPageOutput {
+  hero: ProfileHero;
   experiences: Experience[];
   educations: Education[];
   skills: Skill[];
@@ -15,6 +17,12 @@ export interface LandingPageOutput {
 
 export const load: PageLoad = (): LandingPageOutput => {
   return {
+    hero: {
+      title: "Lukas Grimm",
+      subtitle: "Fullstack Developer in Berlin",
+      imageUri: "profile.jpg",
+      imageAlt: ""
+    },
     experiences: [
       {
         start: new Date(),

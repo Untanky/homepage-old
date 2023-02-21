@@ -11,7 +11,7 @@
   <div>
     <Header locales={ data.locales } navs={ data.navs.header } />
   
-    <main class="mt-12 w-[620px] mx-auto">
+    <main class="mt-12">
       <slot />
     </main>
   </div>

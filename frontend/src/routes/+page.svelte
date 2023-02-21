@@ -4,6 +4,7 @@
   import LanguageList from '$lib/cv/LanguageList.svelte';
   import SkillList from '$lib/cv/SkillList.svelte';
   import StrengthList from '$lib/cv/StrengthList.svelte';
+  import ProfileHero from '$lib/hero/ProfileHero.svelte';
   import Timeline from '$lib/timeline/Timeline.svelte';
   import type { PageData } from './$types';
 
@@ -14,6 +15,10 @@
 	<title>Lukas Grimm</title>
 	<meta name="description" content="Lukas Grimm - Fullstack Developer" />
 </svelte:head>
+
+<section class="hero">
+  <ProfileHero hero={data.hero} />
+</section>
 
 <section>
   <h2>Experiences</h2>
@@ -47,6 +52,14 @@
 </section>
 
 <style>
+  section.hero {
+    @apply max-w-[1260px];
+  }
+
+  section {
+    @apply max-w-[620px] mx-auto;
+  }
+
   section:not(:last-child) {
     @apply mb-12;
   }
