@@ -2,6 +2,7 @@
   import Education from '$lib/cv/Education.svelte';
   import Experience from '$lib/cv/Experience.svelte';
   import LanguageList from '$lib/cv/LanguageList.svelte';
+  import SkillList from '$lib/cv/SkillList.svelte';
   import StrengthList from '$lib/cv/StrengthList.svelte';
   import Timeline from '$lib/timeline/Timeline.svelte';
   import type { PageData } from './$types';
@@ -32,7 +33,7 @@
 
 <section>
   <h2>Skills</h2>
-  <p>Foo</p>
+  <SkillList skillList={data.skills} />
 </section>
 
 <section>
