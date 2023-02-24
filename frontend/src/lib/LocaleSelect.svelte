@@ -23,7 +23,7 @@
 </script>
 
 <select
-  class="px-6 py-3 bg-gray-400 hover:cursor-pointer hover:bg-gray-600 rounded-xl"
+  class="px-6 py-3 bg-sky-400 hover:cursor-pointer hover:bg-sky-600 rounded-xl"
   bind:value={ $locale }
 >
   {#each locales as locale }

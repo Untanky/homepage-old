@@ -9,4 +9,4 @@
   export let strength: Strength;
 </script>
 
-<i class="italic">{ strength.label }</i>&MediumSpace;<span> { strength.description } </span>
+<span>{ strength.label }</span>&MediumSpace;<span class="text-gray-600">{ strength.description }</span>

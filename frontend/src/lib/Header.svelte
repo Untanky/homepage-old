@@ -25,12 +25,12 @@
 
 </script>
 
-<header class="flex items-center justify-between mx-auto w-[1024px] bg-gray-300 px-6 py-3 rounded-3xl shadow">
+<header class="flex items-center justify-between mx-auto w-[1024px] bg-sky-300 px-6 py-3 rounded-3xl shadow">
   <nav>
     <ul class="flex">
       {#each navs as nav}
         <li >
-          <a class="px-6 py-3 text-xl font-medium hover:cursor-pointer hover:bg-gray-600 rounded-xl" href={nav.link}>{nav.title}</a>
+          <a class="px-6 py-3 text-xl font-medium hover:cursor-pointer hover:bg-sky-600 rounded-xl" href={nav.link}>{nav.title}</a>
         </li>
       {/each}
     </ul>

@@ -4,8 +4,11 @@ module.exports = {
   theme: {
     extend: {},
     boxShadow: {
-      DEFAULT: '8px 8px 0px #666666',
-      'lg': '16px 16px 0px #666666'
+      DEFAULT: '8px 8px 0px rgb(2, 132, 199)',
+      'lg': '16px 16px 0px rgb(2, 132, 199)'
+    },
+    fontFamily: {
+      sans: 'Rubik'
     }
   },
   plugins: [
