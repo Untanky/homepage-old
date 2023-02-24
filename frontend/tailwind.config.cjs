@@ -8,5 +8,7 @@ module.exports = {
       'lg': '16px 16px 0px #666666'
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
