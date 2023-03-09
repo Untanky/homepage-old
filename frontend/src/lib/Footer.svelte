@@ -4,9 +4,9 @@
   export let navs: NavigationLink[];
 </script>
 
-<footer class="mx-auto w-[500px] mt-12 bottom-8">
+<footer class="self-start sm:self-center sm:mx-auto sm:w-[500px] sm:mt-12 mb-16 sm:mb-2">
   <nav>
-    <ul class="flex justify-between w-full">
+    <ul class="flex flex-col sm:flex-row justify-between w-full">
       {#each navs as nav}
         <li>
           <a class="text-gray-700 hover:text-gray-900 hover:cursor-pointer hover:underline" href={nav.link}>{nav.title}</a>

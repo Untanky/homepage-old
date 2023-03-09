@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
-  import type { NavigationLink } from "./NavigationLink";
   import LocaleSelect from "./LocaleSelect.svelte";
+  import type { NavigationLink } from "./NavigationLink";
 
   export let navs: NavigationLink[];
   export let locales: string[];
@@ -25,15 +25,17 @@
 
 </script>
 
-<header class="flex items-center justify-between mx-auto w-[1024px] bg-sky-300 px-6 py-3 rounded-3xl shadow">
+<header class="absolute top-0 left-0 right-0 md:static md:flex md:items-center md:justify-between bg-sky-300 md:w-[768px] lg:w-[1024px] px-6 py-3 md:mx-auto md:rounded-3xl md:shadow">
   <nav>
     <ul class="flex">
       {#each navs as nav}
         <li >
-          <a class="px-6 py-3 text-xl font-medium hover:cursor-pointer hover:bg-sky-600 rounded-xl" href={nav.link}>{nav.title}</a>
+          <a class="px-3 md:px-6 py-1.5 md:py-3 text-xl font-medium hover:cursor-pointer hover:bg-sky-600 rounded-xl" href={nav.link}>{nav.title}</a>
         </li>
       {/each}
     </ul>
   </nav>
-  <LocaleSelect locale={ locale } locales={ locales } />
+  <div class="hidden">
+    <LocaleSelect locale={ locale } locales={ locales } />
+  </div>
 </header>

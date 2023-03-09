@@ -6,7 +6,7 @@
   export let skillList: SkillModel[];
 </script>
 
-<div class="grid grid-cols-2 gap-x-6 gap-y-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
   {#each skillList as skill}
     <Skill skill={skill} />
   {/each}
