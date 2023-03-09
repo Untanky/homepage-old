@@ -24,11 +24,11 @@
 
   .timeline-item::before {
     content: "";
-    @apply block absolute w-2 h-2 left-2 mt-2.5 rounded-full bg-sky-700 z-50;
+    @apply block absolute w-2 h-2 left-2 mt-2.5 rounded-full bg-sky-400 z-50;
   }
 
   .timeline-item:not(:last-child) .line::before {
     content: "";
-    @apply block absolute w-1 h-full -left-[22px] top-3 rounded-full bg-sky-400;
+    @apply block absolute w-0.5 h-full -left-[21px] top-3 rounded-full bg-sky-700;
   }
 </style>

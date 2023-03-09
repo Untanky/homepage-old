@@ -35,7 +35,7 @@
       {/each}
     </ul>
   </nav>
-  <div class="hidden">
+  <div class="hidden md:block">
     <LocaleSelect locale={ locale } locales={ locales } />
   </div>
 </header>
