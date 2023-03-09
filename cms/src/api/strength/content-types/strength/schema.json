@@ -4,7 +4,8 @@
   "info": {
     "singularName": "strength",
     "pluralName": "strengths",
-    "displayName": "Strength"
+    "displayName": "Strength",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "Strength": {
+    "strength": {
       "type": "component",
       "repeatable": false,
       "pluginOptions": {

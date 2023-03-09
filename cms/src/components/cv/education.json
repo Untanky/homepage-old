@@ -1,28 +1,29 @@
 {
   "collectionName": "components_cv_educations",
   "info": {
-    "displayName": "Education"
+    "displayName": "education",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "School": {
+    "school": {
       "type": "string",
       "required": true
     },
-    "Grade": {
+    "grade": {
       "type": "string"
     },
-    "Course": {
+    "course": {
       "type": "string"
     },
-    "Start": {
+    "start": {
       "type": "date",
       "required": true
     },
-    "End": {
+    "end": {
       "type": "date"
     },
-    "Description": {
+    "description": {
       "type": "text"
     }
   }
