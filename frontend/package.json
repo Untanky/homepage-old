@@ -35,6 +35,8 @@
 	"type": "module",
 	"dependencies": {
 		"@types/luxon": "^3.2.0",
+		"@urql/svelte": "^3.0.4",
+		"graphql": "^16.6.0",
 		"luxon": "^3.2.1"
 	}
 }

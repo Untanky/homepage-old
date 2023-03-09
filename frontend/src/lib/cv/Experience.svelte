@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
   export interface Experience {
-    start: Date;
-    end?: Date;
+    start: string;
+    end?: string;
     company: string;
     jobTitle: string;
     description: string[];
@@ -14,8 +14,8 @@
 
   export let element: Experience;
 
-  const start = DateTime.fromJSDate(element.start).toFormat('LLLL yyyy');
-  const end = element.end ? DateTime.fromJSDate(element.end).toFormat('LLLL yyyy') : 'current';
+  const start = DateTime.fromFormat(element.start, 'yyyy-MM-dd').toFormat('LLLL yyyy');
+  const end = element.end ? DateTime.fromFormat(element.end, 'yyyy-MM-dd').toFormat('LLLL yyyy') : 'current';
 </script>
 
 <TimelineElement

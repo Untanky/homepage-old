@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
   export interface Education {
-    start: Date;
-    end?: Date;
+    start: string;
+    end?: string;
     school: string;
     course: string;
     grade: string;
@@ -15,8 +15,8 @@
 
   export let element: Education;
 
-  const start = DateTime.fromJSDate(element.start).toFormat('LLLL yyyy');
-  const end = element.end ? DateTime.fromJSDate(element.end).toFormat('LLLL yyyy') : 'current';
+  const start = DateTime.fromFormat(element.start, 'yyyy-MM-dd').toFormat('LLLL yyyy');
+  const end = element.end ? DateTime.fromFormat(element.end, 'yyyy-MM-dd').toFormat('LLLL yyyy') : 'current';
 </script>
 
 <TimelineElement
