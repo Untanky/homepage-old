@@ -14,7 +14,7 @@
   const toEmoji = (locale: string): string => {
     const asciiOffset = 0x1F1A5;
     const codePoints = locale
-      .split('-')[1]
+      // .split('-')[1]
       .toUpperCase()
       .split('')
       .map(char =>  asciiOffset + char.charCodeAt(0));

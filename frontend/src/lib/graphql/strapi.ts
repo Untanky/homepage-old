@@ -1,11 +1,21 @@
-export interface StrapiUnifiedArrayModel<T, PropertyName extends string> {
+export interface StrapiUnifiedModel<T> {
+  data: {
+    attributes: T
+  }
+}
+
+export interface StrapiUnifiedArrayModel<T> {
   data: Array<{
-    attributes: {
-      [P in PropertyName]: T
-    }
+    attributes: T
   }>
 }
 
-export const mapFromStrapiArray = <T, PropertyName extends string>(model: StrapiUnifiedArrayModel<T, PropertyName>, propertyName: PropertyName): T[] => {
+export type StrapiUnifiedArrayWithPropModel<T, PropertyName extends string> = StrapiUnifiedArrayModel<{ [P in PropertyName]: T }>;
+
+export const mapFromStrapiArray = <T, PropertyName extends string>(model: StrapiUnifiedArrayWithPropModel<T, PropertyName>, propertyName: PropertyName): T[] => {
   return model.data.map((value) => value.attributes[propertyName]);
+}
+
+export const mapFromStrapi = <T>(model: StrapiUnifiedModel<T>): T => {
+  return model.data.attributes;
 }
