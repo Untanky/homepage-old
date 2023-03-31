@@ -4,3 +4,4 @@
 </svelte:head>
 
 <h1 class="text-4xl">Posts</h1>
+<p>Coming soon!</p>

@@ -1,11 +1,10 @@
-import { mapFromStrapiArray, type StrapiUnifiedArrayModel, type StrapiUnifiedArrayWithPropModel, type StrapiUnifiedModel } from '$lib/graphql/strapi';
+import { mapArrayFromStrapi, mapFromStrapi, mapFromStrapiArray, type StrapiUnifiedArrayModel, type StrapiUnifiedArrayWithPropModel, type StrapiUnifiedModel } from '$lib/graphql/strapi';
 import { gql } from '@urql/svelte';
 import type { Education } from "../lib/cv/Education.svelte";
 import type { Experience } from "../lib/cv/Experience.svelte";
 import type { Language } from "../lib/cv/Language.svelte";
 import type { Skill } from "../lib/cv/Skill.svelte";
-import type { Strength } from '../lib/cv/Strength.svelte';
-import type { StrengthList } from "../lib/cv/StrengthList.svelte";
+import type { StrengthList, StrengthSection } from "../lib/cv/StrengthList.svelte";
 import { client } from '../lib/graphql/client';
 import type { ProfileHero } from "../lib/hero/ProfileHero.svelte";
 import type { PageLoad } from './$types';
@@ -25,7 +24,8 @@ const query = gql<
     educations: StrapiUnifiedArrayWithPropModel<Education, 'education'>;
     experiences: StrapiUnifiedArrayWithPropModel<Experience, 'experience'>;
     skills: StrapiUnifiedArrayWithPropModel<Skill, 'skill'>;
-    strengths: StrapiUnifiedArrayWithPropModel<Strength, 'strength'>;
+    languages: StrapiUnifiedArrayWithPropModel<Language, 'language'>;
+    strengths: StrapiUnifiedArrayModel<StrengthSection>;
   },
   { locale: string }
 >`
@@ -89,10 +89,21 @@ query PortfolioContent($locale: I18NLocaleCode) {
       }
     }
   }
+  languages(locale: $locale) {
+    data {
+      attributes {
+        language {
+          language
+          level
+        }
+      }
+    }
+  }
   strengths(locale: $locale) {
     data {
       attributes {
-        strength {
+        title
+        strengths {
           id
           title
           description
@@ -111,12 +122,14 @@ export const load: PageLoad = async (): Promise<LandingPageOutput> => await clie
       throw new Error('no data');
     }
 
+    console.log(res.data.strengths.data[0].attributes);
+
     return {
       educations: mapFromStrapiArray(res.data.educations, 'education'),
       experiences: mapFromStrapiArray(res.data.experiences, 'experience'),
       skills: mapFromStrapiArray(res.data.skills, 'skill'),
-      languages: [],
-      strengths: [],
+      languages: mapFromStrapiArray(res.data.languages, 'language'),
+      strengths: mapArrayFromStrapi(res.data.strengths),
       hero: {
         title: res.data.landingHero.data.attributes.landingHero.title,
         subtitle: res.data.landingHero.data.attributes.landingHero.subtitle,

@@ -16,6 +16,10 @@ export const mapFromStrapiArray = <T, PropertyName extends string>(model: Strapi
   return model.data.map((value) => value.attributes[propertyName]);
 }
 
+export const mapArrayFromStrapi = <T>(model: StrapiUnifiedArrayModel<T>): T[] => {
+  return model.data.map((value) => value.attributes);
+}
+
 export const mapFromStrapi = <T>(model: StrapiUnifiedModel<T>): T => {
   return model.data.attributes;
 }
