@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_hero_profile_heroes",
+  "info": {
+    "displayName": "ProfileHero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "imageAlt": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

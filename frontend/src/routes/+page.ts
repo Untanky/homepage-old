@@ -1,4 +1,4 @@
-import { mapFromStrapiArray, type StrapiUnifiedArrayModel } from '$lib/graphql/strapi';
+import { mapFromStrapiArray, type StrapiUnifiedArrayModel, type StrapiUnifiedArrayWithPropModel, type StrapiUnifiedModel } from '$lib/graphql/strapi';
 import { gql } from '@urql/svelte';
 import type { Education } from "../lib/cv/Education.svelte";
 import type { Experience } from "../lib/cv/Experience.svelte";
@@ -21,14 +21,33 @@ export interface LandingPageOutput {
 
 const query = gql<
   {
-    educations: StrapiUnifiedArrayModel<Education, 'education'>,
-    experiences: StrapiUnifiedArrayModel<Experience, 'experience'>,
-    skills: StrapiUnifiedArrayModel<Skill, 'skill'>,
-    strengths: StrapiUnifiedArrayModel<Strength, 'strength'>,
+    landingHero: StrapiUnifiedModel<{ landingHero: { title: string; subtitle: string; image: StrapiUnifiedArrayModel<{ alternativeText: string; url: string; }> } }>;
+    educations: StrapiUnifiedArrayWithPropModel<Education, 'education'>;
+    experiences: StrapiUnifiedArrayWithPropModel<Experience, 'experience'>;
+    skills: StrapiUnifiedArrayWithPropModel<Skill, 'skill'>;
+    strengths: StrapiUnifiedArrayWithPropModel<Strength, 'strength'>;
   },
   { locale: string }
 >`
 query PortfolioContent($locale: I18NLocaleCode) {
+  landingHero(locale: $locale) {
+    data {
+      attributes {
+        landingHero {
+          title
+          subtitle
+          image {
+            data {
+              attributes {
+                alternativeText
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   educations(locale: $locale) {
     data {
       attributes {
@@ -99,10 +118,10 @@ export const load: PageLoad = async (): Promise<LandingPageOutput> => await clie
       languages: [],
       strengths: [],
       hero: {
-        imageAlt: '',
-        imageUri: '',
-        subtitle: 'Fullstack Developer in Berlin',
-        title: 'Lukas Grimm'
+        title: res.data.landingHero.data.attributes.landingHero.title,
+        subtitle: res.data.landingHero.data.attributes.landingHero.subtitle,
+        imageUri: `http://localhost:1337${res.data.landingHero.data.attributes.landingHero.image.data[0].attributes.url}`,
+        imageAlt: res.data.landingHero.data.attributes.landingHero.image.data[0].attributes.alternativeText,
       }
     };
   });
