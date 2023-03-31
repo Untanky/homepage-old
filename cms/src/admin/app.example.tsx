@@ -29,7 +29,4 @@ export default {
       // 'zh',
     ],
   },
-  bootstrap(app) {
-    console.log(app);
-  },
 };

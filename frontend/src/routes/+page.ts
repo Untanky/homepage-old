@@ -122,8 +122,6 @@ export const load: PageLoad = async (): Promise<LandingPageOutput> => await clie
       throw new Error('no data');
     }
 
-    console.log(res.data.strengths.data[0].attributes);
-
     return {
       educations: mapFromStrapiArray(res.data.educations, 'education'),
       experiences: mapFromStrapiArray(res.data.experiences, 'experience'),
