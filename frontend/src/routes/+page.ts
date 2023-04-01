@@ -1,4 +1,5 @@
-import { mapArrayFromStrapi, mapFromStrapi, mapFromStrapiArray, type StrapiUnifiedArrayModel, type StrapiUnifiedArrayWithPropModel, type StrapiUnifiedModel } from '$lib/graphql/strapi';
+import { PUBLIC_BASE_URL } from '$env/static/public';
+import { mapArrayFromStrapi, mapFromStrapiArray, type StrapiUnifiedArrayModel, type StrapiUnifiedArrayWithPropModel, type StrapiUnifiedModel } from '$lib/graphql/strapi';
 import { gql } from '@urql/svelte';
 import type { Education } from "../lib/cv/Education.svelte";
 import type { Experience } from "../lib/cv/Experience.svelte";
@@ -131,7 +132,7 @@ export const load: PageLoad = async (): Promise<LandingPageOutput> => await clie
       hero: {
         title: res.data.landingHero.data.attributes.landingHero.title,
         subtitle: res.data.landingHero.data.attributes.landingHero.subtitle,
-        imageUri: `http://localhost:1337${res.data.landingHero.data.attributes.landingHero.image.data[0].attributes.url}`,
+        imageUri: `${PUBLIC_BASE_URL}${res.data.landingHero.data.attributes.landingHero.image.data[0].attributes.url}`,
         imageAlt: res.data.landingHero.data.attributes.landingHero.image.data[0].attributes.alternativeText,
       }
     };

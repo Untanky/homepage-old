@@ -59,6 +59,7 @@ export const load: PageLoad = async (): Promise<LayoutOutput> => await client
   .query(query, { locale: 'de' })
   .toPromise()
   .then((res): LayoutOutput => {
+    console.info(res.error?.networkError?.cause);
     if (!res.data) {
       throw new Error('no data');
     }
@@ -71,4 +72,5 @@ export const load: PageLoad = async (): Promise<LayoutOutput> => await client
         footer: mapFromStrapi(res.data.footer).NavigationLink.map(link => ({ link: link.Link, title: link.Title })),
       }
     };
-  });
+  })
+  .catch(err => { console.error(err); throw err; });
