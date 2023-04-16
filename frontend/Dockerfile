@@ -1,8 +1,9 @@
 FROM node:18-alpine
 
 WORKDIR /app
-COPY ./build /app
 COPY ./package.json /app
+RUN npm i
+COPY ./build /app
 
 EXPOSE 3000
 

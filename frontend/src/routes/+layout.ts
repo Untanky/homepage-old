@@ -13,8 +13,6 @@ interface LayoutOutput {
   }
 }
 
-
-
 const query = gql<
   {
     i18NLocales: StrapiUnifiedArrayModel<{ name: string, code: string }>,
